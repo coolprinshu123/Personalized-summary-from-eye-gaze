@@ -1,8 +1,4 @@
 #define _BITS_SCHED_H 1
-<<<<<<< HEAD
-#define __SSP_STRONG__ 3
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DBL_MIN_EXP__ (-1021)
 #define EMULTIHOP 72
 #define __cpp_attributes 200809
@@ -10,19 +6,12 @@
 #define HAVE_OPENCV_VIDEO 
 #define __CFLOAT32 _Complex float
 #define __UINT_LEAST16_MAX__ 0xffff
-<<<<<<< HEAD
-=======
 #define __INT64_TYPE__ long int
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT128_MAX_10_EXP__ 4932
 #define RE_DUP_MAX (0x7fff)
 #define __DECL_SIMD_cosf32x 
 #define __GNUC_VA_LIST 
 #define _GLIBCXX_USE_FCHMOD 1
-<<<<<<< HEAD
-#define _IO_UNITBUF 020000
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _T_WCHAR_ 
 #define _EXT_TYPE_TRAITS 1
 #define __CFLOAT64 _Complex double
@@ -53,27 +42,17 @@
 #define _GLIBCXX_ATOMICITY_H 1
 #define EDESTADDRREQ 89
 #define __MATH_TG(TG_ARG,FUNC,ARGS) __builtin_choose_expr (__builtin_types_compatible_p (__typeof (TG_ARG), float), FUNC ## f ARGS, __builtin_choose_expr (__builtin_types_compatible_p (__typeof (TG_ARG), double), FUNC ARGS, __builtin_choose_expr (__builtin_types_compatible_p (__typeof (TG_ARG), long double), FUNC ## l ARGS, FUNC ## f128 ARGS)))
-<<<<<<< HEAD
-=======
 #define __DADDR_T_TYPE __S32_TYPE
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_WRITEV 1
 #define cvMatMulAdd(src1,src2,src3,dst) cvGEMM( (src1), (src2), 1., (src3), 1., (dst), 0 )
 #define _GLIBCXX_END_NAMESPACE_LDBL 
 #define PIPE_BUF 4096
 #define PDP_ENDIAN __PDP_ENDIAN
 #define stderr stderr
-<<<<<<< HEAD
-#define __GLIBC_PREREQ(maj,min) ((__GLIBC__ << 16) + __GLIBC_MINOR__ >= ((maj) << 16) + (min))
-#define __cpp_static_assert 200410
-#define CV_SEQ_KIND_CURVE (1 << CV_SEQ_ELTYPE_BITS)
-#define __STDLIB_MB_LEN_MAX 16
-=======
 #define _GLIBCXX14_CONSTEXPR constexpr
 #define __GLIBC_PREREQ(maj,min) ((__GLIBC__ << 16) + __GLIBC_MINOR__ >= ((maj) << 16) + (min))
 #define __cpp_static_assert 200410
 #define SCHED_OTHER 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_SEQ_FLAG_SHIFT (CV_SEQ_KIND_BITS + CV_SEQ_ELTYPE_BITS)
 #define CV_SSE2 1
 #define CV_SSE3 0
@@ -89,22 +68,12 @@
 #define CV_CPU_NONE 0
 #define CV_GEMM_B_T 2
 #define __cpp_lib_transformation_trait_aliases 201304
-<<<<<<< HEAD
-#define _IO_flockfile(_fp) 
-#define __FLT32X_DECIMAL_DIG__ 17
-#define _POSIX_THREAD_THREADS_MAX 64
-#define SHRT_MIN (-SHRT_MAX - 1)
-#define _IO_USER_LOCK 0x8000
-#define HAVE_OPENCV_SURFACE_MATCHING 
-#define _IO_NO_WRITES 8
-=======
 #define __FLT32X_DECIMAL_DIG__ 17
 #define _POSIX_THREAD_THREADS_MAX 64
 #define CV_GRAPH_SEARCH_TREE_NODE_FLAG (1 << 29)
 #define SHRT_MIN (-SHRT_MAX - 1)
 #define _IO_USER_LOCK 0x8000
 #define HAVE_OPENCV_SURFACE_MATCHING 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_MAT_ELEM_PTR(mat,row,col) CV_MAT_ELEM_PTR_FAST( mat, row, col, CV_ELEM_SIZE((mat).type) )
 #define __unix__ 1
 #define _GLIBCXX_HAVE_SYS_STAT_H 1
@@ -121,13 +90,9 @@
 #define _GLIBCXX_PACKAGE_NAME "package-unused"
 #define _GLIBCXX_PACKAGE__GLIBCXX_VERSION "version-unused"
 #define LONG_WIDTH __WORDSIZE
-<<<<<<< HEAD
-#define CV_RELATIVE_L1 (CV_RELATIVE | CV_L1)
-=======
 #define _POSIX_PATH_MAX 256
 #define CV_RELATIVE_L1 (CV_RELATIVE | CV_L1)
 #define CV_RELATIVE_L2 (CV_RELATIVE | CV_L2)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __cpp_lib_exchange_function 201304
 #define __gthrw(name) __gthrw2(__gthrw_ ## name,name,name)
 #define OPENCV_OLD_CV_H 
@@ -137,27 +102,15 @@
 #define __ASSERT_VOID_CAST static_cast<void>
 #define CLONE_NEWNET 0x40000000
 #define __CPU_COUNT_S(setsize,cpusetp) __sched_cpucount (setsize, cpusetp)
-<<<<<<< HEAD
-#define _IO_SHOWPOINT 0400
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define PTHREAD_PROCESS_SHARED PTHREAD_PROCESS_SHARED
 #define __CFLOAT128 __cfloat128
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
 #define __SIG_ATOMIC_TYPE__ int
-<<<<<<< HEAD
-#define CV_NEXT_LINE_POINT(line_iterator) { int _line_iterator_mask = (line_iterator).err < 0 ? -1 : 0; (line_iterator).err += (line_iterator).minus_delta + ((line_iterator).plus_delta & _line_iterator_mask); (line_iterator).ptr += (line_iterator).minus_step + ((line_iterator).plus_step & _line_iterator_mask); }
-#define CV_HAL_GEMM_1_T 1
-#define __DBL_MIN_10_EXP__ (-307)
-#define ENOTTY 25
-#define CV_NODE_FLOW 8
-=======
 #define _ISOC95_SOURCE 1
 #define CV_HAL_GEMM_1_T 1
 #define __DBL_MIN_10_EXP__ (-307)
 #define ENOTTY 25
 #define CV_NODE_NONE 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define MOD_NANO ADJ_NANO
 #define __attribute_alloc_size__(params) __attribute__ ((__alloc_size__ params))
 #define M_SQRT1_2f64x __f64x (0.707106781186547524400844362104849039)
@@ -166,19 +119,11 @@
 #define CV_STORAGE_WRITE 1
 #define __u_char_defined 
 #define _MM_FLUSH_ZERO_MASK 0x8000
-<<<<<<< HEAD
-#define __GNUC_PATCHLEVEL__ 0
-#define _GLIBCXX_STD_A std
-#define __FLT32_HAS_DENORM__ 1
-#define _GLIBCXX_HAVE_LINUX_FUTEX 1
-#define _POSIX_SYMLINK_MAX 255
-=======
 #define __GNUC_PATCHLEVEL__ 1
 #define _GLIBCXX_STD_A std
 #define __FLT32_HAS_DENORM__ 1
 #define _GLIBCXX_HAVE_LINUX_FUTEX 1
 #define CV_NODE_IS_EMPTY(flags) (((flags) & CV_NODE_EMPTY) != 0)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define OPENCV_CORE_HPP 
 #define HUGE_VAL_F32X (__builtin_huge_valf32x ())
 #define __UINT_FAST8_MAX__ 0xff
@@ -191,10 +136,6 @@
 #define CV_EXPORTS_W CV_EXPORTS
 #define _GLIBCXX_HAVE_POWL 1
 #define STA_RONLY (STA_PPSSIGNAL | STA_PPSJITTER | STA_PPSWANDER | STA_PPSERROR | STA_CLOCKERR | STA_NANO | STA_MODE | STA_CLK)
-<<<<<<< HEAD
-#define CV_SORT_EVERY_ROW 0
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _WCHAR_T_DEFINED 
 #define _POSIX_CLOCKRES_MIN 20000000
 #define ENOMEM 12
@@ -211,13 +152,7 @@
 #define HAVE_OPENCV_TEXT 
 #define __bos0(ptr) __builtin_object_size (ptr, 0)
 #define CV_SET_ELEM_IDX_MASK ((1 << 26) - 1)
-<<<<<<< HEAD
-#define ECONNABORTED 103
 #define __DEC64_MAX__ 9.999999999999999E384DD
-#define _IO_need_lock(_fp) (((_fp)->_flags2 & _IO_FLAGS2_NEED_LOCK) != 0)
-=======
-#define __DEC64_MAX__ 9.999999999999999E384DD
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define WCHAR_WIDTH 32
 #define CV_RNG_COEFF 4164903690U
 #define __OPTIMIZE__ 1
@@ -238,18 +173,11 @@
 #define CV_FILLED -1
 #define CV_ARE_DEPTHS_EQ(mat1,mat2) ((((mat1)->type ^ (mat2)->type) & CV_MAT_DEPTH_MASK) == 0)
 #define _GLIBCXX17_INLINE 
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_NODISCARD 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __linux 1
 #define __PTHREAD_MUTEX_USE_UNION 0
 #define OPENCV_CORE_MATX_HPP 
 #define ULONG_LONG_MAX (LONG_LONG_MAX * 2ULL + 1ULL)
-<<<<<<< HEAD
-#define _IO_cleanup_region_end(_Doit) 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define OPENCV_TRACKING_C_H 
 #define _GLIBCXX_HAVE_SYS_TIME_H 1
 #define __MATHDECLX(type,function,suffix,args,attrib) __MATHDECL_1(type, function,suffix, args) __attribute__ (attrib); __MATHDECL_1(type, __CONCAT(__,function),suffix, args) __attribute__ (attrib)
@@ -263,10 +191,7 @@
 #define CV_IS_MASK_ARR(mat) (((mat)->type & (CV_MAT_TYPE_MASK & ~CV_8SC1)) == 0)
 #define _GLIBCXX_HAVE_ISNANF 1
 #define __SHRT_WIDTH__ 16
-<<<<<<< HEAD
-=======
 #define CV_64F 6
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __SIZE_T 
 #define CV_SUBMAT_FLAG (1 << CV_SUBMAT_FLAG_SHIFT)
 #define _GLIBCXX_FULLY_DYNAMIC_STRING 0
@@ -279,13 +204,8 @@
 #define _GLIBCXX_END_NAMESPACE_LDBL_OR_CXX11 _GLIBCXX_END_NAMESPACE_CXX11
 #define __glibcxx_assert(_Condition) 
 #define CV_SVD_MODIFY_A 1
-<<<<<<< HEAD
-#define _IO_ssize_t __ssize_t
-#define __FLT128_MIN_EXP__ (-16381)
-=======
 #define __FLT128_MIN_EXP__ (-16381)
 #define M_PI_4 0.78539816339744830962
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_SEQ_WRITER_FIELDS() int header_size; CvSeq* seq; CvSeqBlock* block; schar* ptr; schar* block_min; schar* block_max;
 #define UINT_FAST64_WIDTH 64
 #define WUNTRACED 2
@@ -300,28 +220,17 @@
 #define SCHAR_MIN (-SCHAR_MAX - 1)
 #define ENOMSG 42
 #define EXIT_FAILURE 1
-<<<<<<< HEAD
-=======
 #define RENAME_EXCHANGE (1 << 1)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __INT_LEAST16_WIDTH__ 16
 #define _SIZE_T_DEFINED_ 
 #define __LC_TIME 2
 #define CV_HIST_ARRAY 0
 #define __LDBL_REDIR_NTH(name,proto) name proto __THROW
 #define __SCHAR_MAX__ 0x7f
-<<<<<<< HEAD
-#define _IO_UNIFIED_JUMPTABLES 1
-#define CV_STORAGE_WRITE_BASE64 (CV_STORAGE_BASE64 | CV_STORAGE_WRITE)
-#define NFDBITS __NFDBITS
-#define __KERNEL_STRICT_NAMES 
-#define _IO_stderr ((_IO_FILE*)(&_IO_2_1_stderr_))
-=======
 #define CLONE_THREAD 0x00010000
 #define CV_STORAGE_WRITE_BASE64 (CV_STORAGE_BASE64 | CV_STORAGE_WRITE)
 #define NFDBITS __NFDBITS
 #define __KERNEL_STRICT_NAMES 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __INT64_C(c) c ## L
 #define ADJ_OFFSET_SINGLESHOT 0x8001
 #define CV_STORAGE_BASE64 64
@@ -332,30 +241,17 @@
 #define __FLT64X_MANT_DIG__ 64
 #define cvT cvTranspose
 #define _GLIBCXX_HAVE_FENV_H 1
-<<<<<<< HEAD
-=======
 #define CV_FONT_VECTOR0 CV_FONT_HERSHEY_SIMPLEX
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _BITS_LIBM_SIMD_DECL_STUBS_H 1
 #define _GLIBCXX_HAVE_AT_QUICK_EXIT 1
 #define CV_DECL_ALIGNED(x) __attribute__ ((aligned (x)))
 #define __isascii(c) (((c) & ~0x7f) == 0)
 #define __toascii(c) ((c) & 0x7f)
 #define __SIZEOF_FLOAT128__ 16
-<<<<<<< HEAD
-#define _IO_MAGIC 0xFBAD0000
-#define _POSIX_SOURCE 1
-#define __SIZEOF_INT__ 4
-#define __ATOMIC_CONSUME 1
-#define __PRAGMA_REDEFINE_EXTNAME 1
-#define __attribute_used__ __attribute__ ((__used__))
-#define _STDIO_USES_IOSTREAM 
-=======
 #define _POSIX_SOURCE 1
 #define __SIZEOF_INT__ 4
 #define __PRAGMA_REDEFINE_EXTNAME 1
 #define __attribute_used__ __attribute__ ((__used__))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_16UC1 CV_MAKETYPE(CV_16U,1)
 #define CV_16UC2 CV_MAKETYPE(CV_16U,2)
 #define CV_16UC3 CV_MAKETYPE(CV_16U,3)
@@ -367,10 +263,6 @@
 #define CV_CPU_AVX 10
 #define __wint_t_defined 1
 #define __USER_LABEL_PREFIX__ 
-<<<<<<< HEAD
-#define CV_CPU_AVX2 11
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_NUM_FACETS 28
 #define CV_NODE_IDX(mat,node) ((int*)((uchar*)(node) + (mat)->idxoffset))
 #define __glibc_macro_warning(message) __glibc_macro_warning1 (GCC warning message)
@@ -384,10 +276,7 @@
 #define LDBL_MIN_EXP __LDBL_MIN_EXP__
 #define UINT8_MAX (255)
 #define UINT_FAST64_MAX (__UINT64_C(18446744073709551615))
-<<<<<<< HEAD
-=======
 #define CV_NEXT_LINE_POINT(line_iterator) { int _line_iterator_mask = (line_iterator).err < 0 ? -1 : 0; (line_iterator).err += (line_iterator).minus_delta + ((line_iterator).plus_delta & _line_iterator_mask); (line_iterator).ptr += (line_iterator).minus_step + ((line_iterator).plus_step & _line_iterator_mask); }
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_KMEANS_USE_INITIAL_LABELS 1
 #define NAN (__builtin_nanf (""))
 #define __clock_t_defined 1
@@ -395,10 +284,6 @@
 #define _BITS_UINTN_IDENTITY_H 1
 #define _GLIBCXX_DEBUG_ASSERTIONS_H 1
 #define CV_BIG_INT(n) n ##LL
-<<<<<<< HEAD
-#define __SYSMACROS_DM1(...) __glibc_macro_warning (#__VA_ARGS__)
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_DEPTH_MAX (1 << CV_CN_SHIFT)
 #define CV_STORAGE_APPEND 2
 #define FP_INT_TONEARESTFROMZERO 3
@@ -410,10 +295,6 @@
 #define _BSD_SIZE_T_DEFINED_ 
 #define __FLT32_DIG__ 6
 #define __RLIM_T_MATCHES_RLIM64_T 1
-<<<<<<< HEAD
-#define _G_BUFSIZ 8192
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT_EPSILON__ 1.19209289550781250000000000000000000e-7F
 #define __CPUELT(cpu) ((cpu) / __NCPUBITS)
 #define ENOLINK 67
@@ -423,31 +304,19 @@
 #define HAVE_OPENCV_DPM 
 #define LC_CTYPE __LC_CTYPE
 #define __DEC64_MIN__ 1E-383DD
-<<<<<<< HEAD
-=======
 #define RENAME_NOREPLACE (1 << 0)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __SSIZE_T_TYPE __SWORD_TYPE
 #define __DEV_T_TYPE __UQUAD_TYPE
 #define __DECL_SIMD_logf16 
 #define _GLIBCXX_ALGORITHMFWD_H 1
-<<<<<<< HEAD
-#define _GLIBCXX_BEGIN_NAMESPACE_ALGO _GLIBCXX_BEGIN_NAMESPACE_VERSION
-#define CV_GRAPH_VERTEX 1
-#define _IO_SCIENTIFIC 04000
-=======
 #define _GLIBCXX_BEGIN_NAMESPACE_ALGO 
 #define CV_GRAPH_VERTEX 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __GTHREADS_CXX0X 1
 #define le32toh(x) __uint32_identity (x)
 #define __GCC_ATOMIC_LLONG_LOCK_FREE 2
 #define __DEC32_MAX__ 9.999999E96DF
 #define __GLIBC_USE_IEC_60559_BFP_EXT 1
-<<<<<<< HEAD
-=======
 #define _BASIC_IOS_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __WIFSIGNALED(status) (((signed char) (((status) & 0x7f) + 1) >> 1) > 0)
 #define _GLIBCXX_HAVE_POLL 1
 #define CV_DIFF_C (CV_DIFF | CV_C)
@@ -475,18 +344,6 @@
 #define __STDC_ISO_10646__ 201706L
 #define EMFILE 24
 #define __PTRDIFF_WIDTH__ 64
-<<<<<<< HEAD
-#define __attribute_format_arg__(x) __attribute__ ((__format_arg__ (x)))
-#define M_2_PI 0.63661977236758134308
-#define __SYSCALL_SLONG_TYPE __SLONGWORD_TYPE
-#define CV_TYPE_NAME_MAT "opencv-matrix"
-#define _IO_PENDING_OUTPUT_COUNT(_fp) ((_fp)->_IO_write_ptr - (_fp)->_IO_write_base)
-#define _GLIBCXX_HAVE_MODFF 1
-#define _GLIBCXX_HAVE_MODFL 1
-#define __DECIMAL_DIG__ 21
-#define __NTHNL(fct) fct throw ()
-#define __USE_FORTIFY_LEVEL 2
-=======
 #define M_2_PI 0.63661977236758134308
 #define __SYSCALL_SLONG_TYPE __SLONGWORD_TYPE
 #define CV_TYPE_NAME_MAT "opencv-matrix"
@@ -496,7 +353,6 @@
 #define INT_FAST64_MAX (__INT64_C(9223372036854775807))
 #define __NTHNL(fct) fct throw ()
 #define __USE_FORTIFY_LEVEL 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CPU_EQUAL(cpusetp1,cpusetp2) __CPU_EQUAL_S (sizeof (cpu_set_t), cpusetp1, cpusetp2)
 #define __FLT64_EPSILON__ 2.22044604925031308084726333618164062e-16F64
 #define _GLIBCXX_HAVE_HYPOTF 1
@@ -515,17 +371,10 @@
 #define PTRDIFF_MAX (9223372036854775807L)
 #define _GLIBCXX_HAVE_SYMVER_SYMBOL_RENAMING_RUNTIME_SUPPORT 1
 #define _GLIBCXX_USE_CXX11_ABI 1
-<<<<<<< HEAD
-#define _IO_LEFT 02
-#define _NEW_ALLOCATOR_H 1
-#define __FLT64X_MIN_10_EXP__ (-4931)
-#define _MM_ROUND_MASK 0x6000
-=======
 #define _NEW_ALLOCATOR_H 1
 #define __FLT64X_MIN_10_EXP__ (-4931)
 #define _MM_ROUND_MASK 0x6000
 #define SIZE_WIDTH __WORDSIZE
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define DELAYTIMER_MAX 2147483647
 #define __glibcxx_max_b(T,B) (__glibcxx_signed_b (T,B) ? (((((T)1 << (__glibcxx_digits_b (T,B) - 1)) - 1) << 1) + 1) : ~(T)0)
 #define __LDBL_HAS_QUIET_NAN__ 1
@@ -546,14 +395,8 @@
 #define L_tmpnam 20
 #define _BASIC_IOS_TCC 1
 #define WIFCONTINUED(status) __WIFCONTINUED (status)
-<<<<<<< HEAD
-#define __GNUC__ 7
-#define __GXX_RTTI 1
-#define _WCHAR_T_DECLARED 
-=======
 #define __GNUC__ 9
 #define __GXX_RTTI 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __MMX__ 1
 #define _GLIBCXX_USE_GET_NPROCS 1
 #define __OFF64_T_TYPE __SQUAD_TYPE
@@ -568,10 +411,7 @@
 #define __BIGGEST_ALIGNMENT__ 16
 #define DBL_EPSILON __DBL_EPSILON__
 #define STDC_HEADERS 1
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_LOGL 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define PTRDIFF_MIN (-9223372036854775807L-1)
 #define __STDC_UTF_16__ 1
 #define LONG_MAX __LONG_MAX__
@@ -603,23 +443,14 @@
 #define sched_priority sched_priority
 #define CV_IS_MAT_HDR_Z(mat) ((mat) != NULL && (((const CvMat*)(mat))->type & CV_MAGIC_MASK) == CV_MAT_MAGIC_VAL && ((const CvMat*)(mat))->cols >= 0 && ((const CvMat*)(mat))->rows >= 0)
 #define _POSIX_SIGQUEUE_MAX 32
-<<<<<<< HEAD
-#define CV_HAAR_FEATURE_MAX 3
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __LDBL_HAS_DENORM__ 1
 #define __SIZEOF_PTHREAD_MUTEX_T 40
 #define __GLIBC_USE_IEC_60559_FUNCS_EXT 1
 #define _GLIBCXX_HAVE_ETXTBSY 1
 #define _ISbit(bit) ((bit) < 8 ? ((1 << (bit)) << 8) : ((1 << (bit)) >> 8))
-<<<<<<< HEAD
-#define _GLIBCXX_END_NAMESPACE_ALGO _GLIBCXX_END_NAMESPACE_VERSION
-#define CV_HAL_DFT_REAL_OUTPUT 32
-=======
 #define _GLIBCXX_END_NAMESPACE_ALGO 
 #define _GLIBCXX_HAVE_ATOMIC_LOCK_POLICY 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _MM_MASK_INEXACT 0x1000
 #define M_SQRT2f64x __f64x (1.414213562373095048801688724209698079)
 #define CLONE_NEWNS 0x00020000
@@ -627,10 +458,6 @@
 #define NL_LANGMAX _POSIX2_LINE_MAX
 #define __DECL_SIMD_cos 
 #define __glibcxx_requires_partitioned_upper(_First,_Last,_Value) 
-<<<<<<< HEAD
-#define __DADDR_T_TYPE __S32_TYPE
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_UCHAR_H 1
 #define __DECL_SIMD_powf16 
 #define __INTPTR_WIDTH__ 64
@@ -638,10 +465,7 @@
 #define EPIPE 32
 #define CV_GEMM_C_T 4
 #define CV_HAAR_DO_CANNY_PRUNING 1
-<<<<<<< HEAD
-=======
 #define CV_SORT_EVERY_ROW 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_QUICK_EXIT 1
 #define CV_FP16_TYPE 0
 #define LONG_MIN (-LONG_MAX - 1L)
@@ -668,33 +492,18 @@
 #define __FLT32_DECIMAL_DIG__ 9
 #define LC_ADDRESS __LC_ADDRESS
 #define __INT_LEAST32_MAX__ 0x7fffffff
-<<<<<<< HEAD
-#define _IO_UNBUFFERED 2
 #define __DECL_SIMD_powf64 
 #define _GCC_WRAP_STDINT_H 
-#define _IO_INTERNAL 010
-=======
-#define __DECL_SIMD_powf64 
-#define _GCC_WRAP_STDINT_H 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DEC32_MIN__ 1E-95DF
 #define __dev_t_defined 
 #define CV_HAL_GEMM_2_T 2
 #define CPU_ALLOC(count) __CPU_ALLOC (count)
 #define __DBL_MAX_EXP__ 1024
 #define LC_TELEPHONE_MASK (1 << __LC_TELEPHONE)
-<<<<<<< HEAD
-#define _GLIBCXX_HAVE_FLOAT_H 1
-#define __WCHAR_WIDTH__ 32
-#define __FLT64_MAX__ 1.79769313486231570814527423731704357e+308F64
-#define _BITS_WCHAR_H 1
-#define __gthrw2(name,name2,type) static __typeof(type) name __attribute__ ((__weakref__(#name2))); __gthrw_pragma(weak type)
-=======
 #define __WCHAR_WIDTH__ 32
 #define __FLT64_MAX__ 1.79769313486231570814527423731704357e+308F64
 #define _BITS_WCHAR_H 1
 #define __gthrw2(name,name2,type) static __typeof(type) name __attribute__ ((__weakref__(#name2), __copy__ (type))); __gthrw_pragma(weak type)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __GCC_ATOMIC_LONG_LOCK_FREE 2
 #define CV_COVAR_SCRAMBLED 0
 #define CV_GRAPH_EDGE_FIELDS() int flags; float weight; struct CvGraphEdge* next[2]; struct CvGraphVtx* vtx[2];
@@ -713,19 +522,11 @@
 #define CLOCKS_PER_SEC ((__clock_t) 1000000)
 #define _GLIBCXX_HAVE_ATTRIBUTE_VISIBILITY 1
 #define CV_DXT_INVERSE 1
-<<<<<<< HEAD
-#define _IO_HAVE_ST_BLKSIZE _G_HAVE_ST_BLKSIZE
-#define HAVE_OPENCV_CCALIB 
-#define __USECONDS_T_TYPE __U32_TYPE
-#define _IO_FIXED 010000
-#define __OFF_T_TYPE __SYSCALL_SLONG_TYPE
-=======
 #define HAVE_OPENCV_CCALIB 
 #define __USECONDS_T_TYPE __U32_TYPE
 #define __OFF_T_TYPE __SYSCALL_SLONG_TYPE
 #define CV_SEQUENCE_FIELDS() CV_TREE_NODE_FIELDS(CvSeq); int total; int elem_size; schar* block_max; schar* ptr; int delta_elems; CvMemStorage* storage; CvSeqBlock* free_blocks; CvSeqBlock* first;
 #define _GLIBCXX_HAVE_NETDB_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EXFULL 54
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define CV_MAX_DIM 32
@@ -735,21 +536,12 @@
 #define CV_NODE_INT 1
 #define PTHREAD_CREATE_DETACHED PTHREAD_CREATE_DETACHED
 #define __glibcxx_min_b(T,B) (__glibcxx_signed_b (T,B) ? -__glibcxx_max_b (T,B) - 1 : (T)0)
-<<<<<<< HEAD
-#define __USE_POSIX 1
-#define ENOTEMPTY 39
-#define __DECL_SIMD_cosf 
-#define __DECL_SIMD_cosl 
-#define _STL_RELOPS_H 1
-#define _IO_ferror_unlocked(__fp) (((__fp)->_flags & _IO_ERR_SEEN) != 0)
-=======
 #define ENOTEMPTY 39
 #define __DECL_SIMD_cosf 
 #define __DECL_SIMD_cosl 
 #define _____fpos64_t_defined 1
 #define _STL_RELOPS_H 1
 #define __SIZEOF_WINT_T__ 4
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define SNANF (__builtin_nansf (""))
 #define SNANL (__builtin_nansl (""))
 #define CV_HAL_BORDER_CONSTANT 0
@@ -758,18 +550,12 @@
 #define CV_CXX_MOVE_SEMANTICS 1
 #define __u_intN_t(N,MODE) typedef unsigned int u_int ##N ##_t __attribute__ ((__mode__ (MODE)))
 #define __LONG_LONG_WIDTH__ 64
-<<<<<<< HEAD
-=======
 #define __putc_unlocked_body(_ch,_fp) (__glibc_unlikely ((_fp)->_IO_write_ptr >= (_fp)->_IO_write_end) ? __overflow (_fp, (unsigned char) (_ch)) : (unsigned char) (*(_fp)->_IO_write_ptr++ = (_ch)))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __cpp_initializer_lists 200806
 #define CV_8SC1 CV_MAKETYPE(CV_8S,1)
 #define CV_8SC2 CV_MAKETYPE(CV_8S,2)
 #define __U16_TYPE unsigned short int
-<<<<<<< HEAD
-=======
 #define __glibcxx_requires_can_increment(_First,_Size) 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_SYS_PARAM_H 1
 #define _STDIO_H 1
 #define WINT_MAX (4294967295u)
@@ -778,11 +564,7 @@
 #define ENOSPC 28
 #define CV_MAX_ARR 10
 #define UINTPTR_MAX (18446744073709551615UL)
-<<<<<<< HEAD
-#define __INT32_TYPE__ int
-=======
 #define _GLIBCXX_HAVE_ARPA_INET_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define IPL_DEPTH_16S (IPL_DEPTH_SIGN|16)
 #define IPL_DEPTH_16U 16
 #define _PTRDIFF_T 
@@ -806,10 +588,6 @@
 #define LC_IDENTIFICATION __LC_IDENTIFICATION
 #define LC_MEASUREMENT_MASK (1 << __LC_MEASUREMENT)
 #define alloca(size) __builtin_alloca (size)
-<<<<<<< HEAD
-#define __INT16_MAX__ 0x7fff
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define LDBL_MIN __LDBL_MIN__
 #define __cpp_lib_transparent_operators 201510
 #define NL_SETMAX INT_MAX
@@ -835,41 +613,23 @@
 #define CV_SEQ_POINT_SET (CV_SEQ_KIND_GENERIC| CV_SEQ_ELTYPE_POINT)
 #define LDBL_MAX __LDBL_MAX__
 #define M_2_SQRTPIf64x __f64x (1.128379167095512573896158903121545172)
-<<<<<<< HEAD
-#define INFINITY (__builtin_inff ())
-#define WINT_MIN (0u)
-#define CV_SUBMAT_FLAG_SHIFT 15
-#define __STRINGS_FORTIFIED 1
-#define PTHREAD_CANCEL_DISABLE PTHREAD_CANCEL_DISABLE
-#define __key_t_defined 
-#define _IO_MAGIC_MASK 0xFFFF0000
-=======
 #define _GLIBCXX_USE_DEV_RANDOM 1
 #define INFINITY (__builtin_inff ())
 #define WINT_MIN (0u)
 #define CV_SUBMAT_FLAG_SHIFT 15
 #define PTHREAD_CANCEL_DISABLE PTHREAD_CANCEL_DISABLE
 #define __key_t_defined 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FP_LOGB0_IS_MIN 1
 #define __WALL 0x40000000
 #define SIG_ATOMIC_WIDTH 32
 #define _GLIBCXX_HAVE_ETIMEDOUT 1
 #define CLOCK_REALTIME_COARSE 5
 #define __USE_XOPEN2KXSI 1
-<<<<<<< HEAD
-#define __DECL_SIMD_sinl 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_DIFF_L1 (CV_DIFF | CV_L1)
 #define HAVE_OPENCV_STITCHING 
 #define __HAVE_DISTINCT_FLOAT64 0
 #define _GLIBCXX_ALGORITHM 1
 #define __LP64__ 1
-<<<<<<< HEAD
-#define _IO_off64_t __off64_t
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __HAVE_FLOAT32X 1
 #define ENETRESET 102
 #define OPENCV_CORE_BASE_HPP 
@@ -878,10 +638,7 @@
 #define WINT_WIDTH 32
 #define CLOCK_REALTIME_ALARM 8
 #define CV_NORMAL 16
-<<<<<<< HEAD
-=======
 #define __ATOMIC_CONSUME 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define STA_DEL 0x0020
 #define __LEAF_ATTR __attribute__ ((__leaf__))
 #define __DECIMAL_BID_FORMAT__ 1
@@ -895,16 +652,6 @@
 #define _GLIBCXX_HAVE_SETENV 1
 #define SEEK_DATA 3
 #define cvCalcBackProjectPatch(image,dst,range,hist,method,factor) cvCalcArrBackProjectPatch( (CvArr**)image, dst, range, hist, method, factor )
-<<<<<<< HEAD
-#define _IO_BOOLALPHA 0200000
-#define CV_LOG2 0.69314718055994530941723212145818
-#define SIZE_WIDTH __WORDSIZE
-#define _GLIBCXX_PACKAGE_URL ""
-#define __USE_POSIX199309 1
-#define __FDS_BITS(set) ((set)->fds_bits)
-#define _GLIBCXX_HAVE_EOWNERDEAD 1
-#define __ULONGWORD_TYPE unsigned long int
-=======
 #define __GXX_TYPEINFO_EQUALITY_INLINE 1
 #define CV_LOG2 0.69314718055994530941723212145818
 #define _GLIBCXX_PACKAGE_URL ""
@@ -912,15 +659,10 @@
 #define _GLIBCXX_HAVE_EOWNERDEAD 1
 #define __ULONGWORD_TYPE unsigned long int
 #define _GLIBCXX_HAVE_SYS_SOCKET_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
 #define CV_IS_SEQ_CHAIN_CONTOUR(seq) (CV_IS_SEQ_CHAIN( seq ) && CV_IS_SEQ_CLOSED( seq ))
 #define FD_ISSET(fd,fdsetp) __FD_ISSET (fd, fdsetp)
 #define _GLIBCXX_ATOMIC_BUILTINS 1
-<<<<<<< HEAD
-#define CLONE_PARENT_SETTID 0x00100000
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __REGISTER_PREFIX__ 
 #define __UINT16_MAX__ 0xffff
 #define CV_NEON 0
@@ -928,17 +670,10 @@
 #define CV_HAL_SVD_SHORT_UV 2
 #define CV_NODE_IS_USER(flags) (((flags) & CV_NODE_USER) != 0)
 #define CV_HAL_DFT_IS_INPLACE 1024
-<<<<<<< HEAD
-#define _STL_DEQUE_H 1
-#define __ASSERT_FUNCTION __extension__ __PRETTY_FUNCTION__
-#define CV_MAKE_TYPE CV_MAKETYPE
-#define __glibcxx_requires_non_empty_range(_First,_Last) 
-=======
 #define __ASSERT_FUNCTION __extension__ __PRETTY_FUNCTION__
 #define CV_MAKE_TYPE CV_MAKETYPE
 #define __glibcxx_requires_non_empty_range(_First,_Last) 
 #define CLONE_PARENT_SETTID 0x00100000
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ADJ_NANO 0x2000
 #define CLONE_CHILD_SETTID 0x01000000
 #define __USE_POSIX2 1
@@ -947,10 +682,6 @@
 #define CV_IS_SPARSE_HIST(hist) CV_IS_SPARSE_MAT((hist)->bins)
 #define _GLIBCXX_ABI_TAG_CXX11 __attribute ((__abi_tag__ ("cxx11")))
 #define _GLIBCXX_HAVE_ISWBLANK 1
-<<<<<<< HEAD
-#define CV_IS_MAT_CONST(mat) (((mat)->rows|(mat)->cols) == 1)
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __REDIRECT_LDBL(name,proto,alias) __REDIRECT (name, proto, alias)
 #define cvGetGraphVtx(graph,idx) (CvGraphVtx*)cvGetSetElem((CvSet*)(graph), (idx))
 #define CV_2PI 6.283185307179586476925286766559
@@ -958,14 +689,9 @@
 #define CPU_SET(cpu,cpusetp) __CPU_SET_S (cpu, sizeof (cpu_set_t), cpusetp)
 #define CV_EXPORTS_W_MAP CV_EXPORTS
 #define CHAR_MIN SCHAR_MIN
-<<<<<<< HEAD
-#define _POSIX_FD_SETSIZE _POSIX_OPEN_MAX
-#define __VERSION__ "7.4.0"
-=======
 #define _GLIBCXX_GCC_GTHR_POSIX_H 
 #define _POSIX_FD_SETSIZE _POSIX_OPEN_MAX
 #define __VERSION__ "9.2.1 20190821"
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define FP_LLOGB0 (-__FP_LONG_MAX - 1)
 #define CV_AUTO_STEP 0x7fffffff
 #define __IOV_MAX 1024
@@ -986,10 +712,7 @@
 #define CV_32FC4 CV_MAKETYPE(CV_32F,4)
 #define __cpp_decltype_auto 201304
 #define __cpp_lib_robust_nonmodifying_seq_ops 201304
-<<<<<<< HEAD
-=======
 #define _____fpos_t_defined 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_SET_MAGIC_VAL 0x42980000
 #define __W_EXITCODE(ret,sig) ((ret) << 8 | (sig))
 #define _GLIBCXX_HAS_NESTED_TYPE(_NTYPE) template<typename _Tp, typename = __void_t<>> struct __has_ ##_NTYPE : false_type { }; template<typename _Tp> struct __has_ ##_NTYPE<_Tp, __void_t<typename _Tp::_NTYPE>> : true_type { };
@@ -1001,21 +724,12 @@
 #define __FLT128_MAX_EXP__ 16384
 #define CV_FONT_HERSHEY_SCRIPT_SIMPLEX 6
 #define CPU_SET_S(cpu,setsize,cpusetp) __CPU_SET_S (cpu, setsize, cpusetp)
-<<<<<<< HEAD
-#define _GLIBCXX_BEGIN_NAMESPACE_CONTAINER _GLIBCXX_BEGIN_NAMESPACE_VERSION
-#define CV_Assert(expr) if(!!(expr)) ; else cv::error( cv::Error::StsAssert, #expr, CV_Func, __FILE__, __LINE__ )
-#define SCHED_ISO 4
-#define CV_AVX2 0
-#define HAVE_OPENCV_STRUCTURED_LIGHT 
-#define _BITS_G_CONFIG_H 1
-=======
 #define _GLIBCXX_BEGIN_NAMESPACE_CONTAINER 
 #define CV_Assert(expr) if(!!(expr)) ; else cv::error( cv::Error::StsAssert, #expr, CV_Func, __FILE__, __LINE__ )
 #define SCHED_ISO 4
 #define CV_AVX2 0
 #define cvMatMul(src1,src2,dst) cvMatMulAdd( (src1), (src2), NULL, (dst))
 #define HAVE_OPENCV_STRUCTURED_LIGHT 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_UTILITY 1
 #define _POSIX_STREAM_MAX 8
 #define __FLT32_MANT_DIG__ 24
@@ -1023,10 +737,6 @@
 #define _STL_HEAP_H 1
 #define SHRT_WIDTH 16
 #define __DECL_SIMD_expf128 
-<<<<<<< HEAD
-#define _IO_feof_unlocked(__fp) (((__fp)->_flags & _IO_EOF_SEEN) != 0)
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_LOG2Ef32x __f32x (1.442695040888963407359924681001892137)
 #define __SIZE_T__ 
 #define __stub_gtty 
@@ -1041,15 +751,9 @@
 #define __stub_sstk 
 #define PTHREAD_RWLOCK_WRITER_NONRECURSIVE_INITIALIZER_NP { { 0, 0, 0, 0, 0, 0, 0, 0, __PTHREAD_RWLOCK_ELISION_EXTRA, 0, PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP } }
 #define HAVE_OPENCV_SALIENCY 
-<<<<<<< HEAD
-#define __wur __attribute_warn_unused_result__
-#define NL_TEXTMAX INT_MAX
-#define __GLIBC_MINOR__ 27
-=======
 #define __wur 
 #define NL_TEXTMAX INT_MAX
 #define __GLIBC_MINOR__ 28
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_GRAPH_NEW_TREE 32
 #define OPENCV_OVX_HPP 
 #define PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP { { 0, 0, 0, 0, PTHREAD_MUTEX_RECURSIVE_NP, __PTHREAD_SPINS, { 0, 0 } } }
@@ -1104,10 +808,6 @@
 #define __cpp_digit_separators 201309
 #define __HAVE_DISTINCT_FLOAT128 1
 #define STA_INS 0x0010
-<<<<<<< HEAD
-#define CV_STORAGE_FORMAT_YAML 16
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define STA_MODE 0x4000
 #define CV_AA 16
 #define CV_SET_FIELDS() CV_SEQUENCE_FIELDS() CvSetElem* free_elems; int active_count;
@@ -1116,15 +816,8 @@
 #define _GLIBCXX_DEBUG_MACRO_SWITCH_H 1
 #define PTHREAD_ERRORCHECK_MUTEX_INITIALIZER_NP { { 0, 0, 0, 0, PTHREAD_MUTEX_ERRORCHECK_NP, __PTHREAD_SPINS, { 0, 0 } } }
 #define CV_IS_GRAPH_VERTEX_VISITED(vtx) (((CvGraphVtx*)(vtx))->flags & CV_GRAPH_ITEM_VISITED_FLAG)
-<<<<<<< HEAD
-#define __CV_BEGIN__ {
 #define CV_IS_SPARSE_MAT(mat) CV_IS_SPARSE_MAT_HDR(mat)
 #define __warnattr(msg) __attribute__((__warning__ (msg)))
-#define _IO_funlockfile(_fp) 
-=======
-#define CV_IS_SPARSE_MAT(mat) CV_IS_SPARSE_MAT_HDR(mat)
-#define __warnattr(msg) __attribute__((__warning__ (msg)))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define IOV_MAX __IOV_MAX
 #define _LOCALE_CLASSES_H 1
 #define CV_CPU_FMA3 12
@@ -1134,48 +827,29 @@
 #define INTPTR_MAX (9223372036854775807L)
 #define SCHED_RESET_ON_FORK 0x40000000
 #define __UINTMAX_C(c) c ## UL
-<<<<<<< HEAD
-#define minor(dev) __SYSMACROS_DM (minor) gnu_dev_minor (dev)
-=======
 #define _GLIBCXX_USE_LSTAT 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _POSIX_C_SOURCE 200809L
 #define _LOCALE_CLASSES_TCC 1
 #define IPL_DATA_ORDER_PIXEL 0
 #define PTHREAD_STACK_MIN 16384
 #define __SSE_MATH__ 1
 #define _GLIBCXX17_CONSTEXPR 
-<<<<<<< HEAD
-#define htobe32(x) __bswap_32 (x)
-=======
 #define _EXCEPTION_PTR_H 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_WRITE_SEQ_ELEM_VAR(elem_ptr,writer) { if( (writer).ptr >= (writer).block_max ) { cvCreateSeqBlock( &writer); } memcpy((writer).ptr, elem_ptr, (writer).seq->elem_size); (writer).ptr += (writer).seq->elem_size; }
 #define ENAVAIL 119
 #define __k8 1
 #define __LDBL_REDIR(name,proto) name proto
 #define _GLIBCXX_CXX_CONFIG_H 1
-<<<<<<< HEAD
-#define _G_HAVE_MREMAP 1
-#define M_SQRT1_2l 0.707106781186547524400844362104849039L
-#define _GLIBCXX_EXTERN_TEMPLATE 1
-#define ELOOP 40
-=======
 #define __GTHREAD_COND_INIT PTHREAD_COND_INITIALIZER
 #define M_SQRT1_2l 0.707106781186547524400844362104849039L
 #define _GLIBCXX_EXTERN_TEMPLATE 1
 #define __attribute_format_arg__(x) __attribute__ ((__format_arg__ (x)))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __cpp_constexpr 201304
 #define INT_LEAST64_MAX (__INT64_C(9223372036854775807))
 #define __DECL_SIMD_logf64 
 #define __GCC_ATOMIC_WCHAR_T_LOCK_FREE 2
 #define __cpp_sized_deallocation 201309
-<<<<<<< HEAD
-#define __bswap_constant_16(x) ((unsigned short int) ((((x) >> 8) & 0xff) | (((x) & 0xff) << 8)))
-=======
 #define __bswap_constant_16(x) ((__uint16_t) ((((x) >> 8) & 0xff) | (((x) & 0xff) << 8)))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_HAL_ERROR_NOT_IMPLEMENTED 1
 #define PTHREAD_ADAPTIVE_MUTEX_INITIALIZER_NP { { 0, 0, 0, 0, PTHREAD_MUTEX_ADAPTIVE_NP, __PTHREAD_SPINS, { 0, 0 } } }
 #define CV_ELEM_SIZE1(type) ((((sizeof(size_t)<<28)|0x8442211) >> CV_MAT_DEPTH(type)*4) & 15)
@@ -1186,12 +860,7 @@
 #define CV_CPU_AVX_512DQ 16
 #define __cpp_lib_allocator_traits_is_always_equal 201411
 #define CV_PCA_DATA_AS_COL 1
-<<<<<<< HEAD
-#define __bswap_constant_32(x) ((((x) & 0xff000000) >> 24) | (((x) & 0x00ff0000) >> 8) | (((x) & 0x0000ff00) << 8) | (((x) & 0x000000ff) << 24))
-#define _IO_FLAGS2_NOTCANCEL 2
-=======
 #define __bswap_constant_32(x) ((((x) & 0xff000000u) >> 24) | (((x) & 0x00ff0000u) >> 8) | (((x) & 0x0000ff00u) << 8) | (((x) & 0x000000ffu) << 24))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_IS_SEQ_CHAIN(seq) (CV_SEQ_KIND(seq) == CV_SEQ_KIND_CURVE && (seq)->elem_size == 1)
 #define _XOPEN_SOURCE_EXTENDED 1
 #define _VECTOR_TCC 1
@@ -1214,11 +883,7 @@
 #define __UWORD_TYPE unsigned long int
 #define DBL_MIN_10_EXP __DBL_MIN_10_EXP__
 #define __MATHDECL_VEC(type,function,suffix,args) __SIMD_DECL (__MATH_PRECNAME (function, suffix)) __MATHDECL(type, function,suffix, args)
-<<<<<<< HEAD
-#define __bswap_constant_64(x) (__extension__ ((((x) & 0xff00000000000000ull) >> 56) | (((x) & 0x00ff000000000000ull) >> 40) | (((x) & 0x0000ff0000000000ull) >> 24) | (((x) & 0x000000ff00000000ull) >> 8) | (((x) & 0x00000000ff000000ull) << 8) | (((x) & 0x0000000000ff0000ull) << 24) | (((x) & 0x000000000000ff00ull) << 40) | (((x) & 0x00000000000000ffull) << 56)))
-=======
 #define __bswap_constant_64(x) ((((x) & 0xff00000000000000ull) >> 56) | (((x) & 0x00ff000000000000ull) >> 40) | (((x) & 0x0000ff0000000000ull) >> 24) | (((x) & 0x000000ff00000000ull) >> 8) | (((x) & 0x00000000ff000000ull) << 8) | (((x) & 0x0000000000ff0000ull) << 24) | (((x) & 0x000000000000ff00ull) << 40) | (((x) & 0x00000000000000ffull) << 56))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT32X_MIN_EXP__ (-1021)
 #define __PTHREAD_RWLOCK_INT_FLAGS_SHARED 1
 #define CV_SEQ_ELTYPE_GRAPH_VERTEX 0
@@ -1226,19 +891,12 @@
 #define _GLIBCXX_SYNCHRONIZATION_HAPPENS_BEFORE(A) 
 #define strdupa(s) (__extension__ ({ const char *__old = (s); size_t __len = strlen (__old) + 1; char *__new = (char *) __builtin_alloca (__len); (char *) memcpy (__new, __old, __len); }))
 #define _MM_ROUND_DOWN 0x2000
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_BUILTIN_IS_CONSTANT_EVALUATED 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CPU_ZERO_S(setsize,cpusetp) __CPU_ZERO_S (setsize, cpusetp)
 #define __INT_FAST16_MAX__ 0x7fffffffffffffffL
 #define __timer_t_defined 1
 #define __WCLONE 0x80000000
 #define __DECL_SIMD_cosf16 
-<<<<<<< HEAD
-#define _GLIBCXX14_CONSTEXPR constexpr
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_sincosf128 
 #define _GLIBCXX_END_NAMESPACE_CXX11 }
 #define _GLIBCXX_ICONV_CONST 
@@ -1260,10 +918,6 @@
 #define _GLIBCXX_HAVE_FLOORL 1
 #define CV_EXPORTS_W_SIMPLE CV_EXPORTS
 #define __CV_EXIT__ goto exit
-<<<<<<< HEAD
-#define cvConvert(src,dst) cvConvertScale( (src), (dst), 1, 0 )
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __glibc_c99_flexarr_available 1
 #define __LONG_MAX__ 0x7fffffffffffffffL
 #define __WCHAR_T__ 
@@ -1272,16 +926,10 @@
 #define CV_STORAGE_FORMAT_MASK (7<<3)
 #define __DECL_SIMD_cosf64 
 #define _BITS_PTHREADTYPES_COMMON_H 1
-<<<<<<< HEAD
-#define CV_NODE_REF 4
-#define __UINT_FAST16_TYPE__ long unsigned int
-#define CV_FONT_VECTOR0 CV_FONT_HERSHEY_SIMPLEX
-=======
 #define CV_NODE_FLOW 8
 #define _GLIBCXX_CDTOR_CALLABI 
 #define CV_NODE_REF 4
 #define __UINT_FAST16_TYPE__ long unsigned int
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define linux 1
 #define _MEMORYFWD_H 1
 #define CV_FONT_HERSHEY_SIMPLEX 0
@@ -1291,10 +939,7 @@
 #define CV_SSE4_2 0
 #define _GLIBCXX_BITS_STD_ABS_H 
 #define __glibcxx_signed_b(T,B) ((T)(-1) < 0)
-<<<<<<< HEAD
-=======
 #define CV_NODE_INTEGER CV_NODE_INT
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EXPR_NEST_MAX _POSIX2_EXPR_NEST_MAX
 #define _STRINGS_H 1
 #define _VA_LIST_DEFINED 
@@ -1305,30 +950,18 @@
 #define pthread_cleanup_pop(execute) __clframe.__setdoit (execute); } while (0)
 #define __DEC64_MANT_DIG__ 16
 #define UINT64_WIDTH 64
-<<<<<<< HEAD
-#define CV_NODE_USER 16
-#define __INT64_MAX__ 0x7fffffffffffffffL
-=======
 #define __INT64_MAX__ 0x7fffffffffffffffL
 #define CV_HAL_DFT_REAL_OUTPUT 32
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EDEADLK 35
 #define HAVE_OPENCV_XOBJDETECT 
 #define _GLIBCXX_MANGLE_SIZE_T m
 #define M_2_PIf64x __f64x (0.636619772367581343075535053490057448)
-<<<<<<< HEAD
-=======
 #define ELOOP 40
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __CORRECT_ISO_CPP_STRINGS_H_PROTO 
 #define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
 #define __FSID_T_TYPE struct { int __val[2]; }
 #define __SIG_ATOMIC_WIDTH__ 32
-<<<<<<< HEAD
-#define _GLIBCXX_RELEASE 7
-=======
 #define _GLIBCXX_RELEASE 9
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __INT_LEAST64_TYPE__ long int
 #define htole16(x) __uint16_identity (x)
 #define _GLIBCXX_HAVE_FCNTL_H 1
@@ -1338,18 +971,10 @@
 #define ADJ_SETOFFSET 0x0100
 #define cvGraphEdgeIdx(graph,edge) ((edge)->flags & CV_SET_ELEM_IDX_MASK)
 #define htole32(x) __uint32_identity (x)
-<<<<<<< HEAD
-#define FLT_EPSILON __FLT_EPSILON__
-#define __INTPTR_MAX__ 0x7fffffffffffffffL
-#define XATTR_NAME_MAX 255
-#define CV_LKFLOW_PYR_A_READY 1
-#define _OLD_STDIO_MAGIC 0xFABC0000
-=======
 #define __INTPTR_MAX__ 0x7fffffffffffffffL
 #define XATTR_NAME_MAX 255
 #define CV_LKFLOW_PYR_A_READY 1
 #define FLT_EPSILON __FLT_EPSILON__
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_CFLOAT 1
 #define __iscanonicalf128(x) ((void) (__typeof (x)) (x), 1)
 #define CSIGNAL 0x000000ff
@@ -1360,16 +985,8 @@
 #define __cpp_range_based_for 200907
 #define INT_FAST64_MIN (-__INT64_C(9223372036854775807)-1)
 #define cvInvSqrt(value) ((float)(1./sqrt(value)))
-<<<<<<< HEAD
-#define ____FILE_defined 1
 #define _IOLBF 1
 #define htole64(x) __uint64_identity (x)
-#define _IO_stdout ((_IO_FILE*)(&_IO_2_1_stdout_))
-#define _IO_UPPERCASE 01000
-=======
-#define _IOLBF 1
-#define htole64(x) __uint64_identity (x)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_LOG10Ef128 __f128 (0.434294481903251827651128918916605082)
 #define WIFSIGNALED(status) __WIFSIGNALED (status)
 #define MOD_ESTERROR ADJ_ESTERROR
@@ -1385,10 +1002,6 @@
 #define _GLIBCXX_NUMERIC_LIMITS 1
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DBL_HAS_QUIET_NAN__ 1
-<<<<<<< HEAD
-#define _IO_BAD_SEEN 0x4000
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT64X_MAX__ 1.18973149535723176502126385303097021e+4932F64x
 #define CLOCK_BOOTTIME_ALARM 9
 #define UINT_WIDTH 32
@@ -1399,20 +1012,12 @@
 #define __MATHCALL_VEC(function,suffix,args) __SIMD_DECL (__MATH_PRECNAME (function, suffix)) __MATHCALL (function, suffix, args)
 #define ESOCKTNOSUPPORT 94
 #define __WCHAR_TYPE__ int
-<<<<<<< HEAD
-#define _IO_uid_t __uid_t
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define MAX(a,b) ((a) < (b) ? (b) : (a))
 #define LC_ALL __LC_ALL
 #define _GLIBCXX_PACKAGE_TARNAME "libstdc++"
 #define CV_PCA_DATA_AS_ROW 0
 #define IPL_ALIGN_4BYTES 4
 #define LITTLE_ENDIAN __LITTLE_ENDIAN
-<<<<<<< HEAD
-#define __HAVE_COLUMN 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define OPENCV_PHOTO_C_H 
 #define _GLIBCXX_X86_RDRAND 1
 #define CV_SSE 1
@@ -1426,15 +1031,6 @@
 #define _GLIBCXX_USE_C99 1
 #define _GLIBCXX_DEFAULT_ABI_TAG _GLIBCXX_ABI_TAG_CXX11
 #define CV_COVAR_SCALE 4
-<<<<<<< HEAD
-#define __INT_FAST64_MAX__ 0x7fffffffffffffffL
-#define CLONE_NEWIPC 0x08000000
-#define CV_STORAGE_FORMAT_JSON 24
-#define BUFSIZ _IO_BUFSIZ
-#define M_SQRT2l 1.414213562373095048801688724209698079L
-#define _GLIBCXX_HAVE_EIDRM 1
-#define _WCTYPE_H 1
-=======
 #define __USE_POSIX 1
 #define __INT_FAST64_MAX__ 0x7fffffffffffffffL
 #define CLONE_NEWIPC 0x08000000
@@ -1442,7 +1038,6 @@
 #define BUFSIZ 8192
 #define M_SQRT2l 1.414213562373095048801688724209698079L
 #define _GLIBCXX_HAVE_EIDRM 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_SYMVER 1
 #define __PTHREAD_COMPAT_PADDING_MID 
 #define __FLT_MAX_10_EXP__ 38
@@ -1450,10 +1045,6 @@
 #define _OSTREAM_TCC 1
 #define CV_IS_MATND_HDR(mat) ((mat) != NULL && (((const CvMatND*)(mat))->type & CV_MAGIC_MASK) == CV_MATND_MAGIC_VAL)
 #define CLONE_UNTRACED 0x00800000
-<<<<<<< HEAD
-#define _IO_putc_unlocked(_ch,_fp) (_IO_BE ((_fp)->_IO_write_ptr >= (_fp)->_IO_write_end, 0) ? __overflow (_fp, (unsigned char) (_ch)) : (unsigned char) (*(_fp)->_IO_write_ptr++ = (_ch)))
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define WNOWAIT 0x01000000
 #define M_LN10 2.30258509299404568402
 #define _GLIBCXX_HAVE_STRTOF 1
@@ -1462,10 +1053,7 @@
 #define __glibcxx_requires_partitioned_upper_pred(_First,_Last,_Value,_Pred) 
 #define __amd64 1
 #define HAVE_OPENCV_CORE 
-<<<<<<< HEAD
-=======
 #define ____FILE_defined 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __LC_COLLATE 3
 #define CV_MINMAX 32
 #define M_LN2l 0.693147180559945309417232121458176568L
@@ -1481,18 +1069,11 @@
 #define LDBL_MAX_10_EXP __LDBL_MAX_10_EXP__
 #define _GLIBCXX_HAVE_STRXFRM_L 1
 #define cvZero cvSetZero
-<<<<<<< HEAD
-#define CV_NODE_MAP 6
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __gid_t_defined 
 #define LC_GLOBAL_LOCALE ((locale_t) -1L)
 #define _GLIBCXX_HAVE_STDINT_H 1
 #define _GLIBCXX_HAVE_ENOTRECOVERABLE 1
-<<<<<<< HEAD
-=======
 #define __CV_BEGIN__ {
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __ptr_t void *
 #define __DBL_MANT_DIG__ 53
 #define ___int_size_t_h 
@@ -1503,13 +1084,8 @@
 #define _GLIBCXX_HAVE_DIRENT_H 1
 #define _GLIBCXX_DEBUG_PEDASSERT(_Condition) 
 #define __iscanonical(x) ((void) (__typeof (x)) (x), 1)
-<<<<<<< HEAD
-#define _POSIX_SEM_VALUE_MAX 32767
-#define _GLIBCXX11_USE_C99_WCHAR 1
-=======
 #define CV_CPU_AVX2 11
 #define _POSIX_SEM_VALUE_MAX 32767
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __UINT_LEAST32_TYPE__ unsigned int
 #define ADJ_OFFSET_SS_READ 0xa001
 #define __SSE__ 1
@@ -1526,12 +1102,6 @@
 #define __DECL_SIMD_log 
 #define stdout stdout
 #define __WINT_WIDTH__ 32
-<<<<<<< HEAD
-#define CV_FONT_HERSHEY_SCRIPT_COMPLEX 7
-#define CPU_CLR(cpu,cpusetp) __CPU_CLR_S (cpu, sizeof (cpu_set_t), cpusetp)
-#define __INT_LEAST8_MAX__ 0x7f
-#define OPENCV_HAL_NEON_UTILS_HPP 
-=======
 #define __struct_FILE_defined 1
 #define CV_FONT_HERSHEY_SCRIPT_COMPLEX 7
 #define CPU_CLR(cpu,cpusetp) __CPU_CLR_S (cpu, sizeof (cpu_set_t), cpusetp)
@@ -1539,24 +1109,16 @@
 #define __INT_LEAST8_MAX__ 0x7f
 #define OPENCV_HAL_NEON_UTILS_HPP 
 #define CV_HAAR_FEATURE_MAX 3
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT32X_MAX_10_EXP__ 308
 #define CV_SVD_SYM 2
 #define ____mbstate_t_defined 1
 #define ADJ_STATUS 0x0010
 #define STA_NANO 0x2000
-<<<<<<< HEAD
-#define CV_BACK 0
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CPU_ISSET_S(cpu,setsize,cpusetp) __CPU_ISSET_S (cpu, setsize, cpusetp)
 #define _GLIBCXX_RANGE_ACCESS_H 1
 #define CV_CURRENT_POINT(reader) (*((CvPoint*)((reader).ptr)))
 #define EMSGSIZE 90
-<<<<<<< HEAD
-=======
 #define __HAVE_FLOAT128_UNLIKE_LDBL (__HAVE_DISTINCT_FLOAT128 && __LDBL_MANT_DIG__ != 113)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _ANSI_STDDEF_H 
 #define __FLT128_MIN__ 3.36210314311209350626267781732175260e-4932F128
 #define _SIZET_ 
@@ -1567,19 +1129,12 @@
 #define _GLIBCXX_HAVE_CEILL 1
 #define EFBIG 27
 #define __FLT64_MAX_EXP__ 1024
-<<<<<<< HEAD
-=======
 #define __cookie_io_functions_t_defined 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define MOD_MAXERROR ADJ_MAXERROR
 #define __stub_stty 
 #define cvReshapeND(arr,header,new_cn,new_dims,new_sizes) cvReshapeMatND( (arr), sizeof(*(header)), (header), (new_cn), (new_dims), (new_sizes))
 #define CV_STORAGE_WRITE_BINARY CV_STORAGE_WRITE
 #define CV_IMAX(a,b) ((a) ^ (((a)^(b)) & (((a) > (b)) - 1)))
-<<<<<<< HEAD
-#define CV_SEQUENCE_FIELDS() CV_TREE_NODE_FIELDS(CvSeq); int total; int elem_size; schar* block_max; schar* ptr; int delta_elems; CvMemStorage* storage; CvSeqBlock* free_blocks; CvSeqBlock* first;
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_GRAPH_FLAG_ORIENTED (1 << CV_SEQ_FLAG_SHIFT)
 #define _PTHREAD_H 1
 #define cvKalmanUpdateByMeasurement cvKalmanCorrect
@@ -1592,18 +1147,12 @@
 #define HAVE_OPENCV_BIOINSPIRED 
 #define _GLIBCXX_READ_MEM_BARRIER __atomic_thread_fence (__ATOMIC_ACQUIRE)
 #define EHOSTDOWN 112
-<<<<<<< HEAD
-#define MB_CUR_MAX (__ctype_get_mb_cur_max ())
-#define __FLT128_HAS_QUIET_NAN__ 1
-#define CV_IS_SUBDIV2D(seq) (CV_IS_SET(seq) && CV_SEQ_KIND((CvSet*)(seq)) == CV_SEQ_KIND_SUBDIV2D)
-=======
 #define __BYTE_ORDER__ __ORDER_LITTLE_ENDIAN__
 #define _GTHREAD_USE_MUTEX_TIMEDLOCK 1
 #define MB_CUR_MAX (__ctype_get_mb_cur_max ())
 #define __FLT128_HAS_QUIET_NAN__ 1
 #define CV_IS_SUBDIV2D(seq) (CV_IS_SET(seq) && CV_SEQ_KIND((CvSet*)(seq)) == CV_SEQ_KIND_SUBDIV2D)
 #define _GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_SEQ_POLYLINE (CV_SEQ_KIND_CURVE | CV_SEQ_ELTYPE_POINT)
 #define __cpp_alias_templates 200704
 #define __PID_T_TYPE __S32_TYPE
@@ -1623,27 +1172,11 @@
 #define _POSIX_UIO_MAXIOV 16
 #define P_tmpdir "/tmp"
 #define M_SQRT1_2f128 __f128 (0.707106781186547524400844362104849039)
-<<<<<<< HEAD
-#define __DECL_SIMD_sinf16 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _MM_FLUSH_ZERO_ON 0x8000
 #define __WORDSIZE_TIME64_COMPAT32 1
 #define INT_WIDTH 32
 #define ESRMNT 69
 #define __FLT32_EPSILON__ 1.19209289550781250000000000000000000e-7F32
-<<<<<<< HEAD
-#define _IO_stdin ((_IO_FILE*)(&_IO_2_1_stdin_))
-#define INTMAX_MAX (__INT64_C(9223372036854775807))
-#define _MM_EXCEPT_INVALID 0x0001
-#define M_1_PIf32 __f32 (0.318309886183790671537767526745028724)
-#define _IO_cleanup_region_start(_fct,_fp) 
-#define __gthrw_pragma(pragma) 
-#define _GLIBCXX_HAVE_AS_SYMVER_DIRECTIVE 1
-#define __DECL_SIMD_sinf 
-#define PTHREAD_ONCE_INIT 0
-#define _IO_DEC 020
-=======
 #define INTMAX_MAX (__INT64_C(9223372036854775807))
 #define _MM_EXCEPT_INVALID 0x0001
 #define M_1_PIf32 __f32 (0.318309886183790671537767526745028724)
@@ -1652,23 +1185,16 @@
 #define _GLIBCXX_HAVE_AS_SYMVER_DIRECTIVE 1
 #define __DECL_SIMD_sinf 
 #define PTHREAD_ONCE_INIT 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_IMIN(a,b) ((a) ^ (((a)^(b)) & (((a) < (b)) - 1)))
 #define __DECL_SIMD_sincosl 
 #define DBL_MAX_10_EXP __DBL_MAX_10_EXP__
 #define M_Ef64 __f64 (2.718281828459045235360287471352662498)
 #define _POSIX_MQ_PRIO_MAX 32
 #define __DEC_EVAL_METHOD__ 2
-<<<<<<< HEAD
-#define _SIZE_T 
-#define ENOANO 55
-#define _IO_ERR_SEEN 0x20
-=======
 #define ECONNABORTED 103
 #define _SIZE_T 
 #define ENOANO 55
 #define _IO_ERR_SEEN 0x0020
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_sinf32 
 #define INT_LEAST64_WIDTH 64
 #define FP_INT_DOWNWARD 1
@@ -1678,26 +1204,16 @@
 #define LC_ADDRESS_MASK (1 << __LC_ADDRESS)
 #define __W_STOPCODE(sig) ((sig) << 8 | 0x7f)
 #define UINT16_MAX (65535)
-<<<<<<< HEAD
-#define _IO_STDIO 040000
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_1_PIf64x __f64x (0.318309886183790671537767526745028724)
 #define M_LOG10E 0.43429448190325182765
 #define __glibcxx_requires_string(_String) 
 #define CV_NODE_FLOAT CV_NODE_REAL
-<<<<<<< HEAD
-#define OPENCV_IMGPROC_TYPES_C_H 
-#define CV_ARE_SIZES_EQ(mat1,mat2) ((mat1)->rows == (mat2)->rows && (mat1)->cols == (mat2)->cols)
-#define CV_TYPE_NAME_GRAPH "opencv-graph"
-=======
 #define _BITS_TYPES_STRUCT_SCHED_PARAM 1
 #define OPENCV_IMGPROC_TYPES_C_H 
 #define _GLIBCXX_HAVE_LDEXPL 1
 #define CV_ARE_SIZES_EQ(mat1,mat2) ((mat1)->rows == (mat2)->rows && (mat1)->cols == (mat2)->cols)
 #define CV_TYPE_NAME_GRAPH "opencv-graph"
 #define _STRUCT_TIMESPEC 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_sinf64 
 #define __DECL_SIMD_sincosf128x 
 #define cvDrawEllipse cvEllipse
@@ -1708,17 +1224,8 @@
 #define _GLIBCXX_USE_SCHED_YIELD 1
 #define PTHREAD_SCOPE_SYSTEM PTHREAD_SCOPE_SYSTEM
 #define CV_FUNCNAME(Name) static char cvFuncName[] = Name
-<<<<<<< HEAD
-#define _GLIBCXX_GCC_GTHR_POSIX_H 
-#define _IO_BUFSIZ _G_BUFSIZ
 #define CV_COVAR_COLS 16
 #define CV_IMPL CV_EXTERN_C
-#define _IO_DELETE_DONT_CLOSE 0x40
-#define CV_GRAPH_ALL_ITEMS -1
-=======
-#define CV_COVAR_COLS 16
-#define CV_IMPL CV_EXTERN_C
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __ATOMIC_RELEASE 3
 #define INTMAX_MIN (-__INT64_C(9223372036854775807)-1)
 #define CPU_OR(destset,srcset1,srcset2) __CPU_OP_S (sizeof (cpu_set_t), destset, srcset1, srcset2, |)
@@ -1729,10 +1236,7 @@
 #define CPU_EQUAL_S(setsize,cpusetp1,cpusetp2) __CPU_EQUAL_S (setsize, cpusetp1, cpusetp2)
 #define _MM_ROUND_TOWARD_ZERO 0x6000
 #define __PIC__ 2
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_EXECINFO_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_EXCEPTION_PTR_SINCE_GCC46 1
 #define CV_SEQ_FLAG_SIMPLE (0 << CV_SEQ_FLAG_SHIFT)
 #define PTHREAD_EXPLICIT_SCHED PTHREAD_EXPLICIT_SCHED
@@ -1741,15 +1245,6 @@
 #define _CONCEPT_CHECK_H 1
 #define __FLT_MAX__ 3.40282346638528859811704183484516925e+38F
 #define CV_CONTOUR_FIELDS() CV_SEQUENCE_FIELDS() CvRect rect; int color; int reserved[3];
-<<<<<<< HEAD
-#define M_Ef32x __f32x (2.718281828459045235360287471352662498)
-#define __fsfilcnt_t_defined 
-#define _IO_SHOWPOS 02000
-#define CV_DIFF_L2 (CV_DIFF | CV_L2)
-#define ENOTSUP EOPNOTSUPP
-#define _GLIBCXX98_USE_C99_STDIO 1
-#define CV_XADD(addr,delta) (int)__atomic_fetch_add((unsigned*)(addr), (unsigned)(delta), __ATOMIC_ACQ_REL)
-=======
 #define _GLIBCXX_HAVE_NETINET_IN_H 1
 #define M_Ef32x __f32x (2.718281828459045235360287471352662498)
 #define __fsfilcnt_t_defined 
@@ -1757,7 +1252,6 @@
 #define _GLIBCXX98_USE_C99_STDIO 1
 #define CV_XADD(addr,delta) (int)__atomic_fetch_add((unsigned*)(addr), (unsigned)(delta), __ATOMIC_ACQ_REL)
 #define CV_NODE_MAP 6
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __SSE2__ 1
 #define CV_FONT_ITALIC 16
 #define _MM_EXCEPT_OVERFLOW 0x0008
@@ -1770,10 +1264,6 @@
 #define __INT_LEAST32_WIDTH__ 32
 #define __SWORD_TYPE long int
 #define IPL_BORDER_REFLECT_101 4
-<<<<<<< HEAD
-#define cvMatMul(src1,src2,dst) cvMatMulAdd( (src1), (src2), NULL, (dst))
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EL3HLT 46
 #define __PTHREAD_SPINS 0, 0
 #define _BITS_POSIX1_LIM_H 1
@@ -1789,26 +1279,17 @@
 #define __GTHREAD_ONCE_INIT PTHREAD_ONCE_INIT
 #define __FLT32X_HAS_QUIET_NAN__ 1
 #define CV_SEQ_KIND_GRAPH (1 << CV_SEQ_ELTYPE_BITS)
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_CSTDINT 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __GLIBCXX_TYPE_INT_N_0 __int128
 #define __INT_FAST16_WIDTH__ 64
 #define _GLIBCXX_USE_INT128 1
 #define _GLIBCXX_MAKE_MOVE_ITERATOR(_Iter) std::make_move_iterator(_Iter)
-<<<<<<< HEAD
-#define ELIBBAD 80
-#define ESTRPIPE 86
-#define __glibc_clang_prereq(maj,min) 0
-=======
 #define CV_STORAGE_FORMAT_YAML 16
 #define ELIBBAD 80
 #define __getc_unlocked_body(_fp) (__glibc_unlikely ((_fp)->_IO_read_ptr >= (_fp)->_IO_read_end) ? __uflow (_fp) : *(unsigned char *) (_fp)->_IO_read_ptr++)
 #define ESTRPIPE 86
 #define __glibc_clang_prereq(maj,min) 0
 #define _GLIBCXX17_DEPRECATED 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ECONNREFUSED 111
 #define _XOPEN_LIM_H 1
 #define _ASM_GENERIC_ERRNO_H 
@@ -1834,10 +1315,6 @@
 #define __LC_IDENTIFICATION 12
 #define EL2NSYNC 45
 #define CV_IMAGE_ELEM(image,elemtype,row,col) (((elemtype*)((image)->imageData + (image)->widthStep*(row)))[(col)])
-<<<<<<< HEAD
-#define _G_IO_IO_FILE_VERSION 0x20001
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_8UC2 CV_MAKETYPE(CV_8U,2)
 #define CV_8UC3 CV_MAKETYPE(CV_8U,3)
 #define CV_8UC4 CV_MAKETYPE(CV_8U,4)
@@ -1849,10 +1326,6 @@
 #define ENOPKG 65
 #define CV_GRAPH_OVER -1
 #define __CLOCK_T_TYPE __SYSCALL_SLONG_TYPE
-<<<<<<< HEAD
-#define _IO_fpos64_t _G_fpos64_t
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __throw_exception_again throw
 #define BC_STRING_MAX _POSIX2_BC_STRING_MAX
 #define STA_PLL 0x0001
@@ -1867,73 +1340,33 @@
 #define CV_VERSION_REVISION 0
 #define __GTHREAD_MUTEX_INIT_FUNCTION __gthread_mutex_init_function
 #define _GLIBCXX_ERROR_CONSTANTS 1
-<<<<<<< HEAD
-#define _IO_wint_t wint_t
-=======
 #define CV_SEQ_KIND_CURVE (1 << CV_SEQ_ELTYPE_BITS)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_VERBOSE 1
 #define _GLIBCXX_NOTHROW _GLIBCXX_USE_NOEXCEPT
 #define _GLIBCXX_HAVE_ISINFF 1
 #define __cpp_user_defined_literals 200809
 #define _GLIBCXX_HAVE_ISINFL 1
 #define __USE_ATFILE 1
-<<<<<<< HEAD
-#define EROFS 30
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_NORETURN __attribute__((__noreturn__))
 #define __FLT128_DECIMAL_DIG__ 36
 #define CV_NODE_TYPE_MASK 7
 #define ENOTUNIQ 76
 #define CV_NODE_REAL 2
 #define CV_SEQ_KIND_SUBDIV2D (2 << CV_SEQ_ELTYPE_BITS)
-<<<<<<< HEAD
-#define __FLT_DECIMAL_DIG__ 9
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _CXXABI_INIT_EXCEPTION_H 1
 #define __UINT64_TYPE__ long unsigned int
 #define CV_RAND_UNI 0
 #define __glibcxx_requires_nonempty() 
-<<<<<<< HEAD
-#define _IO_NO_READS 4
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define BC_BASE_MAX _POSIX2_BC_BASE_MAX
 #define CV_CPU_AVX_512CD 15
 #define _GLIBCXX_HAVE_ECHILD 1
 #define CV_SEQ_CHAIN_CONTOUR (CV_SEQ_FLAG_CLOSED | CV_SEQ_CHAIN)
-<<<<<<< HEAD
-#define __glibc_likely(cond) __builtin_expect ((cond), 1)
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __GLIBC_FLT_EVAL_METHOD __FLT_EVAL_METHOD__
 #define __UINT_FAST8_TYPE__ unsigned char
 #define EOPNOTSUPP 95
 #define _GNU_SOURCE 1
 #define __N(msgid) (msgid)
 #define __P(args) args
-<<<<<<< HEAD
-#define __ATOMIC_ACQ_REL 4
-#define M_2_SQRTPIf128 __f128 (1.128379167095512573896158903121545172)
-#define __U32_TYPE unsigned int
-#define _GLIBCXX_HAVE_EXECINFO_H 1
-#define CV_NODE_IS_INT(flags) (CV_NODE_TYPE(flags) == CV_NODE_INT)
-#define _STDLIB_H 1
-#define _EXCEPTION_PTR_H 
-#define _GLIBCXX98_USE_C99_MATH 1
-#define _GLIBCXX_HAVE_SYS_SDT_H 1
-#define M_PIl 3.141592653589793238462643383279502884L
-#define _IO_CURRENTLY_PUTTING 0x800
-#define _BITS_FLOATN_COMMON_H 
-#define __STDC__ 1
-#define _IO_peekc_unlocked(_fp) (_IO_BE ((_fp)->_IO_read_ptr >= (_fp)->_IO_read_end, 0) && __underflow (_fp) == EOF ? EOF : *(unsigned char *) (_fp)->_IO_read_ptr)
-#define _STL_PAIR_H 1
-#define CV_MAT_MAGIC_VAL 0x42420000
-#define __FLT32X_MAX_EXP__ 1024
-#define ____sigset_t_defined 
-=======
 #define CV_DIFF_L2 (CV_DIFF | CV_L2)
 #define __ATOMIC_ACQ_REL 4
 #define M_2_SQRTPIf128 __f128 (1.128379167095512573896158903121545172)
@@ -1947,7 +1380,6 @@
 #define _STL_PAIR_H 1
 #define CV_MAT_MAGIC_VAL 0x42420000
 #define __FLT32X_MAX_EXP__ 1024
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_64FC1 CV_MAKETYPE(CV_64F,1)
 #define CV_64FC2 CV_MAKETYPE(CV_64F,2)
 #define CV_64FC3 CV_MAKETYPE(CV_64F,3)
@@ -1957,10 +1389,6 @@
 #define CV_NODE_STR 3
 #define M_PI_2 1.57079632679489661923
 #define _PTRDIFF_T_ 
-<<<<<<< HEAD
-#define M_PI_4 0.78539816339744830962
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_ErrorNoReturn(code,msg) cv::errorNoReturn( code, msg, CV_Func, __FILE__, __LINE__ )
 #define OPENCV_CORE_MAT_HPP 
 #define M_PI_2f32 __f32 (1.570796326794896619231321691639751442)
@@ -1970,10 +1398,6 @@
 #define _POSIX2_BC_SCALE_MAX 99
 #define _GLIBCXX_MOVE_BACKWARD3(_Tp,_Up,_Vp) std::move_backward(_Tp, _Up, _Vp)
 #define CV_STORAGE_FORMAT_XML 8
-<<<<<<< HEAD
-#define MOD_CLKA ADJ_OFFSET_SINGLESHOT
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT_MIN__ 1.17549435082228750796873653722224568e-38F
 #define __GCC_IEC_559_COMPLEX 2
 #define CV_CHECK_QUIET 2
@@ -1984,27 +1408,15 @@
 #define __uid_t_defined 
 #define M_PIf32x __f32x (3.141592653589793238462643383279502884)
 #define __cpp_aggregate_nsdmi 201304
-<<<<<<< HEAD
-#define __bswap_16(x) (__extension__ ({ unsigned short int __v, __x = (unsigned short int) (x); if (__builtin_constant_p (__x)) __v = __bswap_constant_16 (__x); else __asm__ ("rorw $8, %w0" : "=r" (__v) : "0" (__x) : "cc"); __v; }))
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __UINT_LEAST8_TYPE__ unsigned char
 #define __SIZEOF_FLOAT80__ 16
 #define cvDrawCircle cvCircle
 #define EUNATCH 49
-<<<<<<< HEAD
-#define CV_64F 6
-=======
 #define _GLIBCXX_HAVE_TANHF 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define INT_LEAST16_MIN (-32767-1)
 #define __flexarr []
 #define _STL_UNINITIALIZED_H 1
 #define M_PI_2f64 __f64 (1.570796326794896619231321691639751442)
-<<<<<<< HEAD
-#define _IO_FLAGS2_USER_WBUF 8
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _SCHED_H 1
 #define _BITS_SETJMP_H 1
 #define _MM_MASK_MASK 0x1f80
@@ -2012,10 +1424,6 @@
 #define __SIZEOF_SIZE_T__ 8
 #define __INTMAX_C(c) c ## L
 #define PTHREAD_SCOPE_PROCESS PTHREAD_SCOPE_PROCESS
-<<<<<<< HEAD
-#define _GLIBCXX_HAVE_LDEXPL 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define PTHREAD_CANCELED ((void *) -1)
 #define M_PI_4f128 __f128 (0.785398163397448309615660845819875721)
 #define _BITS_TIME_H 1
@@ -2024,36 +1432,23 @@
 #define _GLIBCXX_TXN_SAFE_DYN 
 #define __FSWORD_T_TYPE __SYSCALL_SLONG_TYPE
 #define FP_NAN 0
-<<<<<<< HEAD
-#define makedev(maj,min) __SYSMACROS_DM (makedev) gnu_dev_makedev (maj, min)
 #define __WCHAR_MAX__ 0x7fffffff
 #define EAFNOSUPPORT 97
-#define _BITS_LIBIO_H 1
-=======
-#define __WCHAR_MAX__ 0x7fffffff
-#define EAFNOSUPPORT 97
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _STDDEF_H_ 
 #define CV_HAL_DFT_STAGE_COLS 128
 #define __UINT8_MAX__ 0xff
 #define IPL_ORIGIN_BL 1
 #define IPL_IMAGE_MAGIC_VAL ((int)sizeof(IplImage))
 #define _IOS_BASE_H 1
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_SOCKATMARK 1
 #define __feof_unlocked_body(_fp) (((_fp)->_flags & _IO_EOF_SEEN) != 0)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_CPU_AVX_512PF 19
 #define INT16_C(c) c
 #define __WINT_MAX__ 0xffffffffU
 #define __sigset_t_defined 1
 #define __SIZEOF_PTHREAD_ATTR_T 56
-<<<<<<< HEAD
-=======
 #define CV_BACK 0
 #define UINT32_C(c) c ## U
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT32_MIN_EXP__ (-125)
 #define __INT_FAST8_WIDTH__ 8
 #define INT8_MAX (127)
@@ -2063,20 +1458,12 @@
 #define MQ_PRIO_MAX 32768
 #define CV_PCA_USE_AVG 2
 #define M_LN10f128 __f128 (2.302585092994045684017991454684364208)
-<<<<<<< HEAD
-#define OPENCV_IMGPROC_IMGPROC_C_H 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _XOPEN_SOURCE 700
 #define _POSIX2_BC_DIM_MAX 2048
 #define UINT_LEAST32_WIDTH 32
 #define EILSEQ 84
 #define ESPIPE 29
-<<<<<<< HEAD
-#define __GLIBCXX__ 20181206
-=======
 #define __GLIBCXX__ 20190821
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define INT64_C(c) c ## L
 #define _POSIX_TTY_NAME_MAX 9
 #define _GLIBCXX_USE_WEAK_REF __GXX_WEAK__
@@ -2101,11 +1488,8 @@
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 1
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 1
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 1
-<<<<<<< HEAD
-=======
 #define M_PI_4f32 __f32 (0.785398163397448309615660845819875721)
 #define _POSIX_SYMLINK_MAX 255
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ADJ_ESTERROR 0x0008
 #define EHOSTUNREACH 113
 #define __GCC_ATOMIC_CHAR_LOCK_FREE 2
@@ -2127,10 +1511,6 @@
 #define __FLT64_DECIMAL_DIG__ 17
 #define _WINT_T 1
 #define _GLIBCXX_SYNCHRONIZATION_HAPPENS_AFTER(A) 
-<<<<<<< HEAD
-#define _G_HAVE_ST_BLKSIZE defined (_STATBUF_ST_BLKSIZE)
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __stub_setlogin 
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define _POSIX_DELAYTIMER_MAX 32
@@ -2143,11 +1523,7 @@
 #define XATTR_SIZE_MAX 65536
 #define __cpp_variadic_templates 200704
 #define _GLIBCXX_HAVE_CDTOR_CALLABI 0
-<<<<<<< HEAD
-#define __attribute_nonstring__ 
-=======
 #define __attribute_nonstring__ __attribute__ ((__nonstring__))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_sinf128 
 #define EOWNERDEAD 130
 #define OPENCV_ASSERT(expr,func,context) {if (! (expr)) {OPENCV_ERROR(CV_StsInternal,(func),(context));}}
@@ -2183,10 +1559,6 @@
 #define cvInv cvInvert
 #define ECANCELED 125
 #define _GLIBCXX_BEGIN_NAMESPACE_VERSION 
-<<<<<<< HEAD
-#define _IO_pid_t __pid_t
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __LDBL_REDIR1(name,proto,alias) name proto
 #define __GCC_ATOMIC_TEST_AND_SET_TRUEVAL 1
 #define __size_t 
@@ -2208,16 +1580,10 @@
 #define WCHAR_MAX __WCHAR_MAX
 #define __DECL_SIMD_expf16 
 #define _GLIBCXX_HAVE_COSHF 1
-<<<<<<< HEAD
-#define _GLIBCXX_HAVE_COSHL 1
-#define __FLT64_MANT_DIG__ 53
-#define _IO_FLAGS2_MMAP 1
-=======
 #define _STL_DEQUE_H 1
 #define _GLIBCXX_HAVE_COSHL 1
 #define __FLT64_MANT_DIG__ 53
 #define __STDC__ 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_EXPORTS_AS(synonym) CV_EXPORTS
 #define CV_CPU_SSE 2
 #define htobe16(x) __bswap_16 (x)
@@ -2228,10 +1594,6 @@
 #define __LDBL_MAX__ 1.18973149535723176502126385303097021e+4932L
 #define _GLIBCXX_USE_C99_COMPLEX _GLIBCXX11_USE_C99_COMPLEX
 #define _STREAMBUF_TCC 1
-<<<<<<< HEAD
-#define _BASIC_IOS_H 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT64X_MAX_10_EXP__ 4932
 #define _TYPEINFO 
 #define __extern_inline extern __inline __attribute__ ((__gnu_inline__))
@@ -2241,10 +1603,6 @@
 #define __daddr_t_defined 
 #define IPL_ALIGN_8BYTES 8
 #define _GLIBCXX_HAVE_STRUCT_DIRENT_D_TYPE 1
-<<<<<<< HEAD
-#define _IOS_BIN 128
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_logf64x 
 #define _MM_EXCEPT_UNDERFLOW 0x0010
 #define __DECL_SIMD_expf64 
@@ -2255,10 +1613,6 @@
 #define __WINT_TYPE__ unsigned int
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
 #define __cpp_lib_complex_udls 201309
-<<<<<<< HEAD
-#define CLONE_THREAD 0x00010000
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT128_DENORM_MIN__ 6.47517511943802511092443895822764655e-4966F128
 #define CV_VERSION_MINOR 2
 #define _GLIBCXX_HAVE_MODF 1
@@ -2281,11 +1635,7 @@
 #define HUGE_VALL (__builtin_huge_vall ())
 #define cvFree(ptr) (cvFree_(*(ptr)), *(ptr)=0)
 #define _BITS_TYPES_H 1
-<<<<<<< HEAD
-#define _IO_DONT_CLOSE 0100000
-=======
 #define __blksize_t_defined 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_BEGIN_NAMESPACE_LDBL 
 #define _GLIBCXX_STDIO_SEEK_END 2
 #define MOD_MICRO ADJ_MICRO
@@ -2320,11 +1670,7 @@
 #define __linux__ 1
 #define __DECL_SIMD_logf128x 
 #define CV_HAL_CMP_GE 2
-<<<<<<< HEAD
-#define _IOS_OUTPUT 2
-=======
 #define MOD_CLKA ADJ_OFFSET_SINGLESHOT
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define MOD_CLKB ADJ_TICK
 #define __FLT128_MIN_10_EXP__ (-4931)
 #define CV_READ_CHAIN_POINT(_pt,reader) { (_pt) = (reader).pt; if( (reader).ptr ) { CV_READ_SEQ_ELEM( (reader).code, (reader)); assert( ((reader).code & ~7) == 0 ); (reader).pt.x += (reader).deltas[(int)(reader).code][0]; (reader).pt.y += (reader).deltas[(int)(reader).code][1]; } }
@@ -2335,10 +1681,6 @@
 #define __FLT128_MANT_DIG__ 113
 #define EALREADY 114
 #define __WCHAR_MIN__ (-__WCHAR_MAX__ - 1)
-<<<<<<< HEAD
-#define __SIZEOF_WINT_T__ 4
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_PI_2f128 __f128 (1.570796326794896619231321691639751442)
 #define _FUNCTEXCEPT_H 1
 #define FLT_MIN_EXP __FLT_MIN_EXP__
@@ -2346,17 +1688,10 @@
 #define CV_CMP_GT 1
 #define __NTH(fct) __LEAF_ATTR fct throw ()
 #define _GLIBCXX_IOS 1
-<<<<<<< HEAD
-#define __GCC_ATOMIC_POINTER_LOCK_FREE 2
-#define __SIG_ATOMIC_MIN__ (-__SIG_ATOMIC_MAX__ - 1)
-#define CV_SEQ_ELTYPE_CONNECTED_COMP 0
-#define _FORTIFY_SOURCE 2
-=======
 #define _GLIBCXX_HAVE_LINK 1
 #define __GCC_ATOMIC_POINTER_LOCK_FREE 2
 #define __SIG_ATOMIC_MIN__ (-__SIG_ATOMIC_MAX__ - 1)
 #define CV_SEQ_ELTYPE_CONNECTED_COMP 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __INT8_MAX__ 0x7f
 #define FP_NORMAL 4
 #define CV_VERSION_MAJOR 3
@@ -2393,11 +1728,8 @@
 #define __SIMD_DECL(function) __CONCAT (__DECL_SIMD_, function)
 #define M_LN10f64 __f64 (2.302585092994045684017991454684364208)
 #define ENODATA 61
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_TANL 1
 #define _GLIBCXX_HAVE_LINUX_RANDOM_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_USE_C99_FENV_TR1 1
 #define cvDrawPolyLine cvPolyLine
 #define CV_CMP_NE 5
@@ -2411,17 +1743,6 @@
 #define __STDC_HOSTED__ 1
 #define M_LOG10Ef32 __f32 (0.434294481903251827651128918916605082)
 #define HAVE_OPENCV_IMGCODECS 
-<<<<<<< HEAD
-#define __SLONG32_TYPE int
-#define _SYS_SELECT_H 1
-#define _IO_LINE_BUF 0x200
-#define CV_32FC1 CV_MAKETYPE(CV_32F,1)
-#define _IOS_NOCREATE 32
-#define CV_32FC2 CV_MAKETYPE(CV_32F,2)
-#define __LC_TELEPHONE 10
-#define HAVE_OPENCV_HIGHGUI 
-#define CV_GRAPH_SEARCH_TREE_NODE_FLAG (1 << 29)
-=======
 #define _GLIBCXX_HAVE_TIMESPEC_GET 1
 #define __SLONG32_TYPE int
 #define _SYS_SELECT_H 1
@@ -2429,7 +1750,6 @@
 #define CV_32FC2 CV_MAKETYPE(CV_32F,2)
 #define __LC_TELEPHONE 10
 #define HAVE_OPENCV_HIGHGUI 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define DECIMAL_DIG __DECIMAL_DIG__
 #define EINTR 4
 #define M_LOG10Ef64 __f64 (0.434294481903251827651128918916605082)
@@ -2437,12 +1757,8 @@
 #define _GLIBCXX_C_LOCALE_GNU 1
 #define __NCPUBITS (8 * sizeof (__cpu_mask))
 #define STA_CLOCKERR 0x1000
-<<<<<<< HEAD
-#define _IO_EOF_SEEN 0x10
-=======
 #define _IO_EOF_SEEN 0x0010
 #define OPENCV_IMGPROC_IMGPROC_C_H 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define PTHREAD_BARRIER_SERIAL_THREAD -1
 #define _GLIBCXX_HAVE_ISNANL 1
 #define __f64x(x) x ##l
@@ -2455,10 +1771,7 @@
 #define CV_NODE_TYPE(flags) ((flags) & CV_NODE_TYPE_MASK)
 #define ___int_wchar_t_h 
 #define __LDBL_MIN__ 3.36210314311209350626267781732175260e-4932L
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_LINUX_TYPES_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_8SC(n) CV_MAKETYPE(CV_8S,(n))
 #define __DECL_SIMD_sinf128x 
 #define SCHAR_WIDTH 8
@@ -2489,14 +1802,9 @@
 #define __SIZEOF_LONG__ 8
 #define _IONBF 2
 #define _EMMINTRIN_H_INCLUDED 
-<<<<<<< HEAD
-#define __MATHCALLX(function,suffix,args,attrib) __MATHDECLX (_Mdouble_,function,suffix, args, attrib)
-#define _IO_getc_unlocked(_fp) (_IO_BE ((_fp)->_IO_read_ptr >= (_fp)->_IO_read_end, 0) ? __uflow (_fp) : *(unsigned char *) (_fp)->_IO_read_ptr++)
-=======
 #define _GLIBCXX_HAVE_SYMLINK 1
 #define __MATHCALLX(function,suffix,args,attrib) __MATHDECLX (_Mdouble_,function,suffix, args, attrib)
 #define __glibcxx_requires_can_decrement_range(_First1,_Last1,_First2) 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_IN_OUT 
 #define __UINT16_C(c) c
 #define M_LOG2Ef32 __f32 (1.442695040888963407359924681001892137)
@@ -2522,10 +1830,7 @@
 #define M_LOG2Ef64 __f64 (1.442695040888963407359924681001892137)
 #define _MM_EXCEPT_INEXACT 0x0020
 #define DBL_MIN_EXP __DBL_MIN_EXP__
-<<<<<<< HEAD
-=======
 #define __DEC128_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143DL
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __UINT_FAST32_TYPE__ long unsigned int
 #define HAVE_OPENCV_HDF 
 #define __SYSCALL_ULONG_TYPE __ULONGWORD_TYPE
@@ -2537,25 +1842,14 @@
 #define __HAVE_FLOAT64X 1
 #define _GLIBCXX_HAVE_FABSF 1
 #define _GLIBCXX_HAVE_FABSL 1
-<<<<<<< HEAD
-#define _BITS_STRING_FORTIFIED_H 1
 #define CV_MAT_CN(flags) ((((flags) & CV_MAT_CN_MASK) >> CV_CN_SHIFT) + 1)
 #define HAVE_OPENCV_FREETYPE 
-#define WORD_BIT 32
-=======
-#define CV_MAT_CN(flags) ((((flags) & CV_MAT_CN_MASK) >> CV_CN_SHIFT) + 1)
-#define HAVE_OPENCV_FREETYPE 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_CLIMITS 1
 #define __cpp_lib_is_null_pointer 201309
 #define UINT_LEAST8_MAX (255)
 #define __pie__ 2
 #define CLONE_FILES 0x00000400
 #define __cpp_delegating_constructors 200604
-<<<<<<< HEAD
-#define __timespec_defined 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define L_ctermid 9
 #define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
 #define _GLIBCXX98_USE_C99_STDLIB 1
@@ -2563,20 +1857,14 @@
 #define FD_SET(fd,fdsetp) __FD_SET (fd, fdsetp)
 #define __FLT_HAS_DENORM__ 1
 #define __SIZEOF_LONG_DOUBLE__ 16
-<<<<<<< HEAD
-=======
 #define assert_perror(errnum) (!(errnum) ? __ASSERT_VOID_CAST (0) : __assert_perror_fail ((errnum), __FILE__, __LINE__, __ASSERT_FUNCTION))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __timeval_defined 1
 #define INT_FAST16_MIN (-9223372036854775807L-1)
 #define _GLIBCXX_HAVE_SYS_SYSINFO_H 1
 #define __cpp_rtti 199711
 #define _GLIBCXX_USE_CONSTEXPR constexpr
 #define _GLIBCXX_HAVE_POSIX_MEMALIGN 1
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_TRUNCATE 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define SSIZE_MAX LONG_MAX
 #define CV_DO_PRAGMA(x) _Pragma (#x)
 #define _GLIBCXX_RES_LIMITS 1
@@ -2599,17 +1887,11 @@
 #define _GLIBCXX_HAVE_ICONV 1
 #define __isctype_f(type) __extern_inline int is ##type (int __c) __THROW { return (*__ctype_b_loc ())[(int) (__c)] & (unsigned short int) _IS ##type; }
 #define ULLONG_WIDTH 64
-<<<<<<< HEAD
-#define __DBL_MAX__ double(1.79769313486231570814527423731704357e+308L)
-#define _BITS_STDINT_UINTN_H 1
-#define IPL_DEPTH_1U 1
-=======
 #define __glibcxx_requires_irreflexive2(_First,_Last) 
 #define __DBL_MAX__ double(1.79769313486231570814527423731704357e+308L)
 #define _BITS_STDINT_UINTN_H 1
 #define IPL_DEPTH_1U 1
 #define __glibc_has_attribute(attr) __has_attribute (attr)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_STDIO_SEEK_CUR 1
 #define INT32_WIDTH 32
 #define __cpp_raw_strings 200710
@@ -2618,10 +1900,6 @@
 #define __DBL_HAS_INFINITY__ 1
 #define _GLIBCXX_STDIO_EOF -1
 #define CV_CPU_NEON 100
-<<<<<<< HEAD
-#define _GLIBCXX_USE_CLOCK_MONOTONIC 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define LONG_BIT 64
 #define _GLIBCXX_NAMESPACE_LDBL_OR_CXX11 _GLIBCXX_NAMESPACE_CXX11
 #define __USE_LARGEFILE 1
@@ -2632,16 +1910,10 @@
 #define __USE_XOPEN 1
 #define CV_SEQ_KIND_MASK (((1 << CV_SEQ_KIND_BITS) - 1)<<CV_SEQ_ELTYPE_BITS)
 #define __SIZEOF_PTHREAD_RWLOCK_T 56
-<<<<<<< HEAD
-#define __cpp_lib_uncaught_exceptions 201411
-#define CV_GRAPH_FORWARD_EDGE 8
-#define _POSIX_TIMER_MAX 32
-=======
 #define __cpp_lib_uncaught_exceptions 201411L
 #define CV_GRAPH_FORWARD_EDGE 8
 #define _POSIX_TIMER_MAX 32
 #define __HAVE_SPECULATION_SAFE_VALUE 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_COSF 1
 #define __FLT_MANT_DIG__ 24
 #define __DEC32_MIN_EXP__ (-94)
@@ -2649,11 +1921,7 @@
 #define be16toh(x) __bswap_16 (x)
 #define __CPU_ISSET_S(cpu,setsize,cpusetp) (__extension__ ({ size_t __cpu = (cpu); __cpu / 8 < (setsize) ? ((((const __cpu_mask *) ((cpusetp)->__bits))[__CPUELT (__cpu)] & __CPUMASK (__cpu))) != 0 : 0; }))
 #define CV_UNUSED(name) (void)name
-<<<<<<< HEAD
-#define _POSIX_PATH_MAX 256
-=======
 #define _GLIBCXX_USE_UTIME 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_2_SQRTPIf32 __f32 (1.128379167095512573896158903121545172)
 #define _ISOC11_SOURCE 1
 #define M_1_PIf128 __f128 (0.318309886183790671537767526745028724)
@@ -2691,10 +1959,6 @@
 #define CV_CPU_FP16 9
 #define CV_ENABLE_UNROLLED 1
 #define _GLIBCXX_HAVE_SYS_IPC_H 1
-<<<<<<< HEAD
-#define UINT32_C(c) c ## U
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DEPRECATED 1
 #define __S32_TYPE int
 #define CV_HAAR_DO_ROUGH_SEARCH 8
@@ -2714,39 +1978,24 @@
 #define __CPU_MASK_TYPE __SYSCALL_ULONG_TYPE
 #define EPFNOSUPPORT 96
 #define UINT_LEAST16_WIDTH 16
-<<<<<<< HEAD
-#define _IO_LINKED 0x80
 #define CV_DXT_INV_SCALE (CV_DXT_INVERSE + CV_DXT_SCALE)
 #define CV_SVD_U_T 2
-#define __STDC_NO_THREADS__ 1
-=======
-#define CV_DXT_INV_SCALE (CV_DXT_INVERSE + CV_DXT_SCALE)
-#define CV_SVD_U_T 2
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __HAVE_FLOAT32 1
 #define CV_MAX_DIM_HEAP 1024
 #define CV_IS_SEQ(seq) ((seq) != NULL && (((CvSeq*)(seq))->flags & CV_MAGIC_MASK) == CV_SEQ_MAGIC_VAL)
 #define CV_IS_SET(set) ((set) != NULL && (((CvSeq*)(set))->flags & CV_MAGIC_MASK) == CV_SET_MAGIC_VAL)
 #define CV_SSSE3 0
 #define _PTRDIFF_T_DECLARED 
-<<<<<<< HEAD
-=======
 #define _BITS_STDIO_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FSFILCNT64_T_TYPE __UQUAD_TYPE
 #define CV_NODE_SEQ_IS_SIMPLE(seq) (((seq)->flags & CV_NODE_SEQ_SIMPLE) != 0)
 #define HAVE_OPENCV_LINE_DESCRIPTOR 
 #define __errordecl(name,msg) extern void name (void) __attribute__((__error__ (msg)))
 #define __FLT32_HAS_QUIET_NAN__ 1
-<<<<<<< HEAD
-#define __GNUG__ 7
-#define _GLIBCXX_HAVE___CXA_THREAD_ATEXIT_IMPL 1
-=======
 #define __GNUG__ 9
 #define _GLIBCXX_HAVE___CXA_THREAD_ATEXIT_IMPL 1
 #define __INO_T_TYPE __SYSCALL_ULONG_TYPE
 #define _WCTYPE_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EBADSLT 57
 #define _WCHAR_H 1
 #define __WEXITSTATUS(status) (((status) & 0xff00) >> 8)
@@ -2758,11 +2007,7 @@
 #define __cpp_rvalue_reference 200610
 #define CV_AVX_512F 0
 #define __FD_ZERO(fdsp) do { int __d0, __d1; __asm__ __volatile__ ("cld; rep; " __FD_ZERO_STOS : "=c" (__d0), "=D" (__d1) : "a" (0), "0" (sizeof (fd_set) / sizeof (__fd_mask)), "1" (&__FDS_BITS (fdsp)[0]) : "memory"); } while (0)
-<<<<<<< HEAD
-#define CV_RELATIVE_L2 (CV_RELATIVE | CV_L2)
-=======
 #define OPENCV_ABI_COMPATIBILITY 300
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __cpp_nsdmi 200809
 #define _GLIBCXX_HAVE_INT64_T_LONG 1
 #define __FLT64X_MIN_EXP__ (-16381)
@@ -2772,10 +2017,7 @@
 #define __CORRECT_ISO_CPP_STRING_H_PROTO 
 #define UINT64_C(c) c ## UL
 #define __LDBL_MIN_10_EXP__ (-4931)
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_NETINET_TCP_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT32_MAX_EXP__ 128
 #define pthread_cleanup_push(routine,arg) do { __pthread_cleanup_class __clframe (routine, arg)
 #define OPENCV_CORE_CVSTDINL_HPP 
@@ -2786,16 +2028,9 @@
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
 #define ADJ_TAI 0x0080
 #define _GLIBCXX_HOSTED 1
-<<<<<<< HEAD
-#define __GXX_ABI_VERSION 1011
-#define __WTERMSIG(status) ((status) & 0x7f)
-#define _GLIBCXX_HAS_GTHREADS 1
-#define assert_perror(errnum) (!(errnum) ? __ASSERT_VOID_CAST (0) : __assert_perror_fail ((errnum), __FILE__, __LINE__, __ASSERT_FUNCTION))
-=======
 #define __GXX_ABI_VERSION 1013
 #define __WTERMSIG(status) ((status) & 0x7f)
 #define _GLIBCXX_HAS_GTHREADS 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_LOG2Ef64x __f64x (1.442695040888963407359924681001892137)
 #define __FLT32X_MANT_DIG__ 53
 #define UINT_LEAST16_MAX (65535)
@@ -2804,11 +2039,7 @@
 #define _GLIBCXX_HAVE_ENOSTR 1
 #define __FD_CLR(d,set) ((void) (__FDS_BITS (set)[__FD_ELT (d)] &= ~__FD_MASK (d)))
 #define M_LOG2E 1.4426950408889634074
-<<<<<<< HEAD
-#define UINT32_MAX (4294967295U)
-=======
 #define _GLIBCXX_HAVE_BUILTIN_HAS_UNIQ_OBJ_REP 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define WNOHANG 1
 #define __cpp_lib_result_of_sfinae 201210
 #define _POSIX2_BC_BASE_MAX 99
@@ -2844,10 +2075,7 @@
 #define _GLIBCXX_HAVE_ENOLINK 1
 #define CV_DEFAULT(val) = val
 #define __WCOREFLAG 0x80
-<<<<<<< HEAD
-=======
 #define htobe32(x) __bswap_32 (x)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_CPU_MMX 1
 #define LC_MONETARY_MASK (1 << __LC_MONETARY)
 #define CVAUX_STRW(__A) CVAUX_STRW_EXP(__A)
@@ -2862,18 +2090,10 @@
 #define HAVE_OPENCV_FLANN 
 #define _GLIBCXX_HAVE_STRINGS_H 1
 #define __nonnull(params) __attribute__ ((__nonnull__ params))
-<<<<<<< HEAD
-#define __cpp_lib_incomplete_container_elements 201505
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CPU_ZERO(cpusetp) __CPU_ZERO_S (sizeof (cpu_set_t), cpusetp)
 #define __GTHREAD_TIME_INIT {0,0}
 #define CV_STORAGE_WRITE_TEXT CV_STORAGE_WRITE
 #define _ASSERT_H 1
-<<<<<<< HEAD
-#define _IOS_ATEND 4
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_cosf128 
 #define __DECL_SIMD_sincosf32 
 #define NL_ARGMAX _POSIX_ARG_MAX
@@ -2884,28 +2104,18 @@
 #define _GLIBCXX_HAVE_HYPOT 1
 #define _BASIC_STRING_TCC 1
 #define CV_SEQ_POINT3D_SET (CV_SEQ_KIND_GENERIC| CV_SEQ_ELTYPE_POINT3D)
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_BUILTIN_LAUNDER 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __CFLOAT64X _Complex long double
 #define _GLIBCXX_NUM_UNICODE_FACETS 2
 #define __FLT64_MIN_10_EXP__ (-307)
 #define CV_IS_MAT_HDR(mat) ((mat) != NULL && (((const CvMat*)(mat))->type & CV_MAGIC_MASK) == CV_MAT_MAGIC_VAL && ((const CvMat*)(mat))->cols > 0 && ((const CvMat*)(mat))->rows > 0)
-<<<<<<< HEAD
-=======
 #define CV_IS_MAT_CONST(mat) (((mat)->rows|(mat)->cols) == 1)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ULONG_MAX (LONG_MAX * 2UL + 1UL)
 #define CV_HIST_MAGIC_VAL 0x42450000
 #define __FLT64X_DECIMAL_DIG__ 21
 #define _POSIX_HIWAT _POSIX_PIPE_BUF
 #define __DEC128_MIN__ 1E-6143DL
 #define __glibcxx_requires_sorted_set(_First1,_Last1,_First2) 
-<<<<<<< HEAD
-#define _IOS_NOREPLACE 64
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_HIST_RANGES_FLAG (1 << 11)
 #define __DECL_SIMD_sincosf64 
 #define __DBL_HAS_DENORM__ 1
@@ -2914,19 +2124,11 @@
 #define HAVE_OPENCV_CALIB3D 
 #define CV_VERSION_STATUS ""
 #define LOGIN_NAME_MAX 256
-<<<<<<< HEAD
-#define _IO_TIED_PUT_GET 0x400
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define UINT_LEAST64_WIDTH 64
 #define __attribute_pure__ __attribute__ ((__pure__))
 #define __HAVE_DISTINCT_FLOAT128X __HAVE_FLOAT128X
 #define M_PIf32 __f32 (3.141592653589793238462643383279502884)
 #define _GLIBCXX_HAVE_SINCOS 1
-<<<<<<< HEAD
-#define _BITS_SYSMACROS_H 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define SNANF64X (__builtin_nansf64x (""))
 #define CV_AVX_512PF 0
 #define __glibcxx_requires_sorted(_First,_Last) 
@@ -2939,10 +2141,6 @@
 #define MAX_CANON 255
 #define HAVE_OPENCV_BGSEGM 
 #define M_PIf64 __f64 (3.141592653589793238462643383279502884)
-<<<<<<< HEAD
-#define __LDBL_DECIMAL_DIG__ 21
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_COMPLEX_H 1
 #define INT_LEAST8_MIN (-128)
 #define CV_CDECL 
@@ -2953,10 +2151,6 @@
 #define CV_IS_CONT_MAT CV_IS_MAT_CONT
 #define AIO_PRIO_DELTA_MAX 20
 #define M_SQRT2f32x __f32x (1.414213562373095048801688724209698079)
-<<<<<<< HEAD
-#define _GLIBCXX_HAVE_TANHF 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_Ef64x __f64x (2.718281828459045235360287471352662498)
 #define _GLIBCXX_HAVE_TANHL 1
 #define pthread_cleanup_pop_restore_np(execute) __clframe.__restore (); __clframe.__setdoit (execute); } while (0)
@@ -2968,13 +2162,7 @@
 #define CV_MAT_DEPTH_MASK (CV_DEPTH_MAX - 1)
 #define INT_LEAST32_MIN (-2147483647-1)
 #define __PTHREAD_MUTEX_HAVE_PREV 1
-<<<<<<< HEAD
-#define CV_EXTERN_C extern "C"
 #define CV_AVX_512VL 0
-#define _IO_file_flags _flags
-=======
-#define CV_AVX_512VL 0
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __GNUC_PREREQ(maj,min) ((__GNUC__ << 16) + __GNUC_MINOR__ >= ((maj) << 16) + (min))
 #define __USE_XOPEN2K8 1
 #define M_SQRT1_2f32 __f32 (0.707106781186547524400844362104849039)
@@ -2991,26 +2179,14 @@
 #define FP_INFINITE 1
 #define _GLIBCXX_USE_NOEXCEPT noexcept
 #define _GLIBCXX_CSTDDEF 1
-<<<<<<< HEAD
-#define __INO_T_TYPE __SYSCALL_ULONG_TYPE
 #define LONG_LONG_MIN (-LONG_LONG_MAX - 1LL)
-#define CV_NODE_IS_COLLECTION(flags) (CV_NODE_TYPE(flags) >= CV_NODE_SEQ)
-=======
-#define LONG_LONG_MIN (-LONG_LONG_MAX - 1LL)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_SQRT1_2f64 __f64 (0.707106781186547524400844362104849039)
 #define __LC_ALL 6
 #define _BITS_TYPESIZES_H 1
 #define __struct_tm_defined 1
-<<<<<<< HEAD
-#define __ssize_t_defined 
-#define EBADFD 77
-#define _GLIBCXX_CDTOR_CALLABI 
-=======
 #define __LDBL_DECIMAL_DIG__ 21
 #define __ssize_t_defined 
 #define EBADFD 77
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_ErrModeLeaf 0
 #define CV_FMA3 0
 #define CV_IS_IMAGE_HDR(img) ((img) != NULL && ((const IplImage*)(img))->nSize == sizeof(IplImage))
@@ -3039,24 +2215,12 @@
 #define CV_WHOLE_ARR cvSlice( 0, 0x3fffffff )
 #define _SYS_SIZE_T_H 
 #define LC_MESSAGES_MASK (1 << __LC_MESSAGES)
-<<<<<<< HEAD
-#define CV_HAL_SVD_MODIFY_A 4
-#define _GLIBCXX11_USE_C99_COMPLEX 1
-#define INT32_MAX (2147483647)
-#define LC_ALL_MASK (LC_CTYPE_MASK | LC_NUMERIC_MASK | LC_TIME_MASK | LC_COLLATE_MASK | LC_MONETARY_MASK | LC_MESSAGES_MASK | LC_PAPER_MASK | LC_NAME_MASK | LC_ADDRESS_MASK | LC_TELEPHONE_MASK | LC_MEASUREMENT_MASK | LC_IDENTIFICATION_MASK )
-#define _IO_IN_BACKUP 0x100
-#define __cpp_runtime_arrays 198712
-#define __glibc_macro_warning1(message) _Pragma (#message)
-#define __STDC_IEC_559_COMPLEX__ 1
-#define _G_HAVE_MMAP 1
-=======
 #define _GLIBCXX11_USE_C99_COMPLEX 1
 #define INT32_MAX (2147483647)
 #define LC_ALL_MASK (LC_CTYPE_MASK | LC_NUMERIC_MASK | LC_TIME_MASK | LC_COLLATE_MASK | LC_MONETARY_MASK | LC_MESSAGES_MASK | LC_PAPER_MASK | LC_NAME_MASK | LC_ADDRESS_MASK | LC_TELEPHONE_MASK | LC_MEASUREMENT_MASK | LC_IDENTIFICATION_MASK )
 #define __cpp_runtime_arrays 198712
 #define __glibc_macro_warning1(message) _Pragma (#message)
 #define __STDC_IEC_559_COMPLEX__ 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_NOEXCEPT noexcept
 #define _GLIBCXX_HAVE_WCSTOF 1
 #define HUGE_VAL_F128 (__builtin_huge_valf128 ())
@@ -3081,10 +2245,6 @@
 #define _GLIBCXX_SYSTEM_ERROR 1
 #define FP_ILOGBNAN (-2147483647 - 1)
 #define be64toh(x) __bswap_64 (x)
-<<<<<<< HEAD
-#define _GXX_NULLPTR_T 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_PI_2l 1.570796326794896619231321691639751442L
 #define ENOKEY 126
 #define __DECL_SIMD_expf 
@@ -3095,10 +2255,7 @@
 #define __GTHREAD_MUTEX_INIT PTHREAD_MUTEX_INITIALIZER
 #define cvSqrt(value) ((float)sqrt(value))
 #define _GLIBCXX_USE_C99_MATH_TR1 1
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_POLL_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_USE_C99_MATH _GLIBCXX11_USE_C99_MATH
 #define SIG_ATOMIC_MIN (-2147483647-1)
 #define HAVE_OPENCV_FUZZY 
@@ -3108,10 +2265,6 @@
 #define _POSIX_MAX_INPUT 255
 #define CV_NO_SIZE_CHECK 4
 #define __FD_ZERO_STOS "stosq"
-<<<<<<< HEAD
-#define _IO_SKIPWS 01
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ESHUTDOWN 108
 #define INT32_MIN (-2147483647-1)
 #define _GLIBCXX_MOVE3(_Tp,_Up,_Vp) std::move(_Tp, _Up, _Vp)
@@ -3121,17 +2274,9 @@
 #define __va_arg_pack_len() __builtin_va_arg_pack_len ()
 #define _SIZE_T_DECLARED 
 #define M_PI_4f32x __f32x (0.785398163397448309615660845819875721)
-<<<<<<< HEAD
-#define INT_FAST64_MAX (__INT64_C(9223372036854775807))
 #define XATTR_LIST_MAX 65536
 #define INT_FAST64_WIDTH 64
 #define __FLT64X_DIG__ 18
-#define _IO_SHOWBASE 0200
-=======
-#define XATTR_LIST_MAX 65536
-#define INT_FAST64_WIDTH 64
-#define __FLT64X_DIG__ 18
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _ALLOCATOR_H 1
 #define math_errhandling (MATH_ERRNO | MATH_ERREXCEPT)
 #define CV_SPARSE_MAT_MAGIC_VAL 0x42440000
@@ -3153,11 +2298,7 @@
 #define ELIBSCN 81
 #define CV_HAAR_SCALE_IMAGE 2
 #define _GLIBCXX_HAVE_MBSTATE_T 1
-<<<<<<< HEAD
-#define _IO_iconv_t _G_iconv_t
-=======
 #define CV_EXTERN_C extern "C"
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define M_LN10f32x __f32x (2.302585092994045684017991454684364208)
 #define M_2_PIl 0.636619772367581343075535053490057448L
 #define INT_LEAST16_WIDTH 16
@@ -3177,27 +2318,15 @@
 #define UINT_FAST32_MAX (18446744073709551615UL)
 #define CLOCK_MONOTONIC_RAW 4
 #define __SIG_ATOMIC_MAX__ 0x7fffffff
-<<<<<<< HEAD
-#define CV_NODE_IS_EMPTY(flags) (((flags) & CV_NODE_EMPTY) != 0)
-#define _ISOC95_SOURCE 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define INTMAX_C(c) c ## L
 #define __f32(x) x ##f
 #define FLT_ROUNDS 1
 #define _GLIBCXX_HAVE_DLFCN_H 1
 #define _GLIBCXX_HAVE_LIMIT_RSS 1
-<<<<<<< HEAD
-#define _IO_IS_FILEBUF 0x2000
-#define CV_GET_SEQ_ELEM(elem_type,seq,index) CV_SEQ_ELEM( (seq), elem_type, (index) )
-#define _GLIBCXX_USE_DUAL_ABI 1
-#define CV_RAND_NORMAL 1
-=======
 #define CV_GET_SEQ_ELEM(elem_type,seq,index) CV_SEQ_ELEM( (seq), elem_type, (index) )
 #define _GLIBCXX_USE_DUAL_ABI 1
 #define CV_RAND_NORMAL 1
 #define UINT32_MAX (4294967295U)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define DBL_MAX __DBL_MAX__
 #define UCHAR_MAX (SCHAR_MAX * 2 + 1)
 #define __SIZEOF_PTHREAD_COND_T 48
@@ -3205,13 +2334,8 @@
 #define SEEK_SET 0
 #define _GLIBCXX_CSTDIO 1
 #define CV_SEQ_ELTYPE_MASK ((1 << CV_SEQ_ELTYPE_BITS) - 1)
-<<<<<<< HEAD
-#define SCHED_OTHER 0
-#define CV_STDCALL 
-=======
 #define CV_STDCALL 
 #define RENAME_WHITEOUT (1 << 2)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_VISIBILITY(V) __attribute__ ((__visibility__ (#V)))
 #define CV_SEQ_ELTYPE_PPOINT CV_SEQ_ELTYPE_PTR
 #define __f64(x) x
@@ -3223,17 +2347,10 @@
 #define CV_HAL_DFT_TWO_STAGE 64
 #define CV_RGB(r,g,b) cvScalar( (b), (g), (r), 0 )
 #define __DECL_SIMD_sinf32x 
-<<<<<<< HEAD
-#define _MM_MASK_DENORM 0x0100
-#define _GCC_LIMITS_H_ 
-#define __LDBL_DIG__ 18
-#define __USE_LARGEFILE64 1
-=======
 #define CV_SORT_DESCENDING 16
 #define _MM_MASK_DENORM 0x0100
 #define _GCC_LIMITS_H_ 
 #define __LDBL_DIG__ 18
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define SCHED_BATCH 3
 #define CV_SEQ_ELTYPE_PTR CV_USRTYPE1
 #define CV_IS_SEQ_POLYLINE(seq) (CV_SEQ_KIND(seq) == CV_SEQ_KIND_CURVE && CV_IS_SEQ_POINT_SET(seq))
@@ -3241,10 +2358,6 @@
 #define _SIZE_T_ 
 #define _POSIX2_COLL_WEIGHTS_MAX 2
 #define CV_SEQ_KIND(seq) ((seq)->flags & CV_SEQ_KIND_MASK )
-<<<<<<< HEAD
-#define _IO_USER_BUF 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _WCHAR_T_H 
 #define EPROTO 71
 #define ENODEV 19
@@ -3262,10 +2375,6 @@
 #define CV_SVD_V_T 4
 #define M_2_PIf128 __f128 (0.636619772367581343075535053490057448)
 #define CV_SORT_EVERY_COLUMN 1
-<<<<<<< HEAD
-#define EKEYEXPIRED 127
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define PTHREAD_DESTRUCTOR_ITERATIONS _POSIX_THREAD_DESTRUCTOR_ITERATIONS
 #define DBL_MIN __DBL_MIN__
 #define __UINT_FAST32_MAX__ 0xffffffffffffffffUL
@@ -3278,10 +2387,7 @@
 #define CV_IS_HIST(hist) ((hist) != NULL && (((CvHistogram*)(hist))->type & CV_MAGIC_MASK) == CV_HIST_MAGIC_VAL && (hist)->bins != NULL)
 #define OPENCV_CORE_TYPES_HPP 
 #define __FLT64X_HAS_DENORM__ 1
-<<<<<<< HEAD
-=======
 #define __DECL_SIMD_sinl 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EHWPOISON 133
 #define _GLIBCXX_NORETURN __attribute__ ((__noreturn__))
 #define __FLT_HAS_INFINITY__ 1
@@ -3294,18 +2400,11 @@
 #define M_1_PIl 0.318309886183790671537767526745028724L
 #define __ENUM_IDTYPE_T 1
 #define __INT_FAST32_WIDTH__ 64
-<<<<<<< HEAD
-=======
 #define __FLT_DECIMAL_DIG__ 9
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define NULL __null
 #define GTHR_ACTIVE_PROXY __gthrw_(__pthread_key_create)
 #define CV_AVX_512IFMA512 0
 #define _POSIX2_CHARCLASS_NAME_MAX 14
-<<<<<<< HEAD
-#define __blksize_t_defined 
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __CHAR16_TYPE__ short unsigned int
 #define LT_OBJDIR ".libs/"
 #define _GLIBCXX_HAVE_WCHAR_H 1
@@ -3315,14 +2414,9 @@
 #define _GLIBCXX_HAVE_SINF 1
 #define _GLIBCXX_HAVE_SINL 1
 #define CV_MAT_TYPE(flags) ((flags) & CV_MAT_TYPE_MASK)
-<<<<<<< HEAD
-#define __SIZE_WIDTH__ 64
-#define _IO_size_t size_t
-=======
 #define __UINT_FAST16_MAX__ 0xffffffffffffffffUL
 #define __SIZE_WIDTH__ 64
 #define _WCHAR_T_DECLARED 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define INT_MIN (-INT_MAX - 1)
 #define __stub_lchmod 
 #define CV_VERSION CVAUX_STR(CV_VERSION_MAJOR) "." CVAUX_STR(CV_VERSION_MINOR) "." CVAUX_STR(CV_VERSION_REVISION) CV_VERSION_STATUS
@@ -3335,18 +2429,11 @@
 #define CV_MATND_MAGIC_VAL 0x42430000
 #define __INT_LEAST8_TYPE__ signed char
 #define __CPU_OP_S(setsize,destset,srcset1,srcset2,op) (__extension__ ({ cpu_set_t *__dest = (destset); const __cpu_mask *__arr1 = (srcset1)->__bits; const __cpu_mask *__arr2 = (srcset2)->__bits; size_t __imax = (setsize) / sizeof (__cpu_mask); size_t __i; for (__i = 0; __i < __imax; ++__i) ((__cpu_mask *) __dest->__bits)[__i] = __arr1[__i] op __arr2[__i]; __dest; }))
-<<<<<<< HEAD
-=======
 #define __SIZEOF_PTHREAD_MUTEXATTR_T 4
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ENOTDIR 20
 #define __DEC32_MAX_EXP__ 97
 #define SEEK_HOLE 4
 #define TIMER_ABSTIME 1
-<<<<<<< HEAD
-#define __WCHAR_MB_LEN_MAX 16
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __INT_FAST8_MAX__ 0x7f
 #define __PMT(args) args
 #define CV_CPU_SSE3 4
@@ -3358,13 +2445,7 @@
 #define _GLIBCXX_GCC_GTHR_H 
 #define _LINUX_LIMITS_H 
 #define CV_SUBMINOR_VERSION CV_VERSION_REVISION
-<<<<<<< HEAD
-#define _IOS_APPEND 8
 #define _GLIBCXX_DEBUG_ASSERT(_Condition) 
-#define CV_IS_SEQ_CONVEX(seq) 0
-=======
-#define _GLIBCXX_DEBUG_ASSERT(_Condition) 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ENXIO 6
 #define _GLIBCXX_END_EXTERN_C }
 #define CLOCK_MONOTONIC 1
@@ -3373,10 +2454,6 @@
 #define LDBL_EPSILON __LDBL_EPSILON__
 #define CV_MAKETYPE(depth,cn) (CV_MAT_DEPTH(depth) + (((cn)-1) << CV_CN_SHIFT))
 #define EBADRQC 56
-<<<<<<< HEAD
-#define OPENCV_ABI_COMPATIBILITY 300
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_WRITE_SEQ_ELEM(elem,writer) { assert( (writer).seq->elem_size == sizeof(elem)); if( (writer).ptr >= (writer).block_max ) { cvCreateSeqBlock( &writer); } assert( (writer).ptr <= (writer).block_max - sizeof(elem)); memcpy((writer).ptr, &(elem), sizeof(elem)); (writer).ptr += sizeof(elem); }
 #define __try try
 #define _GLIBCXX_ISTREAM 1
@@ -3385,19 +2462,10 @@
 #define CLONE_SYSVSEM 0x00040000
 #define CV_PREV_POINT(reader) (*((CvPoint*)((reader).prev_elem)))
 #define CV_IS_MAT(mat) (CV_IS_MAT_HDR(mat) && ((const CvMat*)(mat))->data.ptr != NULL)
-<<<<<<< HEAD
-#define __glibcxx_requires_irreflexive_pred(_First,_Last,_Pred) 
-#define _OSTREAM_INSERT_H 1
-#define __BEGIN_DECLS extern "C" {
-#define __LDBL_MANT_DIG__ 64
-#define __SIZEOF_PTHREAD_MUTEXATTR_T 4
-#define M_PI_4f32 __f32 (0.785398163397448309615660845819875721)
-=======
 #define _OSTREAM_INSERT_H 1
 #define __BEGIN_DECLS extern "C" {
 #define __LDBL_MANT_DIG__ 64
 #define CV_GRAPH_ALL_ITEMS -1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __DECL_SIMD_expf128x 
 #define _GLIBCXX_HAVE_FINITEF 1
 #define __FLT64_HAS_INFINITY__ 1
@@ -3409,22 +2477,13 @@
 #define CV_HAL_DFT_SCALE 2
 #define CV_SEQ_ELTYPE_POINT3D CV_32FC3
 #define WSTOPPED 2
-<<<<<<< HEAD
-#define assert(expr) (static_cast <bool> (expr) ? void (0) : __assert_fail (#expr, __FILE__, __LINE__, __ASSERT_FUNCTION))
-#define __SYSMACROS_DM(symbol) __SYSMACROS_DM1 (In the GNU C Library, #symbol is defined\n by <sys/sysmacros.h>. For historical compatibility, it is\n currently defined by <sys/types.h> as well, but we plan to\n remove this soon. To use #symbol, include <sys/sysmacros.h>\n directly. If you did not intend to use a system-defined macro\n #symbol, you should undefine it after including <sys/types.h>.)
-=======
 #define ____sigset_t_defined 
 #define assert(expr) (static_cast <bool> (expr) ? void (0) : __assert_fail (#expr, __FILE__, __LINE__, __ASSERT_FUNCTION))
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define INTPTR_WIDTH __WORDSIZE
 #define FILENAME_MAX 4096
 #define CV_IS_SEQ_POLYGON_TREE(seq) (CV_SEQ_ELTYPE (seq) == CV_SEQ_ELTYPE_TRIAN_ATR && CV_SEQ_KIND( seq ) == CV_SEQ_KIND_BIN_TREE )
 #define CV_IS_SEQ_CLOSED(seq) (((seq)->flags & CV_SEQ_FLAG_CLOSED) != 0)
 #define CLONE_FS 0x00000200
-<<<<<<< HEAD
-#define _GTHREAD_USE_MUTEX_TIMEDLOCK 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __cpp_return_type_deduction 201304
 #define M_PI_4f64 __f64 (0.785398163397448309615660845819875721)
 #define L_cuserid 9
@@ -3433,11 +2492,7 @@
 #define __k8__ 1
 #define __UINT16_TYPE__ short unsigned int
 #define __CLOCKID_T_TYPE __S32_TYPE
-<<<<<<< HEAD
-#define _IOS_TRUNC 16
-=======
 #define _GLIBCXX_HAVE_BUILTIN_IS_AGGREGATE 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __stub_fdetach 
 #define HAVE_OPENCV_STEREO 
 #define ELIBEXEC 83
@@ -3452,25 +2507,14 @@
 #define CV_DXT_MUL_CONJ 8
 #define CVAUX_STRW_EXP(__A) L ## #__A
 #define __UQUAD_TYPE unsigned long int
-<<<<<<< HEAD
-=======
 #define INT_LEAST64_MIN (-__INT64_C(9223372036854775807)-1)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_NODE_VAL(mat,node) ((void*)((uchar*)(node) + (mat)->valoffset))
 #define _BITS_UIO_LIM_H 1
 #define __HAVE_GENERIC_SELECTION 0
 #define CPU_COUNT(cpusetp) __CPU_COUNT_S (sizeof (cpu_set_t), cpusetp)
-<<<<<<< HEAD
-#define _GLIBCXX_CSTDINT 1
 #define EADDRNOTAVAIL 99
 #define M_SQRT2f32 __f32 (1.414213562373095048801688724209698079)
 #define ETIME 62
-#define major(dev) __SYSMACROS_DM (major) gnu_dev_major (dev)
-=======
-#define EADDRNOTAVAIL 99
-#define M_SQRT2f32 __f32 (1.414213562373095048801688724209698079)
-#define ETIME 62
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FLT_DIG__ 6
 #define __FLT32_HAS_INFINITY__ 1
 #define CV_HAL_BORDER_REFLECT 2
@@ -3480,10 +2524,6 @@
 #define CV_IS_GRAPH(seq) (CV_IS_SET(seq) && CV_SEQ_KIND((CvSet*)(seq)) == CV_SEQ_KIND_GRAPH)
 #define __UINT_FAST64_TYPE__ long unsigned int
 #define __glibcxx_class_requires(_a,_b) 
-<<<<<<< HEAD
-#define CV_NODE_INTEGER CV_NODE_INT
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _LOCALE_FACETS_H 1
 #define CV_CPU_AVX_512BW 14
 #define CV_16SC2 CV_MAKETYPE(CV_16S,2)
@@ -3498,10 +2538,7 @@
 #define PTRDIFF_WIDTH __WORDSIZE
 #define __CPU_ALLOC(count) __sched_cpualloc (count)
 #define __isctype_l(c,type,locale) ((locale)->__ctype_b[(int) (c)] & (unsigned short int) type)
-<<<<<<< HEAD
-=======
 #define IPL_DEPTH_8S (IPL_DEPTH_SIGN| 8)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_MSG_PRAGMA(_msg) CV_DO_PRAGMA(message (_msg))
 #define DBL_MAX_EXP __DBL_MAX_EXP__
 #define IPL_DEPTH_64F 64
@@ -3515,12 +2552,7 @@
 #define CV_NODE_HAS_NAME(flags) (((flags) & CV_NODE_NAMED) != 0)
 #define __WNOTHREAD 0x20000000
 #define FLT_MAX __FLT_MAX__
-<<<<<<< HEAD
-#define _IOS_INPUT 1
-#define __INT64_TYPE__ long int
-=======
 #define EKEYEXPIRED 127
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_MAT_CONT_FLAG (1 << CV_MAT_CONT_FLAG_SHIFT)
 #define _GLIBCXX_STRING 1
 #define EIO 5
@@ -3531,10 +2563,7 @@
 #define EXDEV 18
 #define _GLIBCXX_USE_SC_NPROCESSORS_ONLN 1
 #define MATH_ERREXCEPT 2
-<<<<<<< HEAD
-=======
 #define __glibcxx_requires_can_increment_range(_First1,_Last1,_First2) 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _STL_ALGO_H 1
 #define CV_RELATIVE 8
 #define __INO64_T_TYPE __UQUAD_TYPE
@@ -3551,11 +2580,6 @@
 #define _GLIBCXX_CERRNO 1
 #define __intptr_t_defined 
 #define MOD_TAI ADJ_TAI
-<<<<<<< HEAD
-#define _IO_va_list __gnuc_va_list
-#define __GXX_TYPEINFO_EQUALITY_INLINE 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define BC_DIM_MAX _POSIX2_BC_DIM_MAX
 #define EREMOTEIO 121
 #define _GLIBCXX_NOEXCEPT_PARM 
@@ -3563,19 +2587,12 @@
 #define _GLIBCXX_TXN_SAFE 
 #define _NEW 
 #define ENOEXEC 8
-<<<<<<< HEAD
-#define _IO_off_t __off_t
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define HAVE_OPENCV_VIDEOSTAB 
 #define __REDIRECT_NTHNL(name,proto,alias) name proto __THROWNL __asm__ (__ASMNAME (#alias))
 #define CLONE_VM 0x00000100
 #define EOF (-1)
 #define __cpp_lib_string_udls 201304
-<<<<<<< HEAD
-=======
 #define __USE_POSIX199309 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_NORM_MASK 7
 #define CV_TERMCRIT_ITER 1
 #define _GLIBCXX_HAVE_LOG10F 1
@@ -3592,10 +2609,7 @@
 #define __DBL_EPSILON__ double(2.22044604925031308084726333618164062e-16L)
 #define PTHREAD_PROCESS_PRIVATE PTHREAD_PROCESS_PRIVATE
 #define _GLIBCXX_HAVE_GETS 1
-<<<<<<< HEAD
-=======
 #define EROFS 30
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_REV_READ_SEQ_ELEM(elem,reader) { assert( (reader).seq->elem_size == sizeof(elem)); memcpy(&(elem), (reader).ptr, sizeof((elem))); CV_PREV_SEQ_ELEM( sizeof(elem), reader ) }
 #define le16toh(x) __uint16_identity (x)
 #define BC_SCALE_MAX _POSIX2_BC_SCALE_MAX
@@ -3607,13 +2621,7 @@
 #define __REDIRECT_NTH_LDBL(name,proto,alias) __REDIRECT_NTH (name, proto, alias)
 #define INT_LEAST16_MAX (32767)
 #define CLONE_PTRACE 0x00002000
-<<<<<<< HEAD
-#define _GLIBCXX_HAVE_LOGL 1
 #define ESRCH 3
-#define __glibcxx_requires_irreflexive2(_First,_Last) 
-=======
-#define ESRCH 3
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __GTHREADS 1
 #define __INT_LEAST32_TYPE__ int
 #define CHAR_WIDTH 8
@@ -3634,23 +2642,13 @@
 #define CV_SEQ_ELTYPE_CODE CV_8UC1
 #define ENFILE 23
 #define _STRING_CONVERSIONS_H 1
-<<<<<<< HEAD
-#define _IO_RIGHT 04
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define HAVE_OPENCV_XPHOTO 
 #define _GLIBCXX_STD_C std
 #define _LARGEFILE64_SOURCE 1
 #define _GLIBCXX_USE_C99_STDINT_TR1 1
-<<<<<<< HEAD
-#define IPL_DEPTH_8S (IPL_DEPTH_SIGN| 8)
-#define __CPU_ZERO_S(setsize,cpusetp) do __builtin_memset (cpusetp, '\0', setsize); while (0)
-#define __LC_NAME 8
-=======
 #define __CPU_ZERO_S(setsize,cpusetp) do __builtin_memset (cpusetp, '\0', setsize); while (0)
 #define __LC_NAME 8
 #define __glibc_likely(cond) __builtin_expect ((cond), 1)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ENOSYS 38
 #define _EXCEPTION_DEFINES_H 1
 #define CV_COVAR_NORMAL 1
@@ -3660,10 +2658,6 @@
 #define CHARCLASS_NAME_MAX 2048
 #define _GLIBCXX_HAVE_TANF 1
 #define __DECL_SIMD_cosf32 
-<<<<<<< HEAD
-#define _GLIBCXX_HAVE_TANL 1
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_32F 5
 #define _BITS_LOCALE_H 1
 #define _GLIBCXX_USE_NLS 1
@@ -3683,15 +2677,8 @@
 #define __STDC_UTF_32__ 1
 #define _BITS_STDIO_LIM_H 1
 #define OPENCV_CORE_PTR_INL_HPP 
-<<<<<<< HEAD
-#define __BYTE_ORDER__ __ORDER_LITTLE_ENDIAN__
 #define __FXSR__ 1
 #define CV_SEQ_FLAG_HOLE (2 << CV_SEQ_FLAG_SHIFT)
-#define __GTHREAD_COND_INIT PTHREAD_COND_INITIALIZER
-=======
-#define __FXSR__ 1
-#define CV_SEQ_FLAG_HOLE (2 << CV_SEQ_FLAG_SHIFT)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EDEADLOCK EDEADLK
 #define __CV_END__ goto exit; exit: ; }
 #define _GLIBCXX_USE_GETTIMEOFDAY 1
@@ -3700,13 +2687,8 @@
 #define __ULONG32_TYPE unsigned int
 #define _GLIBCXX_BITS_UNIFORM_INT_DIST_H 
 #define STA_PPSJITTER 0x0200
-<<<<<<< HEAD
-#define _IO_OCT 040
-#define CV_FONT_HERSHEY_COMPLEX_SMALL 5
-=======
 #define CV_FONT_HERSHEY_COMPLEX_SMALL 5
 #define _GXX_NULLPTR_T 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __glibcxx_class_requires2(_a,_b,_c) 
 #define __glibcxx_class_requires3(_a,_b,_c,_d) 
 #define __glibcxx_class_requires4(_a,_b,_c,_d,_e) 
@@ -3716,25 +2698,14 @@
 #define HAVE_OPENCV_RGBD 
 #define HAVE_OPENCV_XIMGPROC 
 #define strndupa(s,n) (__extension__ ({ const char *__old = (s); size_t __len = strnlen (__old, (n)); char *__new = (char *) __builtin_alloca (__len + 1); __new[__len] = '\0'; (char *) memcpy (__new, __old, __len); }))
-<<<<<<< HEAD
-#define CV_STORAGE_FORMAT_AUTO 0
-#define EISCONN 106
-#define M_SQRT2f64 __f64 (1.414213562373095048801688724209698079)
-#define _IO_IS_APPENDING 0x1000
-=======
 #define __DECL_SIMD_sinf16 
 #define CV_STORAGE_FORMAT_AUTO 0
 #define EISCONN 106
 #define M_SQRT2f64 __f64 (1.414213562373095048801688724209698079)
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define unix 1
 #define CV_LKFLOW_INITIAL_GUESSES 4
 #define FLT_MAX_10_EXP __FLT_MAX_10_EXP__
 #define M_LN2f128 __f128 (0.693147180559945309417232121458176568)
-<<<<<<< HEAD
-#define CV_SORT_DESCENDING 16
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_CWCHAR 1
 #define _STL_ITERATOR_H 1
 #define CV_GRAPH_TREE_EDGE 2
@@ -3744,24 +2715,15 @@
 #define OPENCV_CORE_TRAITS_HPP 
 #define CV_HIST_SPARSE 1
 #define __INTMAX_MAX__ 0x7fffffffffffffffL
-<<<<<<< HEAD
-#define SNANF128 (__builtin_nansf128 (""))
-#define __size_t__ 
-=======
 #define CV_HAL_SVD_MODIFY_A 4
 #define SNANF128 (__builtin_nansf128 (""))
 #define __size_t__ 
 #define CV_NODE_EMPTY 32
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_SEQ_CONTOUR CV_SEQ_POLYGON
 #define __FLT_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F
 #define CV_SEQ_READER_FIELDS() int header_size; CvSeq* seq; CvSeqBlock* block; schar* ptr; schar* block_min; schar* block_max; int delta_index; schar* prev_elem;
 #define CPU_ALLOC_SIZE(count) __CPU_ALLOC_SIZE (count)
-<<<<<<< HEAD
-#define __cpp_lib_tuple_element_t 201402
-=======
 #define __cpp_lib_tuple_element_t 201402L
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CV_PREV_SEQ_ELEM(elem_size,reader) { if( ((reader).ptr -= (elem_size)) < (reader).block_min ) { cvChangeSeqBlock( &(reader), -1 ); } }
 #define __LC_CTYPE 0
 #define UINTMAX_MAX (__UINT64_C(18446744073709551615))
@@ -3770,36 +2732,23 @@
 #define IPL_ALIGN_32BYTES 32
 #define CV_SEQ_ELTYPE_BITS 12
 #define __INO_T_MATCHES_INO64_T 1
-<<<<<<< HEAD
-#define _IO_fpos_t _G_fpos_t
-=======
 #define _GLIBCXX_HAVE_FLOAT_H 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __CHAR32_TYPE__ unsigned int
 #define ENOPROTOOPT 92
 #define __DECL_SIMD_pow 
 #define __cpp_lib_void_t 201411
-<<<<<<< HEAD
-=======
 #define _GLIBCXX_HAVE_READLINK 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_USE_ALLOCATOR_NEW 1
 #define __blkcnt_t_defined 
 #define ECOMM 70
 #define UINT_LEAST32_MAX (4294967295U)
 #define CPU_XOR(destset,srcset1,srcset2) __CPU_OP_S (sizeof (cpu_set_t), destset, srcset1, srcset2, ^)
-<<<<<<< HEAD
-=======
 #define CV_NODE_USER 16
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define IPL_DEPTH_8U 8
 #define M_1_PI 0.31830988618379067154
 #define _GLIBCXX_CMATH 1
 #define __lldiv_t_defined 1
-<<<<<<< HEAD
-=======
 #define __INT32_TYPE__ int
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_HAVE_SYS_TYPES_H 1
 #define _MM_MASK_INVALID 0x0080
 #define __UINT32_TYPE__ unsigned int
@@ -3807,15 +2756,8 @@
 #define ENOBUFS 105
 #define __FLT_MIN_10_EXP__ (-37)
 #define __time_t_defined 1
-<<<<<<< HEAD
-#define _SYS_SYSMACROS_H 1
 #define __cpp_init_captures 201304
 #define __FLT64_MIN__ 2.22507385850720138309023271733240406e-308F64
-#define _IO_BE(expr,res) __builtin_expect ((expr), res)
-=======
-#define __cpp_init_captures 201304
-#define __FLT64_MIN__ 2.22507385850720138309023271733240406e-308F64
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define cvGetSubArr cvGetSubRect
 #define OPENCV_CORE_HAL_INTERFACE_H 
 #define __DECL_SIMD_expf64x 
@@ -3827,10 +2769,7 @@
 #define __DECL_SIMD_powf64x 
 #define __DEC128_MAX_EXP__ 6145
 #define M_LN2 0.69314718055994530942
-<<<<<<< HEAD
-=======
 #define WORD_BIT 32
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define EWOULDBLOCK EAGAIN
 #define CV_TYPE_NAME_SEQ "opencv-sequence"
 #define _GLIBCXX_HAVE_TLS 1
@@ -3838,12 +2777,8 @@
 #define _GLIBCXX_HAVE_ACOSL 1
 #define _GLIBCXX_CSTRING 1
 #define CLONE_VFORK 0x00004000
-<<<<<<< HEAD
-#define __GNUC_MINOR__ 4
-=======
 #define __cpp_lib_incomplete_container_elements 201505
 #define __GNUC_MINOR__ 2
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define CPU_CLR_S(cpu,setsize,cpusetp) __CPU_CLR_S (cpu, setsize, cpusetp)
 #define __DEC32_MANT_DIG__ 7
 #define __FLT32X_DENORM_MIN__ 4.94065645841246544176568792868221372e-324F32x
@@ -3865,14 +2800,9 @@
 #define __attribute_malloc__ __attribute__ ((__malloc__))
 #define ELIBMAX 82
 #define CLONE_NEWCGROUP 0x02000000
-<<<<<<< HEAD
-#define INT_LEAST64_MIN (-__INT64_C(9223372036854775807)-1)
-#define _GLIBCXX_END_NAMESPACE_CONTAINER _GLIBCXX_END_NAMESPACE_VERSION
-=======
 #define _GLIBCXX_END_NAMESPACE_CONTAINER 
 #define cvConvert(src,dst) cvConvertScale( (src), (dst), 1, 0 )
 #define _GLIBCXX20_CONSTEXPR 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define _GLIBCXX_ALWAYS_INLINE inline __attribute__((__always_inline__))
 #define stdin stdin
 #define __ino64_t_defined 
@@ -3882,10 +2812,6 @@
 #define __fsblkcnt_t_defined 
 #define _GLIBCXX_PACKAGE_STRING "package-unused version-unused"
 #define __FD_SET(d,set) ((void) (__FDS_BITS (set)[__FD_ELT (d)] |= __FD_MASK (d)))
-<<<<<<< HEAD
-#define _IO_HEX 0100
-=======
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __ATOMIC_SEQ_CST 5
 #define __tobody(c,f,a,args) (__extension__ ({ int __res; if (sizeof (c) > 1) { if (__builtin_constant_p (c)) { int __c = (c); __res = __c < -128 || __c > 255 ? __c : (a)[__c]; } else __res = f args; } else __res = (a)[(int) (c)]; __res; }))
 #define M_PIf128 __f128 (3.141592653589793238462643383279502884)
@@ -3895,19 +2821,6 @@
 #define __FLT32X_MIN_10_EXP__ (-307)
 #define _POSIX_MAX_CANON 255
 #define CV_ERROR(Code,Msg) { cvError( (Code), cvFuncName, Msg, __FILE__, __LINE__ ); __CV_EXIT__; }
-<<<<<<< HEAD
-#define CV_DIFF 16
-#define CV_STORAGE_READ 0
-#define PTHREAD_KEYS_MAX 1024
-#define CV_NODE_NONE 0
-#define _GLIBCXX_THROW_OR_ABORT(_EXC) (throw (_EXC))
-#define __useconds_t_defined 
-#define __FD_ELT(d) __extension__ ({ long int __d = (d); (__builtin_constant_p (__d) ? (0 <= __d && __d < __FD_SETSIZE ? (__d / __NFDBITS) : __fdelt_warn (__d)) : __fdelt_chk (__d)); })
-#define __attribute_deprecated__ __attribute__ ((__deprecated__))
-#define OPENCV_CORE_SATURATE_HPP 
-#define __FLT128_EPSILON__ 1.92592994438723585305597794258492732e-34F128
-#define __DEC128_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143DL
-=======
 #define __INT16_MAX__ 0x7fff
 #define _GLIBCXX_USE_CLOCK_MONOTONIC 1
 #define CV_DIFF 16
@@ -3919,7 +2832,6 @@
 #define __attribute_deprecated__ __attribute__ ((__deprecated__))
 #define OPENCV_CORE_SATURATE_HPP 
 #define __FLT128_EPSILON__ 1.92592994438723585305597794258492732e-34F128
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __HAVE_DISTINCT_FLOAT64X 0
 #define MIN(a,b) ((a) > (b) ? (b) : (a))
 #define __SIZEOF_LONG_LONG__ 8
@@ -3931,19 +2843,11 @@
 #define CV_CPU_AVX_512ER 17
 #define _GLIBCXX_HAVE_SYS_STATVFS_H 1
 #define __exctype(name) extern int name (int) __THROW
-<<<<<<< HEAD
-#define __UINT_FAST16_MAX__ 0xffffffffffffffffUL
-#define OPENCV_CORE_BUFFER_POOL_HPP 
-#define __DECL_SIMD_powf128x 
-#define __ldiv_t_defined 1
-#define _G_va_list __gnuc_va_list
-=======
 #define OPENCV_CORE_BUFFER_POOL_HPP 
 #define CV_IS_SEQ_CONVEX(seq) 0
 #define __DECL_SIMD_powf128x 
 #define __ldiv_t_defined 1
 #define __glibcxx_requires_irreflexive_pred(_First,_Last,_Pred) 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define ___int_ptrdiff_t_h 
 #define CV_IS_SEQ_CURVE(seq) (CV_SEQ_KIND(seq) == CV_SEQ_KIND_CURVE)
 #define _MM_EXCEPT_MASK 0x003f
@@ -3954,29 +2858,15 @@
 #define cvMahalonobis cvMahalanobis
 #define M_LN2f64 __f64 (0.693147180559945309417232121458176568)
 #define CV_HAL_BORDER_REPLICATE 1
-<<<<<<< HEAD
-#define _IO_ftrylockfile(_fp) 
-#define _GLIBCXX_HAVE_UNISTD_H 1
-#define __FD_ISSET(d,set) ((__FDS_BITS (set)[__FD_ELT (d)] & __FD_MASK (d)) != 0)
-#define _BITS_CPU_SET_H 1
-=======
 #define _GLIBCXX_HAVE_UNISTD_H 1
 #define CV_NODE_IS_COLLECTION(flags) (CV_NODE_TYPE(flags) >= CV_NODE_SEQ)
 #define __FD_ISSET(d,set) ((__FDS_BITS (set)[__FD_ELT (d)] & __FD_MASK (d)) != 0)
 #define _BITS_CPU_SET_H 1
 #define __USE_LARGEFILE64 1
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __STDC_LIMIT_MACROS 
 #define __WCHAR_T 
 #define _ALLOC_TRAITS_H 1
 #define EMEDIUMTYPE 124
-<<<<<<< HEAD
-#define CV_NODE_EMPTY 32
 #define CV_IS_SEQ_SIMPLE(seq) 1
 #define __DECL_SIMD_sincosf32x 
-#define _IO_peekc(_fp) _IO_peekc_unlocked (_fp)
-=======
-#define CV_IS_SEQ_SIMPLE(seq) 1
-#define __DECL_SIMD_sincosf32x 
->>>>>>> c6062d112f08b94a23a6cb2f24d958719ba4c320
 #define __FP_LONG_MAX 0x7fffffffffffffffL
