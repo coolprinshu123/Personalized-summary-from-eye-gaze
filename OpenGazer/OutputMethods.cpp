@@ -58,6 +58,11 @@ void SocketStore::store() {
 	std::ostringstream stream;
 	stream  << "x " << (int) Application::Data::gazePoints[0].x << std::endl 
 			<< "y " << (int) Application::Data::gazePoints[0].y << std::endl;
+	time_t now = time(0);
+	tm *ltm = localtime(&now);
+	std :: cout << ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec << ",";
+	std::cout << (int)Application::Data::gazePoints[0].x << "," ;
+	std::cout << (int)Application::Data::gazePoints[0].y << std::endl; 
 	std::string str = stream.str();
 	sendto(_mySocket, str.c_str(), str.size(), 0, (sockaddr *)&_destAddr, sizeof(_destAddr));
 }

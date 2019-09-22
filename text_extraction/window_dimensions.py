@@ -30,8 +30,11 @@ logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
 def for_Linux():
     try:
         import wnck
+        # import gi
+        # gi.require_version('Wnck', '3.0')
+        # from gi.repository import Wnck
     except ImportError:
-        logging.info("wnck not installed")
+        logging.info("Using Ubuntu 18.04 or higher")
         wnck = None
     if wnck is not None:
         screen = wnck.screen_get_default()
@@ -46,6 +49,9 @@ def for_Linux():
             return [x, y, w, h]
     else:
         try:
+            import gi
+            gi.require_version('Wnck', '3.0')
+            gi.require_version('Gtk', '3.0')
             from gi.repository import Gtk, Wnck
             gi = "Installed"
         except ImportError:
@@ -100,7 +106,7 @@ def callback(hwnd, extra):
             print("\t    Size: (%d, %d)" % (w, h))
             # return [x, y, w, h]
             dimensions = [x, y, w, h]
-            break         
+            break
 def for_Windows():
     global dimensions
     try:

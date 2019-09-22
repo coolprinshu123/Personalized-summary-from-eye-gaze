@@ -9,15 +9,18 @@ from pynput.keyboard import Listener, Key
 import numpy
 import re
 import hashlib
+import cv2
 from PIL import Image
 from reorderf import reorderFlow
 import window_dimensions
 import settings
+
+
 class Screen(object):
     frames = {}
     scroll_value = False
     new_frame = True
-    portions=[]
+    portions = []
     summary = []
     dimensions = []
     start_time = 0
@@ -30,6 +33,7 @@ class Screen(object):
     n = 0
     data = {}  # text: coordinates, scroll
     dynamic_check = False
+
     def __init__(self):
         # self.get_Window_Dimensions()
         # self.dimensions = window_dimensions.get_active_window_dimensions()
@@ -42,15 +46,18 @@ class Screen(object):
         return
 
     def get_Specific_Window(self):
+        # print(self.monitor)
+        # # frame = sct.grab(monitor)
+        # frame = numpy.array(sct.grab(self.monitor))
+        # # window = smp.toimage(frame)
+        # window = Image.fromarray(frame)
+        # window = window.convert('LA')
+        # # print('mss grabbed frame size: ',window.size)
+        # return window
+        # monitor = {'top': 27, 'left': 67, 'width': 1853, 'height': 1173}
+        img = sct.grab(self.monitor)
         print(self.monitor)
-        # frame = sct.grab(monitor)
-        frame = numpy.array(sct.grab(self.monitor))
-        # window = smp.toimage(frame)
-        window = Image.fromarray(frame)
-        window = window.convert('LA')
-        # print('mss grabbed frame size: ',window.size)
-        return window
-
+        return img
 
     def extract_Text_From_Image(self, image):
         text = pytesseract.image_to_string(image, lang='eng')
@@ -61,15 +68,14 @@ class Screen(object):
         # return [[160, 140, 1439, 280],[0, 1160, 3000, 1160 + 250]]
         # (0, 150, 2500, 280)
         # return [[200, 140, 1700, 350],[2150,170,370+2150,730]]
-        self.portions = [[2150, 170, 370+2150, 730], [845, 830, 845+1700, 830+230],
-                         [0, 1160+50, 1700, 1160+180], [200, 140, 1700, 300]]
+        self.portions = [[2150, 170, 370 + 2150, 730], [845, 830, 845 + 1700, 830 + 230],
+                         [0, 1160 + 50, 1700, 1160 + 180], [200, 140, 1700, 300]]
         # if self.dynamic_check:
         #     self.portions = [[200, 140, 1700, 300]]
         # else:
         #     self.portions = [[845, 830, 845+1700, 830+230]]
         #     self.dynamic_check = True
         return
-
 
     def complete_The_Text(self, extracted_text, window, read_box):
 
@@ -89,7 +95,7 @@ class Screen(object):
             first_word_in_full_text = full_text.split(' ', 1)[0]
             try:
                 if first_word_in_full_text.islower():
-                    first_position = full_text.index('.')+1
+                    first_position = full_text.index('.') + 1
                 else:
                     first_position = 0
             except ValueError:
@@ -98,7 +104,7 @@ class Screen(object):
             try:
                 last_position = full_text.rindex(last_word)
             except ValueError:
-                last_position = len(full_text)+1
+                last_position = len(full_text) + 1
             complete_text = full_text[first_position:last_position]
             return complete_text, read_box
 
@@ -111,26 +117,25 @@ class Screen(object):
                 extracted_image = window.crop(read_box)
                 # extracted_image.show()
                 extracted_text = self.extract_Text_From_Image(extracted_image)
-                if read_box[2]-read_box[0] >= 2500:
+                if read_box[2] - read_box[0] >= 2500:
                     # extract.write(extracted_text+'\n\n')
-                    print('\n'+extracted_text + '\n \n'+str(read_box))
+                    print('\n' + extracted_text + '\n \n' + str(read_box))
                     self.data[extracted_text] = (read_box, self.pixel_info)
                 elif extracted_text:
                     corrected_text, b_box = self.complete_The_Text(extracted_text, window, read_box)
                     self.data[corrected_text] = (b_box, self.pixel_info)
                     # extract.write(corrected_text+'\n\n')
-                    print('\n'+extracted_text + '\n \n'+str(b_box))
+                    print('\n' + extracted_text + '\n \n' + str(b_box))
 
-
-            time_elapsed = time.time()-start
-            print('Time taken:',time_elapsed)
+            time_elapsed = time.time() - start
+            print('Time taken:', time_elapsed)
             return
         else:
             return
 
     @staticmethod
     def clean_Extracted_Text(summary):
-        clean_summary=''
+        clean_summary = ''
         print('_____________________AFTER ClEANING___________________________________')
         # summary = re.sub('[\!\[\(]+\S*[\]\!]*|\S?\d*[\]\!\)\|]', '', summary)
         summary = re.sub('[!{[|]\S+[!\}\]lI1]?|\d+[\]lJ]+', '', summary)
@@ -145,27 +150,29 @@ class Screen(object):
         threshold_start = time.time()
         while not self.scroll_value:
             last_time = time.time()
-            threshold = int(last_time-threshold_start)
+            threshold = int(last_time - threshold_start)
+            print(threshold)
 
-            if settings.keepRecording == False:
+            if not settings.keepRecording:
                 break
             # Exit after getting First Frame
             # if n == 1:
             #     self.new_frame = False
-                # break
+            # break
             # if not self.scroll_value and threshold > 10:
             # if self.new_frame:
             #     window = self.get_Specific_Window()
             #     self.new_frame = False
-                # The Frame Rate:
-                # print("fps: {}".format(1 / (time.time() - last_time)))
+            # The Frame Rate:
+            # print("fps: {}".format(1 / (time.time() - last_time)))
             if threshold > 5 and self.new_frame:
                 # n += 1
                 self.n += 1
                 window = self.get_Specific_Window()
-                frame_name = 'frame_'+str(self.n)
-                self.frames[frame_name] = [window, str(datetime.timedelta(seconds=int(time.time() - self.start_time)))]
-                # window.show()
+                frame_name = 'frame_' + str(self.n)
+                img = Image.frombytes("RGB", window.size, window.bgra, "raw", "BGRX")
+                output = str(frame_name) + "_" + str(self.start_time) + "_" + str(time.time()) + ".png"
+                img.save(output)
                 self.new_frame = False
                 # self.get_Coordinates()
                 # self.text_Extraction(window, self.portions)
@@ -197,6 +204,8 @@ class Screen(object):
         self.new_frame = True
 
     def on_press(self, key):
+        print('{0} release'.format(key))
+
         if key == Key.down or key == Key.up:
             self.scroll_value = True
             self.new_frame = False
@@ -212,8 +221,7 @@ class Screen(object):
         if key == Key.down or key == Key.up:
             self.new_frame = True
             self.scroll_value = False
-        print('{0} release'.format(
-        key))
+        print('{0} release'.format(key))
         if key == Key.esc:
             # Stop listener
             return False
@@ -229,7 +237,7 @@ class Screen(object):
         with open('extracted_summary.txt', 'w+') as s:
             summary = self.clean_Extracted_Text(redundancy_free_text)
             for each in summary.split('.'):
-                s.write(each+'\n')
+                s.write(each + '\n')
             s.close()
 
     def start_recording(self):
@@ -238,20 +246,17 @@ class Screen(object):
         self.start_time = time.time()
         listener.start()
 
-
         self.dimensions = window_dimensions.get_active_window_dimensions()
-        self.monitor = {"top": self.dimensions[1], "left": self.dimensions[0]+self.mw_panel,
+        self.monitor = {"top": self.dimensions[1], "left": self.dimensions[0] + self.mw_panel,
                         "width": self.dimensions[2], "height": self.dimensions[3]}
         while True:
-                if not settings.keepRecording:
-                    print(settings.keepRecording)
-                    break
-                if self.new_frame:
-                    print('Recording!')
-                    self.capture_Frames()
-                    # time.sleep(0.1)
-
-
+            if not settings.keepRecording:
+                print(settings.keepRecording)
+                break
+            if self.new_frame:
+                print('Recording!')
+                self.capture_Frames()
+                # time.sleep(0.1)
 
 
 if __name__ == "__main__":
