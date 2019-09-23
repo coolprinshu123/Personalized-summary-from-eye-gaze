@@ -5,6 +5,7 @@ import numpy
 import matplotlib
 from matplotlib import pyplot, image
 import cv2
+import window_dimensions
 
 
 def draw_display(dispsize, imagefile=None):
@@ -172,7 +173,7 @@ def draw_heatmap(gazepoints, dispsize, imagefile=None, alpha=0.5, savefilename=N
     # resize heatmap
     heatmap = heatmap[int(strt):int(dispsize[1] + strt), int(strt):int(dispsize[0] + strt)]
     # remove zeros
-    lowbound = numpy.mean(heatmap[heatmap > 0]) + 100
+    lowbound = numpy.mean(heatmap[heatmap > 0])  # + 100
     # print(lowbound,len(heatmap))
     heatmap[heatmap < lowbound] = numpy.NaN
     # draw heatmap on top of image
@@ -200,7 +201,7 @@ def bounding_box(image):
 
     # filter black color
     # mask1 = cv2.inRange(roi_hsv, numpy.array([0, 0, 0]), numpy.array([180, 255, 125]))
-    mask1 = cv2.inRange(roi_hsv, numpy.array([15, 0, 0]), numpy.array([70, 255, 255]))
+    mask1 = cv2.inRange(roi_hsv, numpy.array([0, 0, 0]), numpy.array([70, 255, 255]))
     mask1 = cv2.morphologyEx(mask1, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3)))
     mask1 = cv2.Canny(mask1, 100, 300)
     mask1 = cv2.GaussianBlur(mask1, (1, 1), 0)
@@ -215,11 +216,11 @@ def bounding_box(image):
     else:
         im2, ctrs, hier = cv2.findContours(mask1.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
+    bbox_file = open("bbox_points.txt", "a")
     # sort contours
     sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
-
     for i, ctr in enumerate(sorted_ctrs):
-        if cv2.contourArea(ctr) > 100:
+        if cv2.contourArea(ctr) >50:
             peri = cv2.arcLength(ctr, True)
             approx = cv2.approxPolyDP(ctr, 0.02 * peri, True)
             x, y, w, h = cv2.boundingRect(approx)
@@ -232,13 +233,23 @@ def bounding_box(image):
             roi = image[y:y + h, x:x + w]
             # show ROI
             # cv2.imshow('segment no:'+str(i),roi)
-            cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            # if w > 15 and h > 15:
-            #     cv2.imwrite('out_check_out.png'.format(i), roi)
+            # cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            if w > 15 and h > 15:
+                # cv2.imwrite('out_check_out.png'.format(i), roi)
+                cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                bbox_file.write(str(x)+" "+str(y)+" "+str(w)+" "+str(h)+" "+"\n")
 
+    bbox_file.close()
     cv2.imshow('marked areas', image)
     cv2.imwrite('out_check_out.png', image)
     cv2.waitKey(0)
+
+
+def get_output_img_size():
+    dimensions = window_dimensions.get_active_window_dimensions()
+    # monitor = {"top": dimensions[1], "left": dimensions[0],
+    #            "width": dimensions[2], "height": dimensions[3]}
+    return dimensions
 
 
 ##################
@@ -249,10 +260,10 @@ parser = argparse.ArgumentParser(description='Parameters required for processing
 
 # required args
 parser.add_argument('input-path', type=str, help='path to the csv input')
-parser.add_argument('display-width', type=int, help='an integer representing the display width')
-parser.add_argument('display-height', type=int, help='an integer representing the display height')
 
 # optional args
+# parser.add_argument('-w', '--display-width', type=int, default='1400', required=False, help='an integer representing the display width')
+# parser.add_argument('-h', '--display-height', type=int, default='900', required=False, help='an integer representing the display height')
 parser.add_argument('-a', '--alpha', type=float, default='0.5', required=False, help='alpha for the gaze overlay')
 parser.add_argument('-o', '--output-name', type=str, required=False, help='name for the output file')
 parser.add_argument('-b', '--background-image', type=str, default=None, required=False,
@@ -267,13 +278,17 @@ parser.add_argument('-sd', '--standard-deviation', type=float, default=None, req
 args = vars(parser.parse_args())
 
 input_path = args['input-path']
-display_width = args['display-width']
-display_height = args['display-height']
+# display_width = args['display-width']
+# display_height = args['display-height']
 alpha = args['alpha']
 output_name = args['output_name'] if args['output_name'] is not None else 'output'
 background_image = args['background_image']
 ngaussian = args['n_gaussian_matrix']
 sd = args['standard_deviation']
+
+out_dimensions = get_output_img_size()
+display_width = out_dimensions[2]
+display_height = out_dimensions[3]
 
 with open(input_path) as f:
     reader = csv.reader(f)
@@ -283,10 +298,15 @@ with open(input_path) as f:
     if len(raw[0]) is 2:
         gaze_data = list(map(lambda q: (int(q[0]), int(q[1]), 1), raw))
     else:
-        gaze_data = list(map(lambda q: (int(q[0]), int(q[1]), int(q[2])), raw))
+        print("More then two columns")
+        gaze_data = list(map(lambda q: (int(q[0]), int(q[1]), 1), raw))
+        # gaze_data = list(map(lambda q: (int(q[0]), int(q[1]), int(q[2])), raw))
 
     draw_heatmap(gaze_data, (display_width, display_height), alpha=alpha, savefilename=output_name,
                  imagefile=background_image, gaussianwh=ngaussian, gaussiansd=sd)
 
 out_image = cv2.imread(output_name)
 bounding_box(out_image)
+
+# RUN: python gazeheatplot.py FinalGaze.csv 1440 900
+# python gazeheatplot.py gaze-data.csv out_dimensions[2] out_dimensions[3] [-a 0.6] [-o output-name] [-b /Me/bg-image.png] [-n 200] [-sd 33]
