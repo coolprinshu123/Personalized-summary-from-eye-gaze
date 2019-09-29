@@ -1,0 +1,1 @@
+use subprocess.Popen.terminate to kill child process
