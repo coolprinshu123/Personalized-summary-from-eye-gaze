@@ -10,7 +10,22 @@ from PyQt5 import QtCore, QtGui, QtWidgets, Qt
 from screen_recorder import Screen
 from threading import Thread
 import settings
+import subprocess
 TICK_TIME = 2**6
+
+class gazeThread(QtCore.QThread):
+
+    def __init__(self):
+        QtCore.QThread.__init__(self)
+
+    def __del__(self):
+        self.wait()
+
+    def run(self):
+        eyeGaze = subprocess.Popen(["./opengazer"], stdout= subprocess.PIPE)
+        gaze_points = eyeGaze.communicate()[0]
+        with open("gaze_points.csv", "w") as f:
+            f.write(gaze_points.decode('utf-8'))
 
 class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
     def setupUi(self, Dialog):
@@ -61,6 +76,8 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
 
         self.toolButton.clicked.connect(self.recording)
 
+        self.gaze_thread = gazeThread()
+
         self.dialog = Dialog
         self.timer = Qt.QTimer()
         self.timer.setInterval(TICK_TIME)
@@ -89,6 +106,8 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
         with open("main_config", "w") as f:
             buffer[1] = "yes"
             f.write("\n".join(buffer))
+        
+        self.gaze_thread.start()
 
         self.timer.start()
         _translate = QtCore.QCoreApplication.translate

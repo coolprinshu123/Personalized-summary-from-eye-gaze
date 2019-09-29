@@ -1,0 +1,9 @@
+Pre: AnchorPointSelector
+Pre: PointTracker
+Pre: EyeExtractor
+Gaze: GazeTracker
+Post: FrogGame
+Choosing points
+Choosing points
+Detect largest object (for eyes) failed!!
+EYE CORNERS NOT DETECTED

@@ -177,6 +177,8 @@ class Ui_MainWindow(object):
 
         self.analyseCommandLink.clicked.connect(self.calibrate)
 
+
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Personalised Summary Tool"))
@@ -212,11 +214,11 @@ class Ui_MainWindow(object):
 
                 #print(f"Length:{length}")
 
-                Dialog = QtWidgets.QDialog()
-                ui = Ui_Dialog_webcam()
-                ui.setupUi(Dialog)
-                Dialog.show()
-                Dialog.exec_()
+                # Dialog = QtWidgets.QDialog()
+                # ui = Ui_Dialog_webcam()
+                # ui.setupUi(Dialog)
+                # Dialog.show()
+                # Dialog.exec_()
 
                 #Runs the time Elapsed Window
                 Dialog = QtWidgets.QDialog()
