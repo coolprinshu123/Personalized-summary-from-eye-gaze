@@ -7,10 +7,14 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets, Qt
-from screen_recorder import Screen
+from Frame_recording import Screen
 from threading import Thread
 import settings
 import subprocess
+import warnings
+
+warnings.filterwarnings('ignore')
+
 TICK_TIME = 2**6
 
 class gazeThread(QtCore.QThread):
@@ -119,19 +123,19 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
         self.toolButton.clicked.connect(self.stopedRecording)
         self.threadTimer = Thread(target=self.sc.start_recording, args=())
         self.threadTimer.start()
-        #threadRecorder = Thread(target= self.record, args=())
-        #threadRecorder.start()
-        # self.sc.start_recording()
+        threadRecorder = Thread(target= self.record, args=())
+        threadRecorder.start()
+        self.sc.start_recording()
 
-        # self.record()
+        self.record()
     
     
-    # def record(self):
-    #     while True:
-    #         if self.sc.new_frame:
-    #             print('Recording!')
-    #             self.sc.capture_Frames()
-    #             # time.sleep(0.1)
+    def record(self):
+        while True:
+            if self.sc.new_frame:
+                print('Recording!')
+                self.sc.capture_Frames()
+                # time.sleep(0.1)
 
 
     @Qt.pyqtSlot()
