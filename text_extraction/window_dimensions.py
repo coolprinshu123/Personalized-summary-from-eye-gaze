@@ -22,6 +22,7 @@
 import logging
 import sys
 import time
+import pickle as pkl
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
                     level=logging.DEBUG,
                     stream=sys.stdout)
@@ -77,7 +78,11 @@ def for_Linux():
                     print(name)
                 else:
                     each.minimize()
-                    
+            
+            dim = [x, y, w, h]
+            with open("win_dim.pkl", "wb") as f:
+                pkl.dump(dim, f)
+                
             return [x, y, w, h]
 
 def callback(hwnd, extra):

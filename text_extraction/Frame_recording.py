@@ -160,7 +160,7 @@ class Screen(object):
                 window = self.get_Specific_Window()
                 frame_name = 'frame_' + str(self.n)
                 img = Image.frombytes("RGB", window.size, window.bgra, "raw", "BGRX")
-                output = "Frames/"+str(frame_name) + "_" + time.strftime("%H%M%S") + ".png"
+                output = "../text_extraction/Frames/"+str(frame_name) + "_" + time.strftime("%H%M%S") + ".png"
                 img.save(output)
                 self.new_frame = False
                 break
@@ -231,13 +231,20 @@ class Screen(object):
         self.monitor = {"top": self.dimensions[1], "left": self.dimensions[0] + self.mw_panel,
                         "width": self.dimensions[2], "height": self.dimensions[3]}
         while True:
-            if not settings.keepRecording:
-                print("keepRecording: ", settings.keepRecording)
+            with open("main_config", "r") as f:
+                buffer = f.read().split()
+            
+            if buffer[1] == "no":
                 break
-            if self.new_frame:
-                print('Recording!')
-                self.capture_Frames()
-                # time.sleep(0.1)
+            
+            else:
+                if not settings.keepRecording:
+                    print("keepRecording: ", settings.keepRecording)
+                    break
+                if self.new_frame:
+                    print('Recording!')
+                    self.capture_Frames()
+                    # time.sleep(0.1)
 
 
 if __name__ == "__main__":

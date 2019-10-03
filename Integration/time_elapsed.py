@@ -12,10 +12,26 @@ from threading import Thread
 import settings
 import subprocess
 import warnings
+import os
+import signal
 
 warnings.filterwarnings('ignore')
 
 TICK_TIME = 2**6
+
+rThread = 0
+eyeGaze = 0
+
+class recordThread(QtCore.QThread):
+
+    def __init__(self):
+        QtCore.QThread.__init__(self)
+
+    def __del__(self):
+        self.wait()
+
+    def run(self):
+        rThread = subprocess.Popen(["python3", "../text_extraction/Frame_recording.py"])
 
 class gazeThread(QtCore.QThread):
 
@@ -26,11 +42,12 @@ class gazeThread(QtCore.QThread):
         self.wait()
 
     def run(self):
+        
         eyeGaze = subprocess.Popen(["./opengazer"], stdout= subprocess.PIPE)
         gaze_points = eyeGaze.communicate()[0]
         with open("gaze_points.csv", "w") as f:
             f.write(gaze_points.decode('utf-8'))
-
+    
 class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -76,9 +93,11 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-        self.sc = Screen()
+        # self.sc = Screen()
 
         self.toolButton.clicked.connect(self.recording)
+
+        self.record_Thread = recordThread()
 
         self.gaze_thread = gazeThread()
 
@@ -108,10 +127,13 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
             buffer = f.read().split()
             
         with open("main_config", "w") as f:
+            buffer[0] = "yes"
             buffer[1] = "yes"
             f.write("\n".join(buffer))
         
+        
         self.gaze_thread.start()
+        self.record_Thread.start()
 
         self.timer.start()
         _translate = QtCore.QCoreApplication.translate
@@ -121,29 +143,44 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
         self.toolButton.clicked.disconnect()
         self.label.setText(_translate("Dialog", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; color:#ff0000;\">Recording......</span></p></body></html>"))
         self.toolButton.clicked.connect(self.stopedRecording)
-        self.threadTimer = Thread(target=self.sc.start_recording, args=())
-        self.threadTimer.start()
-        threadRecorder = Thread(target= self.record, args=())
-        threadRecorder.start()
-        self.sc.start_recording()
+        # self.threadTimer = Thread(target=self.sc.start_recording, args=())
+        # self.threadTimer.start()
+        # threadRecorder = Thread(target= self.record, args=())
+        # threadRecorder.start()
+        # self.sc.start_recording()
 
-        self.record()
+        # self.record()
     
     
-    def record(self):
-        while True:
-            if self.sc.new_frame:
-                print('Recording!')
-                self.sc.capture_Frames()
-                # time.sleep(0.1)
+    # def record(self):
+    #     while True:
+    #         if self.sc.new_frame:
+    #             print('Recording!')
+    #             self.sc.capture_Frames()
+    #             # time.sleep(0.1)
 
 
     @Qt.pyqtSlot()
     def stopedRecording(self):
         settings.stop_recording()
         self.timer.stop()
+
+        # global rThread
+        # os.killpg(os.getpgid(rThread.pid), signal.SIGTERM)
+
+        # global gazeThread
+        # os.killpg(os.getpgid(gazeThread.pid), signal.SIGTERM)
+        with open("main_config", "r") as f:
+            buffer = f.read().split()
+            
+        with open("main_config", "w") as f:
+            buffer[0] = "no"
+            buffer[1] = "no"
+            f.write("\n".join(buffer))
+
+
         # self.threadTimer.join()
-        self.sc.on_stop_recording()
+        # self.sc.on_stop_recording()
         QtWidgets.QDialog.accept(self.dialog)
         #QtWidgets.QDialog.close(self.dialog)
 
@@ -152,8 +189,8 @@ class Ui_Dialog_time_elapsed(Qt.QMainWindow, object):
         self.time = 0
         self.display()
 
-    def getSummary(self):
-        return self.sc.summary
+    # def getSummary(self):
+    #     return self.sc.summary
 
 
 import time_elapsed_rc

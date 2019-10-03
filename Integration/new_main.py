@@ -224,7 +224,8 @@ class Ui_MainWindow(object):
                 Dialog = QtWidgets.QDialog()
                 ui = Ui_Dialog_time_elapsed()
                 ui.setupUi(Dialog)
-                summary = ui.getSummary()
+                # summary = ui.getSummary()
+                summary = "lol"
                 Dialog.show()
                 rspt = Dialog.exec_()
                 

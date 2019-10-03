@@ -27,7 +27,7 @@ class progressThread(QtCore.QThread):
 
 
 class Ui_Dialog_summarising(object):
-    def setupUi(self, Dialog, length, summary):
+    def setupUi(self, Dialog, length="", summary=""):
         Dialog.setObjectName("Dialog")
         Dialog.resize(563, 237)
         icon = QtGui.QIcon()
@@ -132,11 +132,11 @@ class Ui_Dialog_summarising(object):
 import summarising_rc
 
 
-'''if __name__ == "__main__":
+if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog_summarising()
     ui.setupUi(Dialog)
     Dialog.show()
-    sys.exit(app.exec_())'''
+    sys.exit(app.exec_())
