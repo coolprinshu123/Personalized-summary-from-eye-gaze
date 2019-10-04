@@ -160,7 +160,7 @@ class Screen(object):
                 window = self.get_Specific_Window()
                 frame_name = 'frame_' + str(self.n)
                 img = Image.frombytes("RGB", window.size, window.bgra, "raw", "BGRX")
-                output = "Frames/"+str(frame_name) + "_" + time.strftime("%H%M%S") + ".png"
+                output = "Image_out/Frames/"+str(frame_name) + "_" + time.strftime("%H%M%S") + ".png"
                 img.save(output)
                 self.new_frame = False
                 break
