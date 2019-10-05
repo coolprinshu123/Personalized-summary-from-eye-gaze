@@ -208,18 +208,29 @@ class Screen(object):
             return False
 
     def on_stop_recording(self):
-        # send data for reordering
-        sorted_portions = reorderFlow(self.data)
-        print('reordered text', sorted_portions)
+        print("THIS IS STOP RECORDING CODE BODY")
+        # print("Pro")
+        # # send data for reordering
+        # sorted_portions = reorderFlow(self.data)
+        # print('reordered text', sorted_portions)
 
-        # remove redundancy here
-        redundancy_free_text = self.remove_Redundant_Text(sorted_portions)
-        print('\n redundancy free text: \n', redundancy_free_text)
-        with open('extracted_summary.txt', 'w+') as s:
-            summary = self.clean_Extracted_Text(redundancy_free_text)
-            for each in summary.split('.'):
-                s.write(each + '\n')
-            s.close()
+        # # remove redundancy here
+        # redundancy_free_text = self.remove_Redundant_Text(sorted_portions)
+        # print('\n redundancy free text: \n', redundancy_free_text)
+        # with open('extracted_summary.txt', 'w+') as s:
+        #     summary = self.clean_Extracted_Text(redundancy_free_text)
+        #     for each in summary.split('.'):
+        #         s.write(each + '\n')
+        #     s.close()
+        # store last frame
+        window = self.get_Specific_Window()
+        frame_name = 'frame_' + str(self.n)
+        img = Image.frombytes("RGB", window.size, window.bgra, "raw", "BGRX")
+        path = "../text_extraction/Frames/"
+        # path = "Image_out/Frames/"
+        output = path + str(frame_name) + "_" + time.strftime("%H%M%S") + "_dummy.png"
+        img.save(output)
+
 
     def start_recording(self):
         listener = Listener(on_press=self.on_press, on_release=self.on_release)
@@ -233,8 +244,13 @@ class Screen(object):
         while True:
             with open("main_config", "r") as f:
                 buffer = f.read().split()
+            try:
+                if buffer[1] == "no":
+                    self.on_stop_recording()
+                    break
             
-            if buffer[1] == "no":
+            except:
+                self.on_stop_recording()
                 break
             
             else:
