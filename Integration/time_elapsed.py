@@ -44,6 +44,9 @@ class gazeThread(QtCore.QThread):
     def run(self):
         
         eyeGaze = subprocess.Popen(["./opengazer"], stdout= subprocess.PIPE)
+        with open("gaze_PID", "w") as f:
+            f.write(str(eyeGaze.pid))
+
         gaze_points = eyeGaze.communicate()[0]
         with open("gaze_points.csv", "w") as f:
             f.write(gaze_points.decode('utf-8'))

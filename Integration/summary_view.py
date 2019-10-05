@@ -11,7 +11,7 @@ from exit_confirm import Ui_Dialog_exit_confirm
 from save_file import SaveSummary
 
 class Ui_Dialog_summary_view(object):
-    def setupUi(self, Dialog, summary):
+    def setupUi(self, Dialog, summary=""):
         Dialog.setObjectName("Dialog")
         Dialog.resize(783, 461)
         icon = QtGui.QIcon()
@@ -66,7 +66,7 @@ class Ui_Dialog_summary_view(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-        with open("extracted_summary.txt", "r") as f:
+        with open("File_out/summary.txt", "r") as f:
             summary = f.read()
             self.summaryDisplay.setText(summary)
 

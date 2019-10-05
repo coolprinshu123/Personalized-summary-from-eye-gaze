@@ -20,6 +20,7 @@ from webcam_start import Ui_Dialog_webcam
 import subprocess
 import sys
 import warnings
+import psutil
 
 warnings.filterwarnings('ignore')
 
@@ -235,6 +236,16 @@ class Ui_MainWindow(object):
                     self.isRunning = 0
 
                 else:
+
+                    with open("gaze_PID", "r") as f:
+                        gazePID = int(f.read())
+
+                    while 1:
+                        if not psutil.pid_exists(gazePID):
+                            break
+
+                    subprocess.Popen(["./restIntegrated.sh"])
+                    
 
                     #Opens Summarising window
                     Dialog = QtWidgets.QDialog()

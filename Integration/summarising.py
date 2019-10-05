@@ -22,7 +22,7 @@ class progressThread(QtCore.QThread):
         while 1:
             maxVal = 1
             self.progress_update.emit(maxVal)
-            time.sleep(0.03)
+            time.sleep(0.06)
 
 
 
