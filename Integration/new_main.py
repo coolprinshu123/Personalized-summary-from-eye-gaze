@@ -244,8 +244,12 @@ class Ui_MainWindow(object):
                         if not psutil.pid_exists(gazePID):
                             break
 
-                    subprocess.Popen(["./restIntegrated.sh"])
+                    intShell = subprocess.Popen(["./restIntegrated.sh"])
                     
+
+                    while 1:
+                        if not psutil.pid_exists(intShell.pid):
+                            break
 
                     #Opens Summarising window
                     Dialog = QtWidgets.QDialog()
