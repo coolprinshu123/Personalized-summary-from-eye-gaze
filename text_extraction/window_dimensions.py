@@ -46,11 +46,13 @@ def for_Linux():
             with open("/proc/{pid}/cmdline".format(pid=pid)) as f:
                 active_window_name = f.read()
             x, y, w, h = wnck.window.get_client_window_geometry()
-            print('dimensions: ', x,y,w,h)
-            return [x, y, w, h]
+            print('dimensions: ', x, y, w, h)
+            return "No name", [x, y, w, h]
+
     else:
         try:
             import gi
+            print("text")
             gi.require_version('Wnck', '3.0')
             gi.require_version('Gtk', '3.0')
             from gi.repository import Gtk, Wnck
@@ -62,28 +64,28 @@ def for_Linux():
             Gtk.init([])  # necessary if not using a Gtk.main() loop
             screen = Wnck.Screen.get_default()
             screen.force_update()  # recommended per Wnck documentation
-            windows =screen.get_windows()
-            browser_names = ['Firefox','Mozilla Firefox','Chrome', 'Google Chrome', 'Safari', 'Mss :: Anaconda Cloud - Google Chrome']
+            windows = screen.get_windows()
+            browser_names = ['Firefox', 'Mozilla Firefox', 'Chrome', 'Google Chrome', 'Safari',
+                             'Mss :: Anaconda Cloud - Google Chrome']
             for each in windows:
                 name = each.get_application().get_name()
-                print(name)
-                #if name in browser_names:
                 if any(substring in name for substring in browser_names):
                     browser_window = each
-                    #browser_window.activate(1)
+                    article_name = name
+                    # browser_window.activate(1)
                     # browser_window.set_fullscreen(True)
-
                     x, y, w, h = Wnck.Window.get_geometry(browser_window)
-                    print(x, y, w, h)	
+                    # print(x, y, w, h)
                     print(name)
                 else:
                     each.minimize()
-            
-            dim = [x, y, w, h]
-            with open("win_dim.pkl", "wb") as f:
-                pkl.dump(dim, f)
-                
-            return [x, y, w, h]
+
+            # dim_file = open("Window_dim.txt", "w+")
+            # dim_file.write(article_name+" :: "+ x + y + w + h)
+            # dim_file.close()
+
+            return article_name, [x, y, w, h]
+
 
 def callback(hwnd, extra):
     global dimensions
@@ -112,6 +114,8 @@ def callback(hwnd, extra):
             # return [x, y, w, h]
             dimensions = [x, y, w, h]
             break
+
+
 def for_Windows():
     global dimensions
     try:
@@ -150,6 +154,7 @@ def for_Mac():
     print('got dimensions yo')
     dimensions = list(map(int, wSize.split('x')))
     return dimensions
+
 
 def get_active_window_dimensions():
     """

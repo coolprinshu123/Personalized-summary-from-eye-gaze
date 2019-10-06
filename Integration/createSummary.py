@@ -214,7 +214,6 @@ if __name__ == "__main__":
         index += 1
 
     # Get close matches of summary sentences in original text
-    summaryFinal = open("File_out/summary.txt", "w+")
     matches = []
     for each in unclean_summary.split('.'):
         match = get_close_matches(each, org_list)
@@ -223,7 +222,8 @@ if __name__ == "__main__":
             matches.append([int(match[0]), match[1]])
 
     # Sort the original text sentences according to index and create summary
-    sorted_list = sorted(matches, key=lambda l: l[1])
+    summaryFinal = open("File_out/summary.txt", "w+")
+    sorted_list = sorted(matches, key=lambda l: l[0])
     for each in sorted_list:
         text = str(each[1])
         summaryFinal.write(text.strip() + ". ")
@@ -231,3 +231,7 @@ if __name__ == "__main__":
     summaryFinal.close()
 
     print("Summary saved at File_out/summary.txt")
+
+    config = open("main_config", "a")
+    config.write("summary created")
+    config.close()
