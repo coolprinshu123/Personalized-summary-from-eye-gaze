@@ -15,7 +15,7 @@ from save_file import SaveSummary
 from exit_confirm import Ui_Dialog_exit_confirm
 from running import Ui_Dialog_running
 from wait import Ui_Dialog_wait
-from pls_calibrate import Ui_Dialog_pcalb
+from suggested_summary import Ui_Dialog_suggSummary
 from webcam_start import Ui_Dialog_webcam
 import subprocess
 import sys
@@ -184,7 +184,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Personalised Summary Tool"))
         self.quotes.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic;\">&quot;Egotism is the source of all faults and miseries&quot; - Thomas Carlyle</span></p></body></html>"))
-        self.analyseCommandLink.setText(_translate("MainWindow", "    Calibrate"))
+        self.analyseCommandLink.setText(_translate("MainWindow", "    Suggested Summary"))
         self.title.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:28pt;\">Personalised Summary Tool</span></p></body></html>"))
         self.summariseButton.setText(_translate("MainWindow", "Summarise"))
         self.lengthCombo.setItemText(0, _translate("MainWindow", "Choose Summary length..."))
@@ -305,17 +305,17 @@ class Ui_MainWindow(object):
                 #     # Dialog_exit.show()
                 #     # Dialog_exit.exec_()        
 
-        else:
-            Dialog = QtWidgets.QDialog()
-            ui = Ui_Dialog_pcalb()
-            ui.setupUi(Dialog)
-            Dialog.show()
-            Dialog.exec_()
-            del Dialog
+        # else:
+        #     Dialog = QtWidgets.QDialog()
+        #     ui = Ui_Dialog_pcalb()
+        #     ui.setupUi(Dialog)
+        #     Dialog.show()
+        #     Dialog.exec_()
+        #     del Dialog
 
     def calibrate(self):
         Dialog = QtWidgets.QDialog()
-        ui = Ui_Dialog_wait()
+        ui = Ui_Dialog_suggSummary()
         ui.setupUi(Dialog)
         Dialog.show()
         Dialog.exec_()
