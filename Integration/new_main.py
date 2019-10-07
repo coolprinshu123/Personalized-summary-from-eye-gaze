@@ -27,6 +27,18 @@ warnings.filterwarnings('ignore')
 quotes = ['"Egotism is the source of all faults and miseries" - Thomas Carlyle'] #, '"The saddest summary of a life contains three descriptions: could have, might have, and should have." - Louis E. Boone']
 
 
+class shellThread(QtCore.QThread):
+
+    def __init__(self):
+        QtCore.QThread.__init__(self)
+
+    def __del__(self):
+        self.wait()
+
+    def run(self):
+        sThread = subprocess.Popen(["./restIntegrated.sh"])
+        o,_ = sThread.communicate()
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -174,6 +186,7 @@ class Ui_MainWindow(object):
 
         self.isRunning = 0
         self.quotes.setText(choice(quotes))
+        self.shell_thread = shellThread()
         self.summariseButton.clicked.connect(self.summarise)
 
         self.analyseCommandLink.clicked.connect(self.calibrate)
@@ -244,12 +257,7 @@ class Ui_MainWindow(object):
                         if not psutil.pid_exists(gazePID):
                             break
 
-                    intShell = subprocess.Popen(["./restIntegrated.sh"])
-                    
-
-                    while 1:
-                        if not psutil.pid_exists(intShell.pid):
-                            break
+                    self.shell_thread.start()
 
                     #Opens Summarising window
                     Dialog = QtWidgets.QDialog()
@@ -258,6 +266,8 @@ class Ui_MainWindow(object):
                     Dialog.show()
                     Dialog.exec_()
                     del Dialog
+
+                    self.shell_thread.terminate()
 
                     #Opens summary view
                     Dialog = QtWidgets.QDialog()
