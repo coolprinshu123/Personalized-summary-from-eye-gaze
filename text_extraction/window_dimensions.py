@@ -46,7 +46,7 @@ def for_Linux():
             with open("/proc/{pid}/cmdline".format(pid=pid)) as f:
                 active_window_name = f.read()
             x, y, w, h = wnck.window.get_client_window_geometry()
-            print('dimensions: ', x, y, w, h)
+            # print('dimensions: ', x, y, w, h)
             return "No name", [x, y, w, h]
 
     else:
@@ -76,7 +76,7 @@ def for_Linux():
                     # browser_window.set_fullscreen(True)
                     x, y, w, h = Wnck.Window.get_geometry(browser_window)
                     # print(x, y, w, h)
-                    print(name)
+                    # print(name)
                 else:
                     each.minimize()
 

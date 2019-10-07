@@ -45,7 +45,7 @@ class Screen(object):
 
     def get_Specific_Window(self):
         img = sct.grab(self.monitor)
-        print(self.monitor)
+        # print(self.monitor)
         return img
 
     def capture_Frames(self):
@@ -56,7 +56,7 @@ class Screen(object):
             if not settings.keepRecording:
                 break
             if threshold > 5 and self.new_frame:
-                print("threshold: ", threshold)
+                # print("threshold: ", threshold)
                 self.n += 1
                 window = self.get_Specific_Window()
                 frame_name = str(self.articleName[0:-27]) + "_" + str(self.n)
@@ -96,6 +96,7 @@ class Screen(object):
             return False
 
     def on_stop_recording(self):
+        print("Inside stop recording.......................................................")
         self.n += 1
         window = self.get_Specific_Window()
         frame_name = str(self.articleName[0:-27])+ "_" + str(self.n)
