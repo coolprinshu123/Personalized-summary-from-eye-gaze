@@ -297,25 +297,25 @@ def GazeFrameMap(coordinatesFileName):
 
 
 # Main Function to call all the other function.
+def gPMain():
+    InputGazeFile = "gaze_points.csv"
+    OutputGazeFile = "File_out/FilteredGaze.csv"
+    # Empty the Frames folder
+    import glob
+    import os
 
-InputGazeFile = "gaze_points.csv"
-OutputGazeFile = "File_out/FilteredGaze.csv"
-# Empty the Frames folder
-import glob
-import os
+    # path = "../Integration/Image_out/Frames/"
+    path = "Image_out/HeatMaps/"
+    files = glob.glob(path + '*.png')
+    for f in files:
+        os.remove(f)
 
-# path = "../Integration/Image_out/Frames/"
-path = "Image_out/HeatMaps/"
-files = glob.glob(path + '*.png')
-for f in files:
-    os.remove(f)
+    gazeFileCorrection(InputGazeFile, OutputGazeFile)
 
-gazeFileCorrection(InputGazeFile, OutputGazeFile)
+    # Remove previsous bbox_points file
+    if os.path.exists("File_out/bbox_points.txt"):
+        os.remove("File_out/bbox_points.txt")
 
-# Remove previsous bbox_points file
-if os.path.exists("File_out/bbox_points.txt"):
-    os.remove("File_out/bbox_points.txt")
+    GazeFrameMap(OutputGazeFile)
 
-GazeFrameMap(OutputGazeFile)
-
-print("Gaze bounding boxes captured")
+    print("Gaze bounding boxes captured")

@@ -20,6 +20,8 @@ from webcam_start import Ui_Dialog_webcam
 import subprocess
 import sys
 import warnings
+from createSummary import crMain
+from gazePlotMap import gPMain
 import psutil
 
 warnings.filterwarnings('ignore')
@@ -36,8 +38,8 @@ class shellThread(QtCore.QThread):
         self.wait()
 
     def run(self):
-        sThread = subprocess.Popen(["./restIntegrated.sh"])
-        o,_ = sThread.communicate()
+        gPMain()
+        crMain()
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
