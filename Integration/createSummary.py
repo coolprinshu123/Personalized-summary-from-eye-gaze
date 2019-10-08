@@ -92,18 +92,18 @@ class Screen(object):
             read_box = boxes[i]
             # read_box = [604, 247, 90, 124]
             extracted_image = window.crop(read_box)
-            # extracted_image.show()
+            extracted_image.show()
             extracted_text = self.extract_Text_From_Image(extracted_image)
 
             if read_box[2] - read_box[0] >= 2500:
                 # extract.write(extracted_text+'\n\n')
                 # print('\n' + extracted_text + '\n \n' + str(read_box))
-                sc.extracted_data.append(extracted_text)
+                self.extracted_data.append(extracted_text)
                 # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
                 # = (window_name, read_box, self.pixel_info)
             elif extracted_text:
                 corrected_text, b_box = self.complete_The_Text(extracted_text, window, read_box)
-                sc.extracted_data.append(corrected_text)
+                self.extracted_data.append(corrected_text)
                 # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
                 # data[corrected_text] = (window_name, b_box, self.pixel_info)
                 # extract.write(corrected_text+'\n\n')
@@ -298,6 +298,3 @@ if __name__ == "__main__":
 
     print("Summary saved at File_out/summary.txt")
 
-    config = open("main_config", "a")
-    config.write("summary created")
-    config.close()

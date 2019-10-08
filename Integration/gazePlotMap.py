@@ -242,8 +242,15 @@ def bounding_box(imageName, FrameName):
             # cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
             if w > 15 and h > 15:
                 # cv2.imwrite('out_check_out.png'.format(i), roi)
-                cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                bbox_file.write(str(x) + " " + str(y) + " " + str(w) + " " + str(h) + " " + " | ")
+
+                if x == 0 and y == 0:
+                    cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                    bbox_file.write(
+                        str(x) + " " + str(y) + " " + str(w + 20) + " " + str(h + 20) + " " + " | ")
+                else:
+                    cv2.rectangle(image, (x-50, y-50), (x + w+50, y + h+50), (0, 255, 0), 2)
+                    bbox_file.write(
+                        str(x - 50) + " " + str(y - 50) + " " + str(w + 50) + " " + str(h + 50) + " " + " | ")
 
     bbox_file.write("\n")
     bbox_file.close()
