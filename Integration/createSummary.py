@@ -18,6 +18,7 @@ import re
 from difflib import get_close_matches
 import wikipediaapi
 
+
 class Screen(object):
     frames = {}
     scroll_value = False
@@ -92,7 +93,7 @@ class Screen(object):
             read_box = boxes[i]
             # read_box = [604, 247, 90, 124]
             extracted_image = window.crop(read_box)
-            extracted_image.show()
+            # extracted_image.show()
             extracted_text = self.extract_Text_From_Image(extracted_image)
 
             if read_box[2] - read_box[0] >= 2500:
@@ -168,7 +169,10 @@ class Screen(object):
 
         return wild_removed
 
+
 def crMain():
+    print("Start summary creation...")
+
     sc = Screen()
     frame_list = os.listdir("Image_out/Frames")
 
@@ -231,70 +235,69 @@ def crMain():
 
     print("Summary saved at File_out/summary.txt")
 
-    config = open("main_config", "a")
-    config.write("summary created")
+    config = open("summary_created.txt", "w")
+    config.write("1")
     config.close()
 
-if __name__ == "__main__":
-    sc = Screen()
-    frame_list = os.listdir("Image_out/Frames")
-
-    def frame_no(x):
-        return x.split("_")[1]
-
-    articleName = None
-    unclean_summary = []
-    for filename in sorted(frame_list, key=frame_no):
-        if filename.endswith(".png"):
-            if filename.__contains__("dummy"):
-                continue
-            articleName = filename.split("_")[0]
-            net = "Image_out/Frames/" + filename
-            frame = cv2.imread("Image_out/Frames/" + filename)
-            portions = sc.get_Coordinates(filename)
-            sc.text_Extraction(net, portions)
-        else:
-            continue
-
-    # Remove redundancy
-    sc.extracted_data = '\n'.join(sc.extracted_data)
-    redundancy_free_summary = sc.remove_Redundant_Text(sc.extracted_data)
-    unclean_summary = redundancy_free_summary
-
-    # Get original article plain text
-    wiki_wiki = wikipediaapi.Wikipedia(
-        language='en',
-        extract_format=wikipediaapi.ExtractFormat.WIKI
-    )
-    p_wiki = wiki_wiki.page(articleName)
-    original_text = p_wiki.text
-
-    # Replace decimal by '__'
-    decmark_reg = re.compile('(?<=\d)\.(?=\d)')
-    decimal_replaced = decmark_reg.sub('__', original_text)
-    text_list = decimal_replaced.split(".")
-    index = 0
-    org_list = []
-    for each in text_list:
-        org_list.append(str(index) + " @:@ " + each)
-        index += 1
-
-    # Get close matches of summary sentences in original text
-    matches = []
-    for each in unclean_summary.split('.'):
-        match = get_close_matches(each, org_list)
-        if len(match) != 0:
-            match = match[0].split(" @:@ ")
-            matches.append([int(match[0]), match[1]])
-
-    # Sort the original text sentences according to index and create summary
-    summaryFinal = open("File_out/summary.txt", "w+")
-    sorted_list = sorted(matches, key=lambda l: l[0])
-    for each in sorted_list:
-        text = str(each[1])
-        summaryFinal.write(text.strip() + ". ")
-
-    summaryFinal.close()
-
-    print("Summary saved at File_out/summary.txt")
-
+# if __name__ == "__main__":
+#     sc = Screen()
+#     frame_list = os.listdir("Image_out/Frames")
+#
+#     def frame_no(x):
+#         return x.split("_")[1]
+#
+#     articleName = None
+#     unclean_summary = []
+#     for filename in sorted(frame_list, key=frame_no):
+#         if filename.endswith(".png"):
+#             if filename.__contains__("dummy"):
+#                 continue
+#             articleName = filename.split("_")[0]
+#             net = "Image_out/Frames/" + filename
+#             frame = cv2.imread("Image_out/Frames/" + filename)
+#             portions = sc.get_Coordinates(filename)
+#             sc.text_Extraction(net, portions)
+#         else:
+#             continue
+#
+#     # Remove redundancy
+#     sc.extracted_data = '\n'.join(sc.extracted_data)
+#     redundancy_free_summary = sc.remove_Redundant_Text(sc.extracted_data)
+#     unclean_summary = redundancy_free_summary
+#
+#     # Get original article plain text
+#     wiki_wiki = wikipediaapi.Wikipedia(
+#         language='en',
+#         extract_format=wikipediaapi.ExtractFormat.WIKI
+#     )
+#     p_wiki = wiki_wiki.page(articleName)
+#     original_text = p_wiki.text
+#
+#     # Replace decimal by '__'
+#     decmark_reg = re.compile('(?<=\d)\.(?=\d)')
+#     decimal_replaced = decmark_reg.sub('__', original_text)
+#     text_list = decimal_replaced.split(".")
+#     index = 0
+#     org_list = []
+#     for each in text_list:
+#         org_list.append(str(index) + " @:@ " + each)
+#         index += 1
+#
+#     # Get close matches of summary sentences in original text
+#     matches = []
+#     for each in unclean_summary.split('.'):
+#         match = get_close_matches(each, org_list)
+#         if len(match) != 0:
+#             match = match[0].split(" @:@ ")
+#             matches.append([int(match[0]), match[1]])
+#
+#     # Sort the original text sentences according to index and create summary
+#     summaryFinal = open("File_out/summary.txt", "w+")
+#     sorted_list = sorted(matches, key=lambda l: l[0])
+#     for each in sorted_list:
+#         text = str(each[1])
+#         summaryFinal.write(text.strip() + ". ")
+#
+#     summaryFinal.close()
+#
+#     print("Summary saved at File_out/summary.txt")
