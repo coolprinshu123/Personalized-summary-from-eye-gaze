@@ -271,17 +271,18 @@ class Ui_MainWindow(object):
 
                     self.shell_thread.terminate()
 
-                    #Opens summary view
-                    Dialog = QtWidgets.QDialog()
-                    config = open("summary_created.txt", "r")
-                    check = config.read()
-                    if check == "1":
+                    with open("summary_created.txt", "r") as f:
+                        check = f.read()
+
+                    if check == '1':
+
+                        #Opens summary view
+                        Dialog = QtWidgets.QDialog()
                         ui = Ui_Dialog_summary_view()
                         ui.setupUi(Dialog, summary)
                         Dialog.show()
-                    config.close()
+                        rsp = Dialog.exec_()
 
-                    rsp = Dialog.exec_()
                     if rsp == QtWidgets.QDialog.Accepted:
                         self.isRunning = 0
                         print(f"from main {rsp}")
