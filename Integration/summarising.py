@@ -22,7 +22,7 @@ class progressThread(QtCore.QThread):
         while 1:
             maxVal = 1
             self.progress_update.emit(maxVal)
-            time.sleep(0.06)
+            time.sleep(0.27)
 
 
 
@@ -88,7 +88,7 @@ class Ui_Dialog_summarising(object):
     def processing(self, maxVal):
         model = QtGui.QStandardItemModel()
         self.progressListView.setModel(model)
-        item = QtGui.QStandardItem("Extrating text...")
+        item = QtGui.QStandardItem("Extracting text...")
         item1 = QtGui.QStandardItem("Removing Redundancy...")
         item2 = QtGui.QStandardItem("Cleaning Text...")
         item3 = QtGui.QStandardItem("Performing Extractive Summarisation...")
@@ -106,7 +106,9 @@ class Ui_Dialog_summarising(object):
         # # self.progressBar.setValue(100)
 
         self.progressBar.setValue(self.progressBar.value() + maxVal)
-        
+
+        with open("./summary_created.txt", "r") as f:
+            check = f.read()
 
         if self.progressBar.value() <25:
             model.appendRow(item)
@@ -117,13 +119,16 @@ class Ui_Dialog_summarising(object):
             model.appendRow(item)
             model.appendRow(item1)
             model.appendRow(item2)
-        elif self.progressBar.value() <100:
+        elif self.progressBar.value() < 99:
             model.appendRow(item)
             model.appendRow(item1)
             model.appendRow(item2)
             model.appendRow(item3)
-        elif self.progressBar.value() == 100:
-            QtWidgets.QDialog.close(self.dialog)
+        elif self.progressBar.value() == 99:
+            if check == "1":
+                QtWidgets.QDialog.close(self.dialog)
+            else:
+                self.progressBar.setValue(97)
 
         if maxVal == 0:
             self.progressBar.setValue(100)

@@ -66,7 +66,7 @@ class Ui_Dialog_summary_view(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-        with open("File_out/summary.txt", "r") as f:
+        with open("./File_out/summary.txt", "r") as f:
             summary = f.read()
             self.summaryDisplay.setText(summary)
 

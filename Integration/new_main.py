@@ -269,12 +269,13 @@ class Ui_MainWindow(object):
                     Dialog.exec_()
                     del Dialog
 
-                    self.shell_thread.terminate()
+                    # self.shell_thread.terminate()
 
                     with open("summary_created.txt", "r") as f:
                         check = f.read()
 
                     if check == '1':
+                        print("Reading summary")
 
                         #Opens summary view
                         Dialog = QtWidgets.QDialog()
@@ -282,21 +283,24 @@ class Ui_MainWindow(object):
                         ui.setupUi(Dialog, summary)
                         Dialog.show()
                         rsp = Dialog.exec_()
+                        config = open("./summary_created.txt", "w")
+                        config.write("0")
+                        config.close()
+                        if rsp == QtWidgets.QDialog.Accepted:
+                            self.isRunning = 0
+                            print(f"from main {rsp}")
 
-                    if rsp == QtWidgets.QDialog.Accepted:
-                        self.isRunning = 0
-                        print(f"from main {rsp}")
-
+                        else:
+                            self.isRunning = 0
+                            # print(f"from main{rsp}")
+                            # Dialog_exit = QtWidgets.QDialog()
+                            # ui_exit = Ui_Dialog_exit_confirm()
+                            # ui_exit.setupUi(Dialog_exit)
+                            # Dialog_exit.show()
+                            # Dialog_exit.exec_()
+                        del Dialog
                     else:
-                        self.isRunning = 0
-                        # print(f"from main{rsp}")
-                        # Dialog_exit = QtWidgets.QDialog()
-                        # ui_exit = Ui_Dialog_exit_confirm()
-                        # ui_exit.setupUi(Dialog_exit)
-                        # Dialog_exit.show()
-                        # Dialog_exit.exec_()        
-                del Dialog
-
+                        print("Summary not created")
                 
                 # #Opens Summarising window
                 # Dialog = QtWidgets.QDialog()

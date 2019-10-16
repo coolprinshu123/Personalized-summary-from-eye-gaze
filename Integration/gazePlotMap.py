@@ -198,7 +198,7 @@ def draw_heatmap(gazepoints, dispsize, imagefile=None, alpha=0.5, savefilename=N
     return fig
 
 
-def bounding_box(imageName, FrameName):
+def bounding_box(imageName, FrameName, display_width, display_height):
     image = cv2.imread(imageName)
     roi_copy = image.copy()
     roi_hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
@@ -226,10 +226,11 @@ def bounding_box(imageName, FrameName):
     else:
         im2, ctrs, hier = cv2.findContours(mask1.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    bbox_file = open("File_out/bbox_points.txt", "a")
+    bbox_file = open("./File_out/bbox_points.txt", "a")
     bbox_file.write(FrameName + " | ")
     # sort contours
     sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
+    valid_boxes = []
     for i, ctr in enumerate(sorted_ctrs):
         if cv2.contourArea(ctr) > 50:
             peri = cv2.arcLength(ctr, True)
@@ -240,29 +241,36 @@ def bounding_box(imageName, FrameName):
             # show ROI
             # cv2.imshow('segment no:'+str(i),roi)
             # cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            if w > 15 and h > 15:
+            if w > 200 and h > 15:
                 # cv2.imwrite('out_check_out.png'.format(i), roi)
+                valid_boxes.append([x, y, w, h])
 
-                if x == 0 and y == 0:
-                    cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                    bbox_file.write(
-                        str(x) + " " + str(y) + " " + str(w + 20) + " " + str(h + 20) + " " + " | ")
-                else:
-                    cv2.rectangle(image, (x-50, y-50), (x + w+50, y + h+50), (0, 255, 0), 2)
-                    bbox_file.write(
-                        str(x - 50) + " " + str(y - 50) + " " + str(w + 50) + " " + str(h + 50) + " " + " | ")
+                cv2.rectangle(image, (x, y), (x + display_width - x - 10, y + h + 200), (0, 255, 0), 2)
+                bbox_file.write(
+                    str(x) + " " + str(y) + " " + str(display_width - x - 10) + " " + str(
+                        h + 200) + " " + " | ")
+
+                # if x < 50 or y < 50:
+                #     cv2.rectangle(image, (x, y), (x + display_width - x - 10, y + h), (0, 255, 0), 2)
+                #     bbox_file.write(
+                #         str(x) + " " + str(y) + " " + str(display_width - x - 10) + " " + str(h + 20) + " " + " | ")
+                # else:
+                #     cv2.rectangle(image, (x - 50, y - 50), (x + display_width - x - 10, y + h + 50), (0, 255, 0), 2)
+                #     bbox_file.write(
+                #         str(x - 50) + " " + str(y - 50) + " " + str(display_width - x - 10) + " " + str(
+                #             h + 50) + " " + " | ")
 
     bbox_file.write("\n")
     bbox_file.close()
     # cv2.imshow('marked areas', image)
-    # cv2.imwrite('out_check_out.png', image)
+    cv2.imwrite("./Image_out/" + FrameName + 'box.png', image)
     # cv2.waitKey(0)
 
 
 def GazeFrameMap(coordinatesFileName):
     frameDict = {}
     frameNum = []
-    imageNames = os.listdir("Image_out/Frames/")
+    imageNames = os.listdir("./Image_out/Frames/")
     for frames in imageNames:
         if frames.__contains__(".png"):
             frame_number, startTime = getStartTime(frames)
@@ -287,32 +295,32 @@ def GazeFrameMap(coordinatesFileName):
         file.close()
         # Pass the gazepoints and the frameName to the heat map generator.
         # print(gazePoints)
-        HeatMap_OutFile = "Image_out/HeatMaps/"+frameName[0:-4]+"_out.png"
-        dimFile = open("File_out/Window_dim.txt", "r")
+        HeatMap_OutFile = "./Image_out/HeatMaps/" + frameName[0:-4] + "_out.png"
+        dimFile = open("./File_out/Window_dim.txt", "r")
         out_dimensions = dimFile.read().split(" ")
         dimFile.close()
         # out_dimensions = get_output_img_size()
-        display_width = int(out_dimensions[2])
-        display_height = int(out_dimensions[3])
+        display_width = int(out_dimensions[-2])
+        display_height = int(out_dimensions[-1])
         # print(display_width, display_height)
         # background_image = "Image_out/Frames/"+frameName
         draw_heatmap(gazePoints, (display_width, display_height), alpha=alpha,
-                                       savefilename=HeatMap_OutFile,
-                                       imagefile=background_image, gaussianwh=ngaussian, gaussiansd=sd)
+                     savefilename=HeatMap_OutFile,
+                     imagefile=background_image, gaussianwh=ngaussian, gaussiansd=sd)
 
-        bounding_box(HeatMap_OutFile, frameName)
+        bounding_box(HeatMap_OutFile, frameName, display_width, display_height)
 
 
 # Main Function to call all the other function.
 def gPMain():
     InputGazeFile = "gaze_points.csv"
-    OutputGazeFile = "File_out/FilteredGaze.csv"
+    OutputGazeFile = "./File_out/FilteredGaze.csv"
     # Empty the Frames folder
     import glob
     import os
 
     # path = "../Integration/Image_out/Frames/"
-    path = "Image_out/HeatMaps/"
+    path = "./Image_out/HeatMaps/"
     files = glob.glob(path + '*.png')
     for f in files:
         os.remove(f)
@@ -320,9 +328,13 @@ def gPMain():
     gazeFileCorrection(InputGazeFile, OutputGazeFile)
 
     # Remove previsous bbox_points file
-    if os.path.exists("File_out/bbox_points.txt"):
-        os.remove("File_out/bbox_points.txt")
+    if os.path.exists("./File_out/bbox_points.txt"):
+        os.remove("./File_out/bbox_points.txt")
 
     GazeFrameMap(OutputGazeFile)
 
     print("Gaze bounding boxes captured")
+
+
+if __name__ == "__main__":
+    gPMain()

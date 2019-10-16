@@ -44,7 +44,7 @@ class Screen(object):
 
     def get_Coordinates(self, frameName):
         bboxes = []
-        bboxFile = open("File_out/bbox_points.txt", "r")
+        bboxFile = open("./File_out/bbox_points.txt", "r")
         for line in bboxFile:
             line_parts = line.split(" | ")
             if line_parts[0].__contains__(frameName):
@@ -95,7 +95,8 @@ class Screen(object):
             extracted_image = window.crop(read_box)
             # extracted_image.show()
             extracted_text = self.extract_Text_From_Image(extracted_image)
-
+            # self.extracted_data.append(extracted_text)
+            #####
             if read_box[2] - read_box[0] >= 2500:
                 # extract.write(extracted_text+'\n\n')
                 # print('\n' + extracted_text + '\n \n' + str(read_box))
@@ -103,20 +104,20 @@ class Screen(object):
                 # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
                 # = (window_name, read_box, self.pixel_info)
             elif extracted_text:
-                corrected_text, b_box = self.complete_The_Text(extracted_text, window, read_box)
-                self.extracted_data.append(corrected_text)
-                # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
-                # data[corrected_text] = (window_name, b_box, self.pixel_info)
-                # extract.write(corrected_text+'\n\n')
-                # print('\n' + extracted_text + '\n \n' + str(b_box))
+                self.extracted_data.append(extracted_text)
+                ######corrected_text, b_box = self.complete_The_Text(extracted_text, window, read_box)
+                ######self.extracted_data.append(corrected_text)
+            # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
+            # data[corrected_text] = (window_name, b_box, self.pixel_info)
+            # extract.write(corrected_text+'\n\n')
+            # print('\n' + extracted_text + '\n \n' + str(b_box))
 
         # time_elapsed = time.time() - start
         # print('Time taken:', time_elapsed)
 
         # return data
 
-    @staticmethod
-    def remove_Redundant_Text(input_text):
+    def remove_Redundant_Text(self, input_text):
         list_of_sentences = input_text.split('\n')
         completed_lines_hash = set()
         redundancy_free_text = ''
@@ -131,36 +132,30 @@ class Screen(object):
                 completed_lines_hash.add(hashValue)
         return redundancy_free_text
 
-    # def get_wiki_text(self, articleName):
-    #     import requests
-    #     response = requests.get(
-    #         'https://en.wikipedia.org/w/api.php',
-    #         params={
-    #             'action': 'query',
-    #             'format': 'json',
-    #             'titles': articleName,
-    #             'prop': 'extracts',
-    #             'exintro': True,
-    #             'explaintext': True,
-    #         }
-    #     ).json()
-    #     page = next(iter(response['query']['pages'].values()))
-    #     return page['extract']
+    def split_sentences(self, text):
+        st = text.strip() + '. '
+        sentences = re.split(r'(?<=[^A-Z].[.?]) +(?=[A-Z])', st)
+        return sentences
 
     def clean_Extracted_Text(self, summary_unclean):
 
         # remove non-ascii characters
         non_ascii_removed = re.sub(r'[^\x00-\x7F]+', ' ', summary_unclean)
+
         # replace deciamal with underscore
-        decmark_reg = re.compile('(?<=\d)\.(?=\d)')
-        decimal_replaced = decmark_reg.sub('__', non_ascii_removed)
+        # decmark_reg = re.compile('(?<=\d)\.(?=\d)')
+        # decimal_replaced = decmark_reg.sub('__', non_ascii_removed)
+
         # remove unwanted wild characters
         bad_chars = ['!', '*', '`', "'", '"', '[', ']', '(', ')', "?", "=", "~"]
         for i in bad_chars:
-            wild_removed = ''.join(i for i in decimal_replaced if not i in bad_chars)
+            wild_removed = ''.join(i for i in non_ascii_removed if i not in bad_chars)
         wild_removed = re.sub('[!{[|]\S+[!\}\]lI1]?|\d+[\]lJ]+', '', wild_removed)
-        # single letters removed
-        singles_removed = ' '.join([w for w in wild_removed.split() if (len(w) > 1 and w not in ['a'])])
+        wild_removed = re.sub(' +', ' ', wild_removed)
+        wild_removed = re.sub('\n+', '\n', wild_removed)
+
+        # # single letters removed
+        # singles_removed = ' '.join([w for w in wild_removed.split() if (len(w) > 1 and w not in ['a'])])
 
         # contraction_done = ' '.join(
         #     [contraction_mapping[t] if t in contraction_mapping else t for t in singles_removed.split(" ")])
@@ -174,7 +169,7 @@ def crMain():
     print("Start summary creation...")
 
     sc = Screen()
-    frame_list = os.listdir("Image_out/Frames")
+    frame_list = os.listdir("./Image_out/Frames")
 
     def frame_no(x):
         return x.split("_")[1]
@@ -186,16 +181,18 @@ def crMain():
             if filename.__contains__("dummy"):
                 continue
             articleName = filename.split("_")[0]
-            net = "Image_out/Frames/" + filename
-            frame = cv2.imread("Image_out/Frames/" + filename)
+            net = "./Image_out/Frames/" + filename
+            frame = cv2.imread("./Image_out/Frames/" + filename)
             portions = sc.get_Coordinates(filename)
             sc.text_Extraction(net, portions)
         else:
             continue
 
+    print("Data extracted...")
     # Remove redundancy
     sc.extracted_data = '\n'.join(sc.extracted_data)
-    redundancy_free_summary = sc.remove_Redundant_Text(sc.extracted_data)
+    primary_clean_data = sc.clean_Extracted_Text(sc.extracted_data)
+    redundancy_free_summary = sc.remove_Redundant_Text(primary_clean_data)
     unclean_summary = redundancy_free_summary
 
     # Get original article plain text
@@ -206,13 +203,16 @@ def crMain():
     p_wiki = wiki_wiki.page(articleName)
     original_text = p_wiki.text
 
-    # Replace decimal by '__'
-    decmark_reg = re.compile('(?<=\d)\.(?=\d)')
-    decimal_replaced = decmark_reg.sub('__', original_text)
-    text_list = decimal_replaced.split(".")
+    print("Data API collected...")
+
+    # # Replace decimal by '__'
+    # decmark_reg = re.compile('(?<=\d)\.(?=\d)')
+    # decimal_replaced = decmark_reg.sub('__', original_text)
+    # text_list = decimal_replaced.split(".")
+    original_list = sc.split_sentences(original_text)
     index = 0
     org_list = []
-    for each in text_list:
+    for each in original_list:
         org_list.append(str(index) + " @:@ " + each)
         index += 1
 
@@ -225,79 +225,20 @@ def crMain():
             matches.append([int(match[0]), match[1]])
 
     # Sort the original text sentences according to index and create summary
-    summaryFinal = open("File_out/summary.txt", "w+")
+    summaryFinal = open("./File_out/summary.txt", "w")
     sorted_list = sorted(matches, key=lambda l: l[0])
     for each in sorted_list:
         text = str(each[1])
-        summaryFinal.write(text.strip() + ". ")
+        summaryFinal.write(text.strip() + " ")
 
     summaryFinal.close()
 
     print("Summary saved at File_out/summary.txt")
 
-    config = open("summary_created.txt", "w")
+    config = open("./summary_created.txt", "w")
     config.write("1")
     config.close()
 
-# if __name__ == "__main__":
-#     sc = Screen()
-#     frame_list = os.listdir("Image_out/Frames")
-#
-#     def frame_no(x):
-#         return x.split("_")[1]
-#
-#     articleName = None
-#     unclean_summary = []
-#     for filename in sorted(frame_list, key=frame_no):
-#         if filename.endswith(".png"):
-#             if filename.__contains__("dummy"):
-#                 continue
-#             articleName = filename.split("_")[0]
-#             net = "Image_out/Frames/" + filename
-#             frame = cv2.imread("Image_out/Frames/" + filename)
-#             portions = sc.get_Coordinates(filename)
-#             sc.text_Extraction(net, portions)
-#         else:
-#             continue
-#
-#     # Remove redundancy
-#     sc.extracted_data = '\n'.join(sc.extracted_data)
-#     redundancy_free_summary = sc.remove_Redundant_Text(sc.extracted_data)
-#     unclean_summary = redundancy_free_summary
-#
-#     # Get original article plain text
-#     wiki_wiki = wikipediaapi.Wikipedia(
-#         language='en',
-#         extract_format=wikipediaapi.ExtractFormat.WIKI
-#     )
-#     p_wiki = wiki_wiki.page(articleName)
-#     original_text = p_wiki.text
-#
-#     # Replace decimal by '__'
-#     decmark_reg = re.compile('(?<=\d)\.(?=\d)')
-#     decimal_replaced = decmark_reg.sub('__', original_text)
-#     text_list = decimal_replaced.split(".")
-#     index = 0
-#     org_list = []
-#     for each in text_list:
-#         org_list.append(str(index) + " @:@ " + each)
-#         index += 1
-#
-#     # Get close matches of summary sentences in original text
-#     matches = []
-#     for each in unclean_summary.split('.'):
-#         match = get_close_matches(each, org_list)
-#         if len(match) != 0:
-#             match = match[0].split(" @:@ ")
-#             matches.append([int(match[0]), match[1]])
-#
-#     # Sort the original text sentences according to index and create summary
-#     summaryFinal = open("File_out/summary.txt", "w+")
-#     sorted_list = sorted(matches, key=lambda l: l[0])
-#     for each in sorted_list:
-#         text = str(each[1])
-#         summaryFinal.write(text.strip() + ". ")
-#
-#     summaryFinal.close()
-#
-#     print("Summary saved at File_out/summary.txt")
+
+if __name__ == "__main__":
+    crMain()
