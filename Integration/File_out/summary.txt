@@ -1,1 +1,8 @@
-The English Wikipedia is the English-language edition of the free online encyclopedia Wikipedia. Founded on 15 January 2001, it is the first edition of Wikipedia and, as of April 2019, has the most articles of any of the editions. As of October 2019, 12% of articles in all Wikipedias belong to the English-language edition. 
+<<<<<<< HEAD
+The Mauryan kings are known as much for their empire-building and determined management of public life as for Ashoka's renunciation of militarism and far-flung advocacy of the Buddhist dhamma.The Sangam literature of the Tamil language reveals that, between 200 BCE and 200 CE, the southern peninsula was ruled by the Cheras, the Cholas, and the Pandyas, dynasties that traded extensively with the Roman Empire and with West and South-East Asia. In North India, Hinduism asserted patriarchal control within the family, leading to increased subordination of women. In North India, Hinduism asserted patriarchal control within the family, leading to increased subordination of women. Under the Guptas, a renewed Hinduism based on devotion, rather than the management of ritual, began to assert itself. This renewal was reflected in a flowering of sculpture and architecture, which found patrons among an urban elite. Classical Sanskrit literature flowered as well, and Indian science, astronomy, medicine, and mathematics made significant advances.
+=======
+Classical Sanskrit literature flowered as well, and Indian science, astronomy, medicine, and mathematics made significant advances.
+>>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
+
+Medieval India
+The Indian early medieval age, 600 CE to 1200 CE, is defined by regional kingdoms and cultural diversity. 

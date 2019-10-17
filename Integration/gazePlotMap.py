@@ -241,14 +241,15 @@ def bounding_box(imageName, FrameName, display_width, display_height):
             # show ROI
             # cv2.imshow('segment no:'+str(i),roi)
             # cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            if w > 200 and h > 15:
+
+            if w > 70 and h > 30:
                 # cv2.imwrite('out_check_out.png'.format(i), roi)
                 valid_boxes.append([x, y, w, h])
 
-                cv2.rectangle(image, (x, y), (x + display_width - x - 10, y + h + 200), (0, 255, 0), 2)
+                cv2.rectangle(image, (x, y), (x + w+50, y + h + 50), (0, 255, 0), 2)
                 bbox_file.write(
-                    str(x) + " " + str(y) + " " + str(display_width - x - 10) + " " + str(
-                        h + 200) + " " + " | ")
+                    str(x) + " " + str(y) + " " + str(w+50) + " " + str(
+                        h + 50) + " " + " | ")
 
                 # if x < 50 or y < 50:
                 #     cv2.rectangle(image, (x, y), (x + display_width - x - 10, y + h), (0, 255, 0), 2)

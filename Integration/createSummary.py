@@ -93,7 +93,11 @@ class Screen(object):
             read_box = boxes[i]
             # read_box = [604, 247, 90, 124]
             extracted_image = window.crop(read_box)
+<<<<<<< HEAD
             # extracted_image.show()
+=======
+            extracted_image.show()
+>>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
             extracted_text = self.extract_Text_From_Image(extracted_image)
             # self.extracted_data.append(extracted_text)
             #####
@@ -104,9 +108,15 @@ class Screen(object):
                 # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
                 # = (window_name, read_box, self.pixel_info)
             elif extracted_text:
+<<<<<<< HEAD
                 self.extracted_data.append(extracted_text)
                 ######corrected_text, b_box = self.complete_The_Text(extracted_text, window, read_box)
                 ######self.extracted_data.append(corrected_text)
+=======
+                ##self.extracted_data.append(extracted_text)
+                corrected_text, b_box = self.complete_The_Text(extracted_text, window, read_box)
+                self.extracted_data.append(corrected_text)
+>>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
             # sc.extracted_data = '\n'.join(sc.extracted_data)  # data.append(extracted_text)
             # data[corrected_text] = (window_name, b_box, self.pixel_info)
             # extract.write(corrected_text+'\n\n')
@@ -219,16 +229,31 @@ def crMain():
     # Get close matches of summary sentences in original text
     matches = []
     for each in unclean_summary.split('.'):
+<<<<<<< HEAD
         match = get_close_matches(each, org_list)
+=======
+        match = get_close_matches(each, org_list, cutoff=0.5)
+>>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
         if len(match) != 0:
             match = match[0].split(" @:@ ")
             matches.append([int(match[0]), match[1]])
 
     # Sort the original text sentences according to index and create summary
+<<<<<<< HEAD
     summaryFinal = open("./File_out/summary.txt", "w")
+=======
+    summaryFinal = open("./File_out/summary1.txt", "w")
+>>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
     sorted_list = sorted(matches, key=lambda l: l[0])
-    for each in sorted_list:
+    import numpy as np
+    text_column = np.array(sorted_list)
+    unique_matches = list(dict.fromkeys(text_column[:,1]))
+    for each in unique_matches:
+<<<<<<< HEAD
         text = str(each[1])
+=======
+        text = str(each)
+>>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
         summaryFinal.write(text.strip() + " ")
 
     summaryFinal.close()
