@@ -232,7 +232,7 @@ def crMain():
 <<<<<<< HEAD
         match = get_close_matches(each, org_list)
 =======
-        match = get_close_matches(each, org_list, cutoff=0.5)
+        match = get_close_matches(each, org_list, cutoff=0.4)
 >>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
         if len(match) != 0:
             match = match[0].split(" @:@ ")
