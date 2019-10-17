@@ -42,6 +42,9 @@ void ImageWindow::showImage(cv::Mat image) {
 void ImageWindow::show() {
 	if(Application::Settings::noWindows)
 		return;
+	if(Application::isTrackerCalibrated){
+        	QMainWindow::showMinimized();
+	}  
 
 	QMainWindow::show();
 }
