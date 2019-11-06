@@ -46,12 +46,8 @@ void ImageWindow::showImage(cv::Mat image) {
 // 	QMainWindow::show();
 // }
 
-<<<<<<< HEAD
 // Override the QMainWindow show function so that we can decide whether we want
 // to hide all the windows (for experiment reruns) or not
-=======
-
->>>>>>> de9409b081b02954d632ad3e169d8def3f5a111d
 void ImageWindow::show() {
 	if(Application::Settings::noWindows)
 		return;

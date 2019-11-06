@@ -6,7 +6,7 @@ import time
 import pytesseract
 # from pynput.mouse import Listener
 # from pynput.keyboard import Listener, Key
-import numpy as np
+# import numpy
 # import re
 import hashlib
 import cv2
@@ -93,9 +93,8 @@ class Screen(object):
             read_box = boxes[i]
             # read_box = [604, 247, 90, 124]
             extracted_image = window.crop(read_box)
-            extracted_image.show()
+            #extracted_image.show()
             extracted_text = self.extract_Text_From_Image(extracted_image)
-            extracted_text = re.sub("\n", ". ", extracted_text)
             # self.extracted_data.append(extracted_text)
             #####
             if read_box[2] - read_box[0] >= 2500:
@@ -134,9 +133,7 @@ class Screen(object):
         return redundancy_free_text
 
     def split_sentences(self, text):
-        corrected_text = re.sub(r"\.(?=\S)", ". ", text)
-        corrected_text = re.sub(".\n", ". ", corrected_text)
-        st = corrected_text.strip() + '. '
+        st = text.strip() + '. '
         sentences = re.split(r'(?<=[^A-Z].[.?]) +(?=[A-Z])', st)
         return sentences
 
@@ -155,7 +152,6 @@ class Screen(object):
             wild_removed = ''.join(i for i in non_ascii_removed if i not in bad_chars)
         wild_removed = re.sub('[!{[|]\S+[!\}\]lI1]?|\d+[\]lJ]+', '', wild_removed)
         wild_removed = re.sub(' +', ' ', wild_removed)
-        wild_removed = re.sub('@', '', wild_removed)
         wild_removed = re.sub('\n+', '\n', wild_removed)
 
         # # single letters removed
@@ -209,7 +205,7 @@ def crMain():
 
     print("Data API collected...")
 
-    # Replace decimal by '__'
+    # # Replace decimal by '__'
     # decmark_reg = re.compile('(?<=\d)\.(?=\d)')
     # decimal_replaced = decmark_reg.sub('__', original_text)
     # text_list = decimal_replaced.split(".")
@@ -221,27 +217,17 @@ def crMain():
         index += 1
 
     # Get close matches of summary sentences in original text
-    from fuzzywuzzy import process
-    final_matches = []
     matches = []
     for each in unclean_summary.split('.'):
-        each = each.strip()
-        each_list = each.split(" ")
-        if len(each_list) > 1:
-            # extract = process.extract(each, org_list)
-            # text_column = np.array(extract)
-            # match1 = text_column[:, 0]
-            # if len(match1) != 0:
-            #     best_match = match1[0].split(" @:@ ")
-            #     final_matches.append([int(best_match[0]), best_match[1]])
-            match2 = get_close_matches(each, org_list, cutoff=0.4)
-            if len(match2) != 0:
-                best_match = match2[0].split(" @:@ ")
-                final_matches.append([int(best_match[0]), best_match[1]])
+        match = get_close_matches(each, org_list, cutoff=0.5)
+        if len(match) != 0:
+            match = match[0].split(" @:@ ")
+            matches.append([int(match[0]), match[1]])
 
     # Sort the original text sentences according to index and create summary
     summaryFinal = open("./File_out/summary.txt", "w")
-    sorted_list = sorted(final_matches, key=lambda l: l[0])
+    sorted_list = sorted(matches, key=lambda l: l[0])
+    import numpy as np
     text_column = np.array(sorted_list)
     unique_matches = list(dict.fromkeys(text_column[:, 1]))
     for each in unique_matches:
