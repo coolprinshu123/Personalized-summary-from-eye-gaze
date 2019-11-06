@@ -93,7 +93,7 @@ class Screen(object):
             read_box = boxes[i]
             # read_box = [604, 247, 90, 124]
             extracted_image = window.crop(read_box)
-            extracted_image.show()
+            # extracted_image.show()
             extracted_text = self.extract_Text_From_Image(extracted_image)
             extracted_text = re.sub("\n", ". ", extracted_text)
             # self.extracted_data.append(extracted_text)
