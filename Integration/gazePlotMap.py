@@ -245,10 +245,10 @@ def bounding_box(imageName, FrameName, display_width, display_height):
                 # cv2.imwrite('out_check_out.png'.format(i), roi)
                 valid_boxes.append([x, y, w, h])
 
-                cv2.rectangle(image, (x-100, y), (x + w+150, y + h + 50), (0, 255, 0), 2)
+                cv2.rectangle(image, (x-100, y), (x + w+150, y + h + 20), (0, 255, 0), 2)
                 bbox_file.write(
                     str(x-100) + " " + str(y) + " " + str(w+150) + " " + str(
-                        h + 50) + " " + " | ")
+                        h + 20) + " " + " | ")
 
                 # if x < 50 or y < 50:
                 #     cv2.rectangle(image, (x, y), (x + display_width - x - 10, y + h), (0, 255, 0), 2)

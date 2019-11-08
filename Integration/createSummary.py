@@ -93,7 +93,7 @@ class Screen(object):
             read_box = boxes[i]
             # read_box = [604, 247, 90, 124]
             extracted_image = window.crop(read_box)
-            # extracted_image.show()
+            extracted_image.show()
             extracted_text = self.extract_Text_From_Image(extracted_image)
             extracted_text = re.sub("\n", ". ", extracted_text)
             # self.extracted_data.append(extracted_text)
@@ -223,17 +223,17 @@ def crMain():
     # Get close matches of summary sentences in original text
     from fuzzywuzzy import process
     final_matches = []
-    matches = []
+    # matches = []
     for each in unclean_summary.split('.'):
         each = each.strip()
         each_list = each.split(" ")
-        if len(each_list) > 1:
-            # extract = process.extract(each, org_list)
-            # text_column = np.array(extract)
-            # match1 = text_column[:, 0]
-            # if len(match1) != 0:
-            #     best_match = match1[0].split(" @:@ ")
-            #     final_matches.append([int(best_match[0]), best_match[1]])
+        if len(each_list) > 2:
+            extract = process.extract(each, org_list)
+            text_column = np.array(extract)
+            match1 = text_column[:, 0]
+            if len(match1) != 0:
+                best_match = match1[0].split(" @:@ ")
+                final_matches.append([int(best_match[0]), best_match[1]])
             match2 = get_close_matches(each, org_list, cutoff=0.4)
             if len(match2) != 0:
                 best_match = match2[0].split(" @:@ ")
