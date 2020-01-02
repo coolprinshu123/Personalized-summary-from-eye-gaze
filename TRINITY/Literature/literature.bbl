@@ -1,0 +1,151 @@
+\begin{thebibliography}{10}
+
+\bibitem{wiki:Wikipedia:Statistics}
+Wikipedia, ``{Wikipedia:Statistics} --- {W}ikipedia{,} the free encyclopedia.''
+  \url{http://en.wikipedia.org/w/index.php?title=Wikipedia\%3AStatistics&oldid=914609482},
+  2019.
+\newblock [Online; accessed 02-October-2019].
+
+\bibitem{giles2005internet}
+J.~Giles, ``Internet encyclopaedias go head to head,'' 2005.
+
+\bibitem{bergstrom2009conversation}
+T.~Bergstrom and K.~Karahalios, ``Conversation clusters: grouping conversation
+  topics through human-computer dialog,'' in {\em Proceedings of the SIGCHI
+  Conference on Human Factors in Computing Systems}, pp.~2349--2352, ACM, 2009.
+
+\bibitem{cress2008systemic}
+U.~Cress and J.~Kimmerle, ``A systemic and cognitive view on collaborative
+  knowledge building with wikis,'' {\em International Journal of
+  Computer-Supported Collaborative Learning}, vol.~3, no.~2, p.~105, 2008.
+
+\bibitem{antin2010readers}
+J.~Antin and C.~Cheshire, ``Readers are not free-riders: reading as a form of
+  participation on wikipedia,'' in {\em Proceedings of the 2010 ACM conference
+  on Computer supported cooperative work}, pp.~127--130, ACM, 2010.
+
+\bibitem{rayner1998eye}
+K.~Rayner, ``Eye movements in reading and information processing: 20 years of
+  research.,'' {\em Psychological bulletin}, vol.~124, no.~3, p.~372, 1998.
+
+\bibitem{beymer2005webgazeanalyzer}
+D.~Beymer and D.~M. Russell, ``Webgazeanalyzer: a system for capturing and
+  analyzing web reading behavior using eye gaze,'' in {\em CHI'05 extended
+  abstracts on Human factors in computing systems}, pp.~1913--1916, ACM, 2005.
+
+\bibitem{sanches2018estimation}
+C.~L. Sanches, O.~Augereau, and K.~Kise, ``Estimation of reading subjective
+  understanding based on eye gaze analysis,'' {\em PloS one}, vol.~13, no.~10,
+  p.~e0206213, 2018.
+
+\bibitem{okoli2012people}
+C.~Okoli, M.~Mehdi, M.~Mesgari, F.~{\AA}. Nielsen, and A.~Lanam{\"a}ki, ``The
+  people’s encyclopedia under the gaze of the sages: A systematic review of
+  scholarly research on wikipedia,'' {\em Available at SSRN 2021326}, 2012.
+
+\bibitem{wilkinson2007assessing}
+D.~Wilkinson and B.~Huberman, ``Assessing the value of cooperation in
+  wikipedia, digital libraries (cs. dl),'' {\em Computers and Society; Physics
+  and Society}, 2007.
+
+\bibitem{kittur2008harnessing}
+A.~Kittur and R.~E. Kraut, ``Harnessing the wisdom of crowds in wikipedia:
+  quality through coordination,'' in {\em Proceedings of the 2008 ACM
+  conference on Computer supported cooperative work}, pp.~37--46, ACM, 2008.
+
+\bibitem{stvilia2008information}
+B.~Stvilia, M.~B. Twidale, L.~C. Smith, and L.~Gasser, ``Information quality
+  work organization in wikipedia,'' {\em Journal of the American society for
+  information science and technology}, vol.~59, no.~6, pp.~983--1001, 2008.
+
+\bibitem{lehmann2014reader}
+J.~Lehmann, C.~M{\"u}ller-Birn, D.~Laniado, M.~Lalmas, and A.~Kaltenbrunner,
+  ``Reader preferences and behavior on wikipedia,'' in {\em Proceedings of the
+  25th ACM conference on Hypertext and social media}, pp.~88--97, ACM, 2014.
+
+\bibitem{calder2002reading}
+A.~J. Calder, A.~D. Lawrence, J.~Keane, S.~K. Scott, A.~M. Owen,
+  I.~Christoffels, and A.~W. Young, ``Reading the mind from eye gaze,'' {\em
+  Neuropsychologia}, vol.~40, no.~8, pp.~1129--1138, 2002.
+
+\bibitem{bff9c00ddce3404ca729f4a96d53a701}
+A.~Ajanki, D.~Hardoon, S.~Kaski, K.~Puolam{\"a}ki, and J.~Shawe-Taylor, ``Can
+  eyes reveal interest? implicit queries from gaze patterns,'' {\em User
+  Modeling and User-Adapted Interaction}, vol.~19, no.~4, pp.~307--339, 2009.
+
+\bibitem{rayner1978eye}
+K.~Rayner, ``Eye movements in reading and information processing.,'' {\em
+  Psychological bulletin}, vol.~85, no.~3, p.~618, 1978.
+
+\bibitem{belkin2008some}
+N.~J. Belkin, ``Some (what) grand challenges for information retrieval,'' in
+  {\em ACM SIGIR Forum}, vol.~42, pp.~47--54, ACM, 2008.
+
+\bibitem{berkovsky2008aspect}
+S.~Berkovsky, T.~Baldwin, and I.~Zukerman, ``Aspect-based personalized text
+  summarization,'' in {\em International Conference on Adaptive Hypermedia and
+  Adaptive Web-Based Systems}, pp.~267--270, Springer, 2008.
+
+\bibitem{moro2012personalized}
+R.~M{\'o}ro {\em et~al.}, ``Personalized text summarization based on important
+  terms identification,'' in {\em 2012 23rd International Workshop on Database
+  and Expert Systems Applications}, pp.~131--135, IEEE, 2012.
+
+\bibitem{wu2008personalized}
+X.~Wu, J.~Li, Y.~Zhang, S.~Tang, and S.-Y. Neo, ``Personalized multimedia web
+  summarizer for tourist,'' in {\em Proceedings of the 17th international
+  conference on World Wide Web}, pp.~1025--1026, ACM, 2008.
+
+\bibitem{kumar2008generating}
+C.~Kumar, P.~Pingali, and V.~Varma, ``Generating personalized summaries using
+  publicly available web documents,'' in {\em Proceedings of the 2008
+  IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent
+  Agent Technology-Volume 03}, pp.~103--106, IEEE Computer Society, 2008.
+
+\bibitem{olsen2012tobii}
+A.~Olsen, ``The tobii i-vt fixation filter,'' {\em Tobii Technology}, 2012.
+
+\bibitem{cornelissen2002eyelink}
+F.~W. Cornelissen, E.~M. Peters, and J.~Palmer, ``The eyelink toolbox: eye
+  tracking with matlab and the psychophysics toolbox,'' {\em Behavior Research
+  Methods, Instruments, \& Computers}, vol.~34, no.~4, pp.~613--617, 2002.
+
+\bibitem{ferhat2014cheap}
+O.~Ferhat, F.~Vilarino, and F.~J. Sanchez, ``A cheap portable eye-tracker
+  solution for common setups,'' 2014.
+
+\bibitem{CVC}
+``Cvc eye tracker.'' \url{https://github.com/tiendan/OpenGazer}.
+\newblock Accessed: 2016.
+
+\bibitem{WinNT}
+``Netgazer.'' \url{http://sourceforge.net/projects/netgazer/}.
+\newblock Accessed: 2016.
+
+\bibitem{xu2009user}
+S.~Xu, H.~Jiang, and F.~Lau, ``User-oriented document summarization through
+  vision-based eye-tracking,'' in {\em Proceedings of the 14th international
+  conference on Intelligent user interfaces}, pp.~7--16, ACM, 2009.
+
+\bibitem{chevalier2010wikipediaviz}
+F.~Chevalier, S.~Huot, and J.-D. Fekete, ``Wikipediaviz: Conveying article
+  quality for casual wikipedia readers,'' in {\em 2010 IEEE Pacific
+  Visualization Symposium (PacificVis)}, pp.~49--56, IEEE, 2010.
+
+\bibitem{dang2016quality}
+Q.~V. Dang and C.-L. Ignat, ``Quality assessment of wikipedia articles without
+  feature engineering,'' in {\em Proceedings of the 16th ACM/IEEE-CS on Joint
+  Conference on Digital Libraries}, pp.~27--30, ACM, 2016.
+
+\bibitem{falagas2013impact}
+M.~E. Falagas, A.~Zarkali, D.~E. Karageorgopoulos, V.~Bardakas, and M.~N.
+  Mavros, ``The impact of article length on the number of future citations: a
+  bibliometric analysis of general medicine journals,'' {\em PLoS One}, vol.~8,
+  no.~2, p.~e49476, 2013.
+
+\bibitem{blumenstock2008size}
+J.~E. Blumenstock, ``Size matters: word count as a measure of quality on
+  wikipedia,'' in {\em Proceedings of the 17th international conference on
+  World Wide Web}, pp.~1095--1096, ACM, 2008.
+
+\end{thebibliography}

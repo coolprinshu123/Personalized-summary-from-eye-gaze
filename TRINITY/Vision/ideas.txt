@@ -1,0 +1,57 @@
+Piling down of knowledge gaps:
+=============================
+	* There are occassions when the rush of factoids may conceal a few 
+	knowledge gaps from surfacing up. One can solve this problem
+	if one has a Q-factor in the portal. We suspect there are patterns in
+	the exisiting knowledge building data on wikipedia which will help
+	us show this fact. We suppose that there has been rapid development
+	of facts which has concealed some of the knowledge gaps in a few
+	wikipedia articles.
+
+Article to FAQ:
+==============
+	* Given a wikipedia article, can one generate an FAQ out of this.
+	* This looks like a well established research question in a form that
+	  is different from the above bullet point. There are research directions
+	  where one can get an answer for a query by parsing through the database.
+	  This is what the KD filed is all about (Knowledge discovery).
+	* As you can see, there are inumerous applications of A2FAQ, some of them being
+ 	  Summarize discussion forums and create an FAQ, there are some well known 
+	  ways to summarize. If there are several articles written on a topic, we
+	  may not be able to merge them for copyright reasons, but we can extract
+	  a common FAQ out of these 'same themed' articles. For example, an article
+	  on mahatma gandhi on wikipedia, plus a few new paper articles about Mahatma, 
+	  followed by a few blog articles can all be used to generate a single FAQ. 
+          People like reading FAQs to know about a new thing that they are less 
+          familiar with than go through all these articles. Remember? We like reading
+          a quora question than going through a wiki article.  
+
+FAQ to Article:
+===============
+
+	* This is an important question in Q-wiki research (obviously?)
+	* Given the discussions in SE like forum, can we generate a stub wiki article
+ 	  to begin with. It is better than a blank article. Assume you want to start 
+	  a wiki page on faculty lounge at IIT Ropar, you may not know a thing about
+ 	  this unless you look into the discussion forum (assuming it exists). You
+	  can easily take some content from there, summarize it and initiate a stub
+	  article which will then help the contribution on the article to cascade. 	
+	* We need to note that FAQ to article is slightly different from discussion 
+	  forum to article. But there are some commonalities between SE and FAQ lists.
+	  We need to explore more on this. 
+	* This seems to have some link to Neeru's Summarization attempts. Maybe we should
+	  discuss this in group.
+
+DF to FAQ:
+=========
+	* It is also important to note that DF is different from an FAQ. How do we 
+	  point out the important questions in DF that are valid candidates of FAQ.
+	* A dumb idea: Use wikum to make DF an A and then use A2FAQ, this trasitivity
+	  leads to DF2FAQ (?).
+
+Eye Gaze idea:
+============= 	
+	* On DF eye gaze data might help us rank candidate questions for FAQ.
+	* ORAM like secure computation to ensure that the data collected from the 
+	  crowd, doesn't reveal any private information (A big question in itself).	
+
