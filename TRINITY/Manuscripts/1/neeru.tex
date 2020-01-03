@@ -122,49 +122,37 @@ Wikipedia research community can be vastly divided into two classes: one that \e
 In this section we describe the theoretical background and related previous works in the fields of automatic document summarization and various methods of Wikipedia analysis. First, we review user awareness in utilization of eye gaze data for determining reader's interest and thus generation of personalized summary. Then, we also review the literature on Wikipedia analysis methods.
 
 \subsection{Relation between Eye Gaze and Readers Interest}
-Eye movement characteristic of reading is extensively studied in the psychology literature~\cite{rayner1998eye}. Eye tracking open the door for an automated analysis of document reading. The time-lined distribution of saccades and fixations reflects significant features of the reader as well as the text being read. In a study performed by Frazier at al. \cite{frazier1982making} regressions indicate the disambiguation of a sentence. In addition long regressive eye movements (regressing more than 10 letter spaces~\cite{rayner1998eye}) may indicate difficulty in understanding the text (\cite{frazier1982making} \cite{rayner2012eye}. 
+In \cite{admoni2017social} Henny Admoni and Brian Scassellati mentions that eye gaze is more prominent nonverbal signal as compared to pointing, body posture, and other behaviors. This is supported by the evidence from psychology which suggests that eyes are a cognitively special stimulus, with unique ``hard-wired" pathways in the brain dedicated to their interpretation \cite{emery2000eyes}.
 
-The relation between eye gaze pattern and human interest has been vastly utilized in various fields~\cite{knight2013estimating}. In~\cite{beymer2005webgazeanalyzer} a system is proposed for recording and analyzing web reading behavior using eye gaze. In \cite{bee2008writing}, a gaze-controlled input system was introduced that enables users to write with their eyes. Sanches et. al~\cite{sanches2018estimation} show that prediction of the subjective understanding is improved by 13\% if we use eye gaze instead of comprehension questions. Eye gaze is also used for website designing~\cite{djamasbi2014eye}. 
+Eye movement characteristic of reading is extensively studied in the psychology literature~\cite{rayner1998eye}. Eye tracking open the door for an automated analysis of document reading. The time-lined distribution of saccades and fixations reflects significant features of the reader as well as the text being read. In a study performed by Frazier at al. \cite{frazier1982making} regressions indicate the disambiguation of a sentence. In addition long regressive eye movements (regressing more than 10 letter spaces~\cite{rayner1998eye}) may indicate difficulty in understanding the text \cite{frazier1982making} \cite{rayner2012eye}. 
 
-Considering all the instances discussed above, we can say that eye gaze reflects the interest of the reader. Therefore it can be used to segregate the portions of the document where reader was interested while reading from the portions that he skimmed through or did not read at all.
+The relation between eye gaze pattern and human interest has been vastly utilized in various fields~\cite{knight2013estimating}. In~\cite{beymer2005webgazeanalyzer} a system is proposed for recording and analyzing web reading behavior using eye gaze. In \cite{bee2008writing}, a gaze-controlled input system was introduced that enables users to write with their eyes. Sanches et. al~\cite{sanches2018estimation} show that prediction of the subjective understanding is improved by 13\% if we use eye gaze instead of comprehension questions. Eye gaze is also used for website designing~\cite{djamasbi2014eye}. The inclusion of eye gaze into human-robot interactions is also vastly studied to use robots as stimuli to understand the limits of human perception \cite{admoni2017social}.
 
+Considering all the instances discussed above, we can say that eye gaze reflects human cognitive process and it can be harnessed to capture the interest of the reader. Therefore it can be used to segregate the portions of the document where reader was interested while reading, from the portions that he skimmed through or did not read at all.
 
 \subsection{Personalized Summarization Techniques}
 %title = Single Document Summarization as Tree Induction
 
-Summarization is the task of automatically generating a shorter version of a document while retaining its most important information. The task has received much attention in the
-natural language processing community due to its
-potential for various information access applications. Examples include tools which digest textual
-content (e.g., news, social media, reviews), answer
-questions, or provide recommendations.
-Of the many summarization paradigms that
-have been identified over the years (see \cite{autoSum}
-and {Nenkova, Ani, and Kathleen McKeown. "Automatic summarization." Foundations and Trends$^{\tiny{\textregistered}}$ in Information Retrieval 5.2–3 (2011): 103-233.}
-for comprehensive overviews), two have consistently attracted
-attention. In abstractive summarization, various
-text rewriting operations generate summaries using words or phrases that were not in the original
-text, while extractive approaches form summaries
-by copying and concatenating the most important
-spans (usually sentences) in a document. 
+%Summarization\\
+%Automatic summarization\\
+%Personalized Automatic summarization\\
+%Eye gaze based Personalized Automatic summarization\\
+
+A summary represents comprehensive overview of a document and summarization is the process of generating summary. In natural language processing community summarization has received much attention. Information access applications extensively benefit from the task summarization. Examples include news portals~\cite{ge2016news}, review systems~\cite{hu2017opinion}, question answer portals~\cite{pudaruth2016intelligent} and recommendation systems~\cite{roul2019nifty}.
+
+Manual summarization requires a significant amount of effort by the reader. Therefore many automatic summarization techniques have been proposed by researchers in the past. 
+The first automatic text summarization technique was proposed by Luhn~\cite{luhn1958automatic}. The idea was to extract from a document the most significant sentences, which contained the highest number of occurrences of significant terms. The significance of a term was calculated by term frequency. 
+Later Edmundson~ \cite{edmundson1969new} emphasized that the location of the terms also matter along with their frequency.
+
+The literature of automatic summarization can be divided into two classes; namely, abstractive summarization and extractive summarization. 
+In abstractive summarization, various text rewriting operations generate summaries using text that might not belong to the original
+text, while extractive approaches form summaries by identifying and concatenating the important spans of a document. 
 
 %title = Neural Latent Extractive Document Summarization
+Extractive summarization techniques are seemingly more successful than their abstractive counterparts~\cite{zhang2018neural}. A great deal of past research is focused on extractive summarization. Several techniques have been proposed to identify the important spans of the document to prepare summary. Early attempts leveraged binary classification of sentences~\cite{10.1145/215206.215333}, usage of human-engineered features~\cite{filatova2004event}, hidden Markov models~\cite{conroy2001text}, graph based methods~\cite{mihalcea2005language}, and integer linear programming~\cite{woodsend2010automatic}. 
 
-A great deal of previous work has focused
-on extractive summarization which is usually modeled as a sentence ranking or binary classification problem (i.e., sentences
-which are top ranked or predicted as True
-are selected as summaries). Early attempts
-mostly leverage human-engineered features
-(Filatova and Hatzivassiloglou, 2004) coupled
-with binary classifiers (Kupiec et al., 1995), hidden Markov models (Conroy and O’leary, 2001), graph based methods (Mihalcea, 2005), and integer linear programming (Woodsend and Lapata,
-2010). Although seemingly more successful than their
-abstractive counterparts, extractive models require
-sentence-level labels, which are not included in
-most summarization datasets (only document and
-gold summary pairs are available). Sentence labels are usually obtained by rule-based methods (Cheng and Lapata, 2016) or by maximizing
-the ROUGE score (Lin, 2004) between a subset
-of sentences and the human written summaries
-(Nallapati et al., 2017). These methods do not
-fully exploit the human summaries, they only create True/False labels which might be suboptimal.
+
+The summaries generated by these methods do not fully exploit the human summaries, they only create True/False labels which might be suboptimal.
 
 
 
@@ -225,6 +213,13 @@ Cross-platform application (Ubuntu, Mac, Windows)...Application detail...\\
 We present a novel approach to analyze Wikipedia articles by capturing the reading pattern of users, through personalized summaries. 
 
 \subsection{Personalized Summarization}
+%%%%%%%%%%
+With the rapid growth of information in the new era, people can obtain and share information
+almost instantly from a wide array of sources. The Web contains billions of documents and
+is growing at an exponential pace. As a result, we are facing an inevitable and challenging
+problem of information overload. Tools that provide timely access to, and digest of, various
+sources are necessary in order to alleviate the problem.
+%%%%%%%%%%%%%%
 
 Document summarization reflects the key points of the document which the summarizer tool deems important. The summary thus produced is generic in nature. In many situations, users are interested in facts more relevant to them; motivating the need for query-relevant or personalized summaries. For instance, consider a sports enthusiast who wants to know about the sports culture in United States by reading its' Wikipedia article. A more useful summary for this person would contain sports related passages assembled into a short document. We can say that users with different information needs require different summaries of the same document.
 
@@ -236,6 +231,14 @@ Include similar sections of the article as per our selected portions.
 
 
 Spacial and temporal gaze patterns are valuable pieces of information and can be used to infer present cognitive processes of the user \cite{Beymer:2005:WSC:1056808.1057055}. We utilize the eye gaze pattern to extract more focused portions of the text and assemble them to generate personalized summary. In following subsections, we address methods and measures to generate a summary.
+
+
+
+\begin{itemize}
+\item Eye gaze tracking
+\item Frame Recording \& Wikipedia Specific Text Extraction
+\item Summarization
+\end{itemize}
 
 \subsubsection{Eye Gaze Tracking}
 Eye gaze tracking is the process to estimate the direction of gaze and the point of regard. Rayner~\cite{rayner1998eye} provides a comprehensive overview of the studies concerning gaze pattern while reading. The eye shows a characteristic behavior composed of a series of fixations and saccades. Fixation is a duration for which the eye is steadily gazing at one point. On average it is of time interval 200-250 ms. Saccade is a rapid eye movement from one fixation to the next. For languages written left-to-right; approximately 10-15\% of the eye movements during reading are regressions, i.e., movements to the left along the currently focused line. A regression, or backwards eye movement in the text, is a sign that the
@@ -344,6 +347,9 @@ what does it depict?
 \section{Wikipedia Analysis}\label{sec:Analysis}
 Based on the summary created, we can capture the article reading pattern. This can serve as a novel dimension to analyze Wikipedia articles. 
 
+%%%%%%%%%%%%%%
+The World Wide Web is commonly seen as a platform that can harness the collective abilities of large numbers of people to accomplish tasks with unprecedented speed, accuracy, and scale.
+%%%%%%%%%%%%%%%%%%
     
 \subsection{Editor's Contribution Analysis}
 Wikipedia is a crowd-sourced online community for knowledge building. A characteristic feature of such online communities and social media sites is the mechanism for rewarding user achievements. It is primarily done to motivate users to enhance their on-site participation. There exists a strong correlation between editor contribute and article quality~\cite{li2015automatically}. 
@@ -593,6 +599,14 @@ majoring in a variety of different subjects.
 
 \subsection{Summarization}
 The intrinsic approach quantifies the performance of the summarization technique on the basis text coverage comparison with a ground truth summarization result. 
+
+ROUGE-N is an n-gram-based metric with
+the recall-oriented score, the precision-oriented score and the F-measure score for ROUGE-N
+computed
+
+Formulae for Recall, precision and f-measure.
+
+
 
 
 Avg P:0.21093474426807765\\
