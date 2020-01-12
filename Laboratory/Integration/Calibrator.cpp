@@ -92,7 +92,7 @@ void Calibrator::pointStart() {
 	}
 
 	// Fill the screen image with solid color and copy the target image
-	_screenImage.setTo(cv::Scalar(153, 75, 75));
+	_screenImage.setTo(cv::Scalar(0, 0, 0));
 	_targetImage(targetBounds).copyTo(_screenImage(screenBounds));
 	_window.showImage(_screenImage);
 }
